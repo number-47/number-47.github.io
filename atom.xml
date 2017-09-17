@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-09-17T05:07:49.939Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Number 47</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>First-Android</title>
+    <link href="http://yoursite.com/2017/09/17/Andeoid%E7%96%AF%E7%8B%82%E8%AE%B2%E4%B9%89/"/>
+    <id>http://yoursite.com/2017/09/17/Andeoid疯狂讲义/</id>
+    <published>2017-09-17T04:56:35.000Z</published>
+    <updated>2017-09-17T05:07:49.939Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-LineLayout"><a href="#1-LineLayout" class="headerlink" title="1 LineLayout"></a>1 LineLayout</h2><h3 id="1-1方法"><a href="#1-1方法" class="headerlink" title="1.1方法"></a>1.1方法</h3><p>11111111111111111111111111111111111111111</p><h3 id="1-2方"><a href="#1-2方" class="headerlink" title="1.2方"></a>1.2方</h3><p>2222222222222222</p><h2 id="1-2-GGGG"><a href="#1-2-GGGG" class="headerlink" title="1.2 GGGG"></a>1.2 GGGG</h2><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-LineLayout&quot;&gt;&lt;a href=&quot;#1-LineLayout&quot; class=&quot;headerlink&quot; title=&quot;1 LineLayout&quot;&gt;&lt;/a&gt;1 LineLayout&lt;/h2&gt;&lt;h3 id=&quot;1-1方法&quot;&gt;&lt;a href=&quot;#1-1方法&quot; class=&quot;headerlink&quot; title=&quot;1.1方法&quot;&gt;&lt;/a&gt;1.1方法&lt;/h3&gt;&lt;p&gt;11111111111111111111111111111111111111111&lt;/p&gt;
+&lt;h3 id=&quot;1-2方&quot;&gt;&lt;a href=&quot;#1-2方&quot; class=&quot;headerlink&quot; title=&quot;1.2方&quot;&gt;&lt;/a&gt;1.2方&lt;/h3&gt;&lt;p&gt;2222222222222222&lt;/p&gt;
+&lt;h2 id=&quot;1-2-GGGG&quot;&gt;&lt;a href=&quot;#1-2-GGGG&quot; class=&quot;headerlink&quot; title=&quot;1.2 GGGG&quot;&gt;&lt;/a&gt;1.2 GGGG&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="Android疯狂讲义" scheme="http://yoursite.com/categories/Android%E7%96%AF%E7%8B%82%E8%AE%B2%E4%B9%89/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/09/17/hello-world/"/>
+    <id>http://yoursite.com/2017/09/17/hello-world/</id>
+    <published>2017-09-17T01:15:34.489Z</published>
+    <updated>2017-09-17T01:15:34.497Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
