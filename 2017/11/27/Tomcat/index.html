@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://yoursite.com/images/img-Servlet容器响应客户请求过程.png">
 <meta property="og:image" content="http://yoursite.com/images/img-Tomcat各个组件之间的关系.png">
 <meta property="og:image" content="http://yoursite.com/images/img-Tomcat%20Server处理一个HTTP请求的过程.png">
-<meta property="og:updated_time" content="2018-01-05T13:57:31.149Z">
+<meta property="og:updated_time" content="2018-01-05T14:19:19.385Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tomcat">
 <meta name="twitter:description" content="Tomcat  Tomcat服务器是一种Servlet/JSP容器，负责处理客户请求，把请求传送给Servlet并把结果返回给客户。 当用户访问某个Servlet时，Servlet容器将创建一个ServletRequest对象和ServletResponse对象。在ServletRequest对象中封装了客户请求信息，然后Servlet容器（Tomcat）把ServletRequest对象和Ser">
@@ -191,6 +191,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -328,8 +338,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/11/27/Tomcat/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/11/27/Tomcat/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/11/27/Tomcat/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -358,7 +367,7 @@
 
       
         <h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><p>  Tomcat服务器是一种Servlet/JSP容器，负责处理客户请求，把请求传送给Servlet并把结果返回给客户。</p>
-<p>当用户访问某个Servlet时，Servlet容器将创建一个ServletRequest对象和ServletResponse对象。在ServletRequest对象中封装了客户请求信息，然后Servlet容器（Tomcat）把ServletRequest对象和ServletResponse对象传给客户所请求的Servlet。Servlet把响应结果写到ServletResponse中，然后由Servlet容器（Tomcat）把响应结果传给客户。</p>
+<p>当用户访问某个Servlet时，Servlet容器将创建一个ServletRequest对象和ServletResponse对象。在ServletRequest对象中封装了客户请求信息，然后Servlet容器（Tomcat）把ServletRequest对象和ServletResponse对象传给客户所请求的Servlet。Servlet把响应结果写到ServletResponse中，然后由Servlet容器（Tomcat）把响应结果传给客户。<a id="more"></a></p>
 <p><img src="/images/img-Servlet容器响应客户请求过程.png" alt="Alt text"></p>
 <h2 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h2><p>安装目录为D:\Tomcat</p>
 <p>打开D:\Tomcat\conf\server.xml，修改8080端口</p>
@@ -366,24 +375,24 @@
 <h2 id="Tomcat的结构"><a href="#Tomcat的结构" class="headerlink" title="Tomcat的结构"></a>Tomcat的结构</h2><p>每个Tomcat组件在server.xml文件中对应一种配置元素。以下为Tomcat组件之间的关系。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;Server&gt;                             //顶层类元素，可以包括多个Service   </div><div class="line">    &lt;Service&gt;                        //顶层类元素，可包含一个Engine，多个Connecter</div><div class="line">        &lt;Connector&gt;                  //连接器类元素，代表通信接口</div><div class="line">                &lt;Engine&gt;             //容器类元素，为特定的Service组件处理客户请求，要包含多个Host</div><div class="line">                        &lt;Host&gt;       //容器类元素，为特定的虚拟主机组件处理客户请求，可包含多个Context</div><div class="line">                          &lt;Context&gt;  //容器类元素，为特定的Web应用处理所有的客户请求</div><div class="line">                          &lt;/Context&gt;</div><div class="line">                        &lt;/Host&gt;</div><div class="line">                &lt;/Engine&gt;</div><div class="line">        &lt;/Connector&gt;</div><div class="line">    &lt;/Service&gt;</div><div class="line">&lt;/Server&gt;</div></pre></td></tr></table></figure>
 <ul>
-<li>\<server>元素</server></li>
+<li><code>&lt;Server&gt;</code>元素</li>
 </ul>
-<p>\<server>元素代表整个Servlet容器，是Tomcat实例的顶层元素。\<server>元素中包含一个或多个\<service>元素。</service></server></server></p>
+<p><code>&lt;Server&gt;</code>元素代表整个Servlet容器，是Tomcat实例的顶层元素。<code>&lt;Server&gt;</code>元素中包含一个或多个<code>&lt;Server&gt;</code>元素。</p>
 <ul>
-<li><p>\<service>元素</service></p>
-<p>\<service>元素包含一个\<engine>元素，以及一个或多个\<connector>元素，这些\<connector>元素共享同一个\<engine>元素</engine></connector></connector></engine></service></p>
+<li><p><code>&lt;Service&gt;</code>元素</p>
+<p><code>&lt;Service&gt;</code>元素包含一个<code>&lt;Engine&gt;</code>元素，以及一个或多个<code>&lt;Connector&gt;</code>元素，这些<code>&lt;Connector&gt;</code>元素共享同一个\<engine>元素</engine></p>
 </li>
-<li><p>\<connector>元素</connector></p>
-<p>\<connector>元素代表和客户程序实际交互的组件，它负责接收客户请求，以及向客户返回响应结果。</connector></p>
+<li><p><code>&lt;Connector&gt;</code>元素</p>
+<p><code>&lt;Connector&gt;</code>元素代表和客户程序实际交互的组件，它负责接收客户请求，以及向客户返回响应结果。</p>
 </li>
-<li><p>\<engine>元素</engine></p>
-<p>每个\<service>元素只能包含\<engine>元素。\<engine>元素处理在同一个\<service>中所有\<connector>元素接收到的客户请求。</connector></service></engine></engine></service></p>
+<li><p><code>&lt;Engine&gt;</code>元素</p>
+<p>每个<code>&lt;Service&gt;</code>元素只能包含<code>&lt;Engine&gt;</code>元素。<code>&lt;Engine&gt;</code>元素处理在同一个<code>&lt;Service&gt;</code>中所有<code>&lt;Connector&gt;</code>元素接收到的客户请求。</p>
 </li>
-<li><p>\<host>元素</host></p>
-<p>一个\<engine>元素可以包含多个\<host>元素。每个\<host>元素定义了一个虚拟主机，它可以包含一个或多个Web应用。</host></host></engine></p>
+<li><p><code>&lt;Host&gt;</code>元素</p>
+<p>一个<code>&lt;Engine&gt;</code>元素可以包含多个<code>&lt;Host&gt;</code>元素。每个<code>&lt;Host&gt;</code>元素定义了一个虚拟主机，它可以包含一个或多个Web应用。</p>
 </li>
-<li><p>\<context>元素</context></p>
-<p>\<context>元素是使用最频繁的元素，每个\<context>元素代表了运行在虚拟主机上的单个Web应用。一个\<host>元素中可以包含多个\<context>元素。</context></host></context></context></p>
+<li><p><code>&lt;Context&gt;</code>元素</p>
+<p><code>&lt;Context&gt;</code>元素是使用最频繁的元素，每个<code>&lt;Context&gt;</code>元素代表了运行在虚拟主机上的单个Web应用。一个<code>&lt;Host&gt;</code>元素中可以包含多个<code>&lt;Context&gt;</code>元素。</p>
 </li>
 </ul>
 <h2 id="Tomcat各个组件之间的嵌套关系"><a href="#Tomcat各个组件之间的嵌套关系" class="headerlink" title="Tomcat各个组件之间的嵌套关系"></a>Tomcat各个组件之间的嵌套关系</h2><p><img src="/images/img-Tomcat各个组件之间的关系.png" alt="img_Tomcat各个组件之间的关系"></p>
@@ -459,8 +468,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/25/Java运行机制和JVM/" rel="next" title="Java运行机制/JVM/JRE/JDK">
-                <i class="fa fa-chevron-left"></i> Java运行机制/JVM/JRE/JDK
+              <a href="/2017/11/27/Java面试题/" rel="next" title="Java面试题">
+                <i class="fa fa-chevron-left"></i> Java面试题
               </a>
             
           </div>
@@ -469,8 +478,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/27/Java面试题/" rel="prev" title="Java面试题">
-                Java面试题 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/07/理解面向对象/" rel="prev" title="理解面向对象">
+                理解面向对象 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -502,11 +511,8 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+      <div class="ds-thread" data-thread-key="2017/11/27/Tomcat/"
+           data-title="Tomcat" data-url="http://yoursite.com/2017/11/27/Tomcat/">
       </div>
     </div>
 
@@ -802,39 +808,33 @@
 
   
 
-
+  
+    
   
 
-    
-      <script id="dsq-count-scr" src="https://number-47.disqus.com/count.js" async></script>
-    
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"number-47"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
+  
     
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/11/27/Tomcat/';
-          this.page.identifier = '2017/11/27/Tomcat/';
-          this.page.title = 'Tomcat';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://number-47.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
     
-
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
-	
-
-
-
-
-
-  
 
 
 

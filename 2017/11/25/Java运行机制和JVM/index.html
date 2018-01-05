@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Number 47">
 <meta property="og:description" content="JAVA运行机制Java语言编写的程序需要经过编译步骤，这个编译步骤并不会生成特定平台的机器骂，而是生成一种与平台无关的字节码（也就是*.class文件），这种字节码不是可执行性的，必须使用Java解释器来解释执行。Java程序的执行过程需要想编译、后解释，如下： java源文件*.java—使用javac编译—&amp;gt;编译生成*.class文件（字节码文件）—使用java解释执行—&amp;gt;特定平">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-10T16:27:09.284Z">
+<meta property="og:updated_time" content="2018-01-05T14:18:03.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java运行机制&#x2F;JVM&#x2F;JRE&#x2F;JDK">
 <meta name="twitter:description" content="JAVA运行机制Java语言编写的程序需要经过编译步骤，这个编译步骤并不会生成特定平台的机器骂，而是生成一种与平台无关的字节码（也就是*.class文件），这种字节码不是可执行性的，必须使用Java解释器来解释执行。Java程序的执行过程需要想编译、后解释，如下： java源文件*.java—使用javac编译—&amp;gt;编译生成*.class文件（字节码文件）—使用java解释执行—&amp;gt;特定平">
@@ -187,6 +187,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -324,8 +334,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/11/25/Java运行机制和JVM/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/11/25/Java运行机制和JVM/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/11/25/Java运行机制和JVM/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -354,7 +363,7 @@
 
       
         <h2 id="JAVA运行机制"><a href="#JAVA运行机制" class="headerlink" title="JAVA运行机制"></a>JAVA运行机制</h2><p>Java语言编写的程序需要经过编译步骤，这个编译步骤并不会生成特定平台的机器骂，而是生成一种与平台无关的字节码（也就是*.class文件），这种字节码不是可执行性的，必须使用Java解释器来解释执行。<br>Java程序的执行过程需要想编译、后解释，如下：</p>
-<p>java源文件*.java—使用javac编译—&gt;编译生成*.class文件（字节码文件）—使用java解释执行—&gt;特定平台的机器码。</p>
+<p>java源文件*.java—使用javac编译—&gt;编译生成*.class文件（字节码文件）—使用java解释执行—&gt;特定平台的机器码。<a id="more"></a></p>
 <h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><p>Java语言里负责解释执行字节码文件的Java虚拟机，即JVM(Java Virtual Machine)。</p>
 <p><strong>问：为什么Java可以跨平台？</strong></p>
 <p>答：当使用Java编译器编译Java程序时，生成的是与平台无关的字节码，这些字节码不面向任何具体平台，只面向JVM。不同平台上的JVM都是不同的，但是它们提供了相同的接口。只要不同平台实现了相应的虚拟机，编译后的Java字节码就可以在该平台上运行。</p>
@@ -429,8 +438,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/27/Tomcat/" rel="prev" title="Tomcat">
-                Tomcat <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/27/Java面试题/" rel="prev" title="Java面试题">
+                Java面试题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -462,11 +471,8 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+      <div class="ds-thread" data-thread-key="2017/11/25/Java运行机制和JVM/"
+           data-title="Java运行机制/JVM/JRE/JDK" data-url="http://yoursite.com/2017/11/25/Java运行机制和JVM/">
       </div>
     </div>
 
@@ -762,39 +768,33 @@
 
   
 
-
+  
+    
   
 
-    
-      <script id="dsq-count-scr" src="https://number-47.disqus.com/count.js" async></script>
-    
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"number-47"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
+  
     
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/11/25/Java运行机制和JVM/';
-          this.page.identifier = '2017/11/25/Java运行机制和JVM/';
-          this.page.title = 'Java运行机制/JVM/JRE/JDK';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://number-47.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
     
-
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
-	
-
-
-
-
-
-  
 
 
 

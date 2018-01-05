@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="事务事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。 控制事务###COMMIT命令 用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。 123begin transactionsql语句commit; ###ROLLBACK命令 用于撤销还没有被保存到数据库的命令，它只能">
+<meta name="description" content="事务事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。 控制事务###COMMIT命令 用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。 123begin transactionsql语句commit;">
 <meta name="keywords" content="SQL入门经典">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL事务">
 <meta property="og:url" content="http://yoursite.com/2017/12/10/SQL事务/index.html">
 <meta property="og:site_name" content="Number 47">
-<meta property="og:description" content="事务事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。 控制事务###COMMIT命令 用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。 123begin transactionsql语句commit; ###ROLLBACK命令 用于撤销还没有被保存到数据库的命令，它只能">
+<meta property="og:description" content="事务事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。 控制事务###COMMIT命令 用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。 123begin transactionsql语句commit;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-24T08:46:29.922Z">
+<meta property="og:updated_time" content="2018-01-05T14:18:32.662Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL事务">
-<meta name="twitter:description" content="事务事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。 控制事务###COMMIT命令 用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。 123begin transactionsql语句commit; ###ROLLBACK命令 用于撤销还没有被保存到数据库的命令，它只能">
+<meta name="twitter:description" content="事务事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。 控制事务###COMMIT命令 用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。 123begin transactionsql语句commit;">
 
 
 
@@ -187,6 +187,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -324,8 +334,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/12/10/SQL事务/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/12/10/SQL事务/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/10/SQL事务/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -357,6 +366,7 @@
 <h2 id="控制事务"><a href="#控制事务" class="headerlink" title="控制事务"></a>控制事务</h2><p>###COMMIT命令</p>
 <p>用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">begin transaction</div><div class="line">sql语句</div><div class="line">commit;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>###ROLLBACK命令</p>
 <p>用于撤销还没有被保存到数据库的命令，它只能用于撤销上一个COMMIT或ROLLBACK命令之后的实物。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">begin transaction</div><div class="line">sql语句</div><div class="line">rollback;</div></pre></td></tr></table></figure>
@@ -437,8 +447,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/10/SQL数据类型/" rel="prev" title="SQL数据类型">
-                SQL数据类型 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/10/SQL数据库对象/" rel="prev" title="SQL管理数据库对象">
+                SQL管理数据库对象 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -470,11 +480,8 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+      <div class="ds-thread" data-thread-key="2017/12/10/SQL事务/"
+           data-title="SQL事务" data-url="http://yoursite.com/2017/12/10/SQL事务/">
       </div>
     </div>
 
@@ -770,39 +777,33 @@
 
   
 
-
+  
+    
   
 
-    
-      <script id="dsq-count-scr" src="https://number-47.disqus.com/count.js" async></script>
-    
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"number-47"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
+  
     
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/12/10/SQL事务/';
-          this.page.identifier = '2017/12/10/SQL事务/';
-          this.page.title = 'SQL事务';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://number-47.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
     
-
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
-	
-
-
-
-
-
-  
 
 
 

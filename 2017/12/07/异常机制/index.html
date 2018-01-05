@@ -88,7 +88,7 @@
 <meta property="og:description" content="概述异常：程序在运行时出现不正常情况。 Java将异常分为Checked异常、Runtime异常 Runtime异常(运行时异常)定义：所有RuntimeException类及其子类的实例都称为Runtime异常 如果在函数内抛出异常，函数上不用声明，函数一样通过。 如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。 之所以不用函数声明，是因为不需要让调用者处理。当该异常发生，希望程">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/img-Throwable.png">
-<meta property="og:updated_time" content="2018-01-05T13:53:06.890Z">
+<meta property="og:updated_time" content="2018-01-05T14:19:46.717Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常机制">
 <meta name="twitter:description" content="概述异常：程序在运行时出现不正常情况。 Java将异常分为Checked异常、Runtime异常 Runtime异常(运行时异常)定义：所有RuntimeException类及其子类的实例都称为Runtime异常 如果在函数内抛出异常，函数上不用声明，函数一样通过。 如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。 之所以不用函数声明，是因为不需要让调用者处理。当该异常发生，希望程">
@@ -189,6 +189,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -326,8 +336,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/12/07/异常机制/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/12/07/异常机制/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/07/异常机制/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -364,7 +373,7 @@
 <h3 id="Checked异常（可查异常）"><a href="#Checked异常（可查异常）" class="headerlink" title="Checked异常（可查异常）"></a>Checked异常（可查异常）</h3><p><strong>定义：</strong>不是RuntimeException类及其子类的实例都称为Checked异常。</p>
 <p>可查异常即必须进行处理的异常，要么try catch住,要么往外抛，谁调用，谁处理，比如 FileNotFoundException<br>如果不处理，编译器，就不让你通过。</p>
 <p>也就是说Java认为Checked异常是可以修复的异常，所以Java程序必须显式处理Checked异常，如果程序没有处理Checked异常，该程序在编译时就会发生错误，无法通过编译。</p>
-<p><strong>运行时异常与非运行时异常的区别：</strong><br>运行时异常是不可查异常，不需要进行显式的捕捉<br>非运行时异常是可查异常，必须进行显示的捕捉，或者抛出</p>
+<p><strong>运行时异常与非运行时异常的区别：</strong><br>运行时异常是不可查异常，不需要进行显式的捕捉<br>非运行时异常是可查异常，必须进行显示的捕捉，或者抛出<a id="more"></a></p>
 <h2 id="异常处理机制"><a href="#异常处理机制" class="headerlink" title="异常处理机制"></a>异常处理机制</h2><p>当程序运行出现意外情形时，系统会自动生成一个Exception对象来通知程序，从而实现将”业务功能实现代码“和“错误处理代码”分离，提供更好的可读性。</p>
 <p>下面为异常的处理</p>
 <h3 id="方式一：try…catch捕获异常"><a href="#方式一：try…catch捕获异常" class="headerlink" title="方式一：try…catch捕获异常"></a>方式一：try…catch捕获异常</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span></div><div class="line">&#123;</div><div class="line">  <span class="comment">//有可能产生异常的业务实现代码</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">catch</span>(Exception e)<span class="comment">//异常对象</span></div><div class="line">&#123;</div><div class="line">  System.out.println(e.toString());<span class="comment">//异常名称：异常信息</span></div><div class="line">  e.printStackTrace();<span class="comment">//异常名称：异常信息,异常出现的位置</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">finally</span></div><div class="line">&#123;</div><div class="line">  <span class="comment">//一定会执行的语句</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -480,8 +489,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/10/SQL数据库查询/" rel="prev" title="SQL数据库查询">
-                SQL数据库查询 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/10/SQL数据类型/" rel="prev" title="SQL数据类型">
+                SQL数据类型 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -513,11 +522,8 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+      <div class="ds-thread" data-thread-key="2017/12/07/异常机制/"
+           data-title="异常机制" data-url="http://yoursite.com/2017/12/07/异常机制/">
       </div>
     </div>
 
@@ -813,39 +819,33 @@
 
   
 
-
+  
+    
   
 
-    
-      <script id="dsq-count-scr" src="https://number-47.disqus.com/count.js" async></script>
-    
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"number-47"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
+  
     
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/12/07/异常机制/';
-          this.page.identifier = '2017/12/07/异常机制/';
-          this.page.title = '异常机制';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://number-47.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
     
-
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
-	
-
-
-
-
-
-  
 
 
 

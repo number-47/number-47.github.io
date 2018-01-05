@@ -88,7 +88,7 @@
 <meta property="og:description" content="Select语句数据库查询语句(DQL) 1234select [* | distinct column1 , column2 ]from   table [,table2]where  [condition1 | expression1] [and | orcondition2 | expression2 ]order by column1 | integer [ASC升序 | DESC降序]">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/img-sql字段别名输出.png">
-<meta property="og:updated_time" content="2018-01-05T13:52:14.726Z">
+<meta property="og:updated_time" content="2018-01-05T14:18:46.407Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL数据库查询">
 <meta name="twitter:description" content="Select语句数据库查询语句(DQL) 1234select [* | distinct column1 , column2 ]from   table [,table2]where  [condition1 | expression1] [and | orcondition2 | expression2 ]order by column1 | integer [ASC升序 | DESC降序]">
@@ -189,6 +189,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -326,8 +336,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/12/10/SQL数据库查询/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/12/10/SQL数据库查询/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/10/SQL数据库查询/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -359,7 +368,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">select [* | distinct column1 , column2 ]</div><div class="line">from   table [,table2]</div><div class="line">where  [condition1 | expression1] [and | orcondition2 | expression2 ]</div><div class="line">order by column1 | integer [ASC升序 | DESC降序]</div></pre></td></tr></table></figure>
 <p>distinct：在结果中去除重复的记录。</p>
 <p>order by：输出结果以某种形式排序。默认升序asc </p>
-<p><strong>order by可以使用整数代表字段</strong></p>
+<p><strong>order by可以使用整数代表字段</strong><a id="more"></a></p>
 <p>eg:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">select *</div><div class="line">from products_tbl</div><div class="line">order by 1;</div><div class="line">//上面查询语句输出的会按照products_tbl的第一个字段进行升序排序。</div><div class="line">select *</div><div class="line">from products_tbl</div><div class="line">order by 1，2;</div><div class="line">//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行升序排序。</div><div class="line">select *</div><div class="line">from products_tbl</div><div class="line">order by 1，2 desc;</div><div class="line">//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行降序排序。</div></pre></td></tr></table></figure>
 <h2 id="统计表里的记录数量COUNT"><a href="#统计表里的记录数量COUNT" class="headerlink" title="统计表里的记录数量COUNT()"></a>统计表里的记录数量COUNT()</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">select COUNT(*)</div><div class="line">from table_name;</div><div class="line">//查询table_name的表中有多少行数据</div><div class="line">如果统计的字段规定not null，那么统计结果和表里的数量相同</div><div class="line">如果统计字段规定可以null，那么就只统计有数据的数据。</div></pre></td></tr></table></figure>
@@ -428,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/07/异常机制/" rel="next" title="异常机制">
-                <i class="fa fa-chevron-left"></i> 异常机制
+              <a href="/2017/12/10/SQL数据类型/" rel="next" title="SQL数据类型">
+                <i class="fa fa-chevron-left"></i> SQL数据类型
               </a>
             
           </div>
@@ -471,11 +480,8 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+      <div class="ds-thread" data-thread-key="2017/12/10/SQL数据库查询/"
+           data-title="SQL数据库查询" data-url="http://yoursite.com/2017/12/10/SQL数据库查询/">
       </div>
     </div>
 
@@ -771,39 +777,33 @@
 
   
 
-
+  
+    
   
 
-    
-      <script id="dsq-count-scr" src="https://number-47.disqus.com/count.js" async></script>
-    
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"number-47"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
+  
     
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/12/10/SQL数据库查询/';
-          this.page.identifier = '2017/12/10/SQL数据库查询/';
-          this.page.title = 'SQL数据库查询';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://number-47.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
     
-
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
-	
-
-
-
-
-
-  
 
 
 

@@ -88,7 +88,7 @@
 <meta property="og:description" content="File类创建文件对象注：只是创建File对象，以下程序并不会在文件系统中创建这些目录或文件。 123456789101112131415package io;import java.io.File;public class CreateFile &amp;#123;	public static void main(String[] args) &amp;#123;		// 绝对路径        File f1">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/img-创建File对象.png">
-<meta property="og:updated_time" content="2018-01-05T13:40:53.598Z">
+<meta property="og:updated_time" content="2018-01-05T14:17:19.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IO流——File类">
 <meta name="twitter:description" content="File类创建文件对象注：只是创建File对象，以下程序并不会在文件系统中创建这些目录或文件。 123456789101112131415package io;import java.io.File;public class CreateFile &amp;#123;	public static void main(String[] args) &amp;#123;		// 绝对路径        File f1">
@@ -189,6 +189,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -326,8 +336,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/01/01/IO—File类/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/01/IO—File类/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/01/IO—File类/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -357,6 +366,7 @@
       
         <h2 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h2><h3 id="创建文件对象"><a href="#创建文件对象" class="headerlink" title="创建文件对象"></a>创建文件对象</h3><p><strong>注：</strong>只是创建File对象，以下程序并不会在文件系统中创建这些目录或文件。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">package io;</div><div class="line">import java.io.File;</div><div class="line">public class CreateFile &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		// 绝对路径</div><div class="line">        File f1 = new File(&quot;d:/TestFolder&quot;);</div><div class="line">        System.out.println(&quot;f1的绝对路径：&quot; + f1.getAbsolutePath());</div><div class="line">        // 相对路径,相对于工作目录，如果在eclipse中，就是项目目录</div><div class="line">        File f2 = new File(&quot;text.exe&quot;);</div><div class="line">        System.out.println(&quot;f2的绝对路径：&quot; + f2.getAbsolutePath());</div><div class="line">        // 把f1作为父目录创建文件对象</div><div class="line">        File f3 = new File(f1, &quot;text.exe&quot;);</div><div class="line">        System.out.println(&quot;f3的绝对路径：&quot; + f3.getAbsolutePath());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>运行结果如下：</p>
 <p><img src="/images/img-创建File对象.png" alt="img-创建File对象"></p>
 <h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><h3 id="访问文件名相关的方法"><a href="#访问文件名相关的方法" class="headerlink" title="访问文件名相关的方法"></a>访问文件名相关的方法</h3><ul>
@@ -499,11 +509,8 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+      <div class="ds-thread" data-thread-key="2018/01/01/IO—File类/"
+           data-title="IO流——File类" data-url="http://yoursite.com/2018/01/01/IO—File类/">
       </div>
     </div>
 
@@ -799,39 +806,33 @@
 
   
 
-
+  
+    
   
 
-    
-      <script id="dsq-count-scr" src="https://number-47.disqus.com/count.js" async></script>
-    
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"number-47"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
+  
     
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/01/01/IO—File类/';
-          this.page.identifier = '2018/01/01/IO—File类/';
-          this.page.title = 'IO流——File类';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://number-47.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
     
-
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
-	
-
-
-
-
-
-  
 
 
 

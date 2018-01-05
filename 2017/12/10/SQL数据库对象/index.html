@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Number 47">
 <meta property="og:description" content="数据库对象数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。 创建表CREATE TABLE 命令 使用方法： 123456CREATE TABLE &amp;lt;表名&amp;gt;(	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束],  //列级完整新约束 eg：primary key	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束]">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-24T07:02:47.919Z">
+<meta property="og:updated_time" content="2018-01-05T14:18:57.953Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL管理数据库对象">
 <meta name="twitter:description" content="数据库对象数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。 创建表CREATE TABLE 命令 使用方法： 123456CREATE TABLE &amp;lt;表名&amp;gt;(	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束],  //列级完整新约束 eg：primary key	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束]">
@@ -187,6 +187,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -324,8 +334,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/12/10/SQL数据库对象/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/12/10/SQL数据库对象/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/10/SQL数据库对象/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -357,7 +366,7 @@
 <h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><p><strong>CREATE TABLE 命令</strong></p>
 <p>使用方法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE &lt;表名&gt;(</div><div class="line">	&lt;列名&gt;  &lt;数据类型&gt;  [列级完整新约束],  //列级完整新约束 eg：primary key</div><div class="line">	&lt;列名&gt;  &lt;数据类型&gt;  [列级完整新约束],  </div><div class="line">	...</div><div class="line">	[,&lt;表级完整性约束&gt;]</div><div class="line">);</div></pre></td></tr></table></figure>
-<p>Eg:</p>
+<p>Eg:<a id="more"></a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE EMPLOYEE_TBL(</div><div class="line">	EMP_ID       CHAR(9)       NOT NULL,</div><div class="line">	EMP_NAME     VARCHAR(40)   NOT NULL,</div><div class="line">	EMP_ST_ADDR  VARCHAR(20)   NOT NULL,</div><div class="line">	EMP_CITY     VARCHAR(15)   NOT NULL,</div><div class="line">	EMP_ST       CHAR(2)       NOT NULL,</div><div class="line">	EMP_ZIP      INTEGER       NOT NULL,</div><div class="line">	EMP_PHONE    INTEGER       NULL,</div><div class="line">	EMP_PAGER    INTEGER       NULL</div><div class="line">);</div></pre></td></tr></table></figure>
 <h2 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h2><p><strong>ALTER TABLE 命令</strong></p>
 <h3 id="修改表的列的属性"><a href="#修改表的列的属性" class="headerlink" title="修改表的列的属性"></a>修改表的列的属性</h3><p><strong>列的属性：</strong>数据类型、长度、有效位或标度、是否为空</p>
@@ -430,8 +439,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/10/SQL数据类型/" rel="next" title="SQL数据类型">
-                <i class="fa fa-chevron-left"></i> SQL数据类型
+              <a href="/2017/12/10/SQL事务/" rel="next" title="SQL事务">
+                <i class="fa fa-chevron-left"></i> SQL事务
               </a>
             
           </div>
@@ -473,11 +482,8 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+      <div class="ds-thread" data-thread-key="2017/12/10/SQL数据库对象/"
+           data-title="SQL管理数据库对象" data-url="http://yoursite.com/2017/12/10/SQL数据库对象/">
       </div>
     </div>
 
@@ -773,39 +779,33 @@
 
   
 
-
+  
+    
   
 
-    
-      <script id="dsq-count-scr" src="https://number-47.disqus.com/count.js" async></script>
-    
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"number-47"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
+  
     
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/12/10/SQL数据库对象/';
-          this.page.identifier = '2017/12/10/SQL数据库对象/';
-          this.page.title = 'SQL管理数据库对象';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://number-47.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
     
-
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
-	
-
-
-
-
-
-  
 
 
 
