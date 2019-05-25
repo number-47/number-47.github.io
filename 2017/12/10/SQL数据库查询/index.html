@@ -24,6 +24,12 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
 
 
 
@@ -31,10 +37,15 @@
 
 
 
+  <meta name="google-site-verification" content="true">
 
 
 
 
+
+
+
+  <meta name="baidu-site-verification" content="true">
 
 
 
@@ -77,7 +88,7 @@
     back2top_sidebar: false,
     fancybox: false,
     fastclick: false,
-    lazyload: false,
+    lazyload: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
@@ -96,20 +107,27 @@
 
 
 
+
+  <meta name="baidu-site-verification" content="number-47">
+
+
+  <meta name="google-site-verification" content="OEGvUNDprcDAPzFy12Ke7q-M372LbXqOgPLPuEYjSP0">
+
+
   <meta name="description" content="Select语句数据库查询语句(DQL) 1234select [* | distinct column1 , column2 ]from   table [,table2]where  [condition1 | expression1] [and | orcondition2 | expression2 ]order by column1 | integer [ASC升序 | DESC降序]">
 <meta name="keywords" content="SQL入门经典">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL数据库查询">
-<meta property="og:url" content="http://yoursite.com/2017/12/10/SQL数据库查询/index.html">
+<meta property="og:url" content="https://number-47.github.io/2017/12/10/SQL数据库查询/index.html">
 <meta property="og:site_name" content="Number 47">
 <meta property="og:description" content="Select语句数据库查询语句(DQL) 1234select [* | distinct column1 , column2 ]from   table [,table2]where  [condition1 | expression1] [and | orcondition2 | expression2 ]order by column1 | integer [ASC升序 | DESC降序]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/img-sql字段别名输出.png">
+<meta property="og:image" content="https://number-47.github.io/images/img-sql字段别名输出.png">
 <meta property="og:updated_time" content="2019-05-25T05:38:39.577Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL数据库查询">
 <meta name="twitter:description" content="Select语句数据库查询语句(DQL) 1234select [* | distinct column1 , column2 ]from   table [,table2]where  [condition1 | expression1] [and | orcondition2 | expression2 ]order by column1 | integer [ASC升序 | DESC降序]">
-<meta name="twitter:image" content="http://yoursite.com/images/img-sql字段别名输出.png">
+<meta name="twitter:image" content="https://number-47.github.io/images/img-sql字段别名输出.png">
 
 
 
@@ -119,7 +137,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2017/12/10/SQL数据库查询/">
+  <link rel="canonical" href="https://number-47.github.io/2017/12/10/SQL数据库查询/">
 
 
 
@@ -172,7 +190,7 @@
 
    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+   <script type="text/javascript" src="/js/fireworks.js"></script>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -384,7 +402,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/SQL数据库查询/">
+    <link itemprop="mainEntityOfPage" href="https://number-47.github.io/2017/12/10/SQL数据库查询/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Number 47">
@@ -613,8 +631,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/10/SQL数据类型/" rel="next" title="SQL数据类型">
-                <i class="fa fa-chevron-left"></i> SQL数据类型
+              <a href="/2017/12/07/异常机制/" rel="next" title="异常机制">
+                <i class="fa fa-chevron-left"></i> 异常机制
               </a>
             
           </div>
@@ -623,8 +641,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/10/SQL事务/" rel="prev" title="SQL事务">
-                SQL事务 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/10/SQL数据库对象/" rel="prev" title="SQL管理数据库对象">
+                SQL管理数据库对象 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -925,6 +943,8 @@
 
 
 
+  
+
 
 
 
@@ -946,6 +966,9 @@
 
   
   <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
@@ -1361,6 +1384,16 @@
   
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
 
   
 
@@ -1380,4 +1413,3 @@
 
 </body>
 </html>
-<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>

@@ -24,6 +24,12 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
 
 
 
@@ -31,10 +37,15 @@
 
 
 
+  <meta name="google-site-verification" content="true">
 
 
 
 
+
+
+
+  <meta name="baidu-site-verification" content="true">
 
 
 
@@ -77,7 +88,7 @@
     back2top_sidebar: false,
     fancybox: false,
     fastclick: false,
-    lazyload: false,
+    lazyload: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
@@ -96,20 +107,27 @@
 
 
 
+
+  <meta name="baidu-site-verification" content="number-47">
+
+
+  <meta name="google-site-verification" content="OEGvUNDprcDAPzFy12Ke7q-M372LbXqOgPLPuEYjSP0">
+
+
   <meta name="description" content="概述异常：程序在运行时出现不正常情况。 Java将异常分为Checked异常、Runtime异常 Runtime异常(运行时异常)定义：所有RuntimeException类及其子类的实例都称为Runtime异常 如果在函数内抛出异常，函数上不用声明，函数一样通过。 如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。 之所以不用函数声明，是因为不需要让调用者处理。当该异常发生，希望程">
 <meta name="keywords" content="JAVA基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="异常机制">
-<meta property="og:url" content="http://yoursite.com/2017/12/07/异常机制/index.html">
+<meta property="og:url" content="https://number-47.github.io/2017/12/07/异常机制/index.html">
 <meta property="og:site_name" content="Number 47">
 <meta property="og:description" content="概述异常：程序在运行时出现不正常情况。 Java将异常分为Checked异常、Runtime异常 Runtime异常(运行时异常)定义：所有RuntimeException类及其子类的实例都称为Runtime异常 如果在函数内抛出异常，函数上不用声明，函数一样通过。 如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。 之所以不用函数声明，是因为不需要让调用者处理。当该异常发生，希望程">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/img-Throwable.png">
+<meta property="og:image" content="https://number-47.github.io/images/img-Throwable.png">
 <meta property="og:updated_time" content="2019-05-25T05:38:39.583Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常机制">
 <meta name="twitter:description" content="概述异常：程序在运行时出现不正常情况。 Java将异常分为Checked异常、Runtime异常 Runtime异常(运行时异常)定义：所有RuntimeException类及其子类的实例都称为Runtime异常 如果在函数内抛出异常，函数上不用声明，函数一样通过。 如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。 之所以不用函数声明，是因为不需要让调用者处理。当该异常发生，希望程">
-<meta name="twitter:image" content="http://yoursite.com/images/img-Throwable.png">
+<meta name="twitter:image" content="https://number-47.github.io/images/img-Throwable.png">
 
 
 
@@ -119,7 +137,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2017/12/07/异常机制/">
+  <link rel="canonical" href="https://number-47.github.io/2017/12/07/异常机制/">
 
 
 
@@ -172,7 +190,7 @@
 
    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+   <script type="text/javascript" src="/js/fireworks.js"></script>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -384,7 +402,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/07/异常机制/">
+    <link itemprop="mainEntityOfPage" href="https://number-47.github.io/2017/12/07/异常机制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Number 47">
@@ -671,8 +689,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/10/SQL基本概念/" rel="prev" title="SQL基本概念">
-                SQL基本概念 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/10/SQL数据库查询/" rel="prev" title="SQL数据库查询">
+                SQL数据库查询 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -973,6 +991,8 @@
 
 
 
+  
+
 
 
 
@@ -994,6 +1014,9 @@
 
   
   <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
@@ -1409,6 +1432,16 @@
   
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
 
   
 
@@ -1428,4 +1461,3 @@
 
 </body>
 </html>
-<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>
