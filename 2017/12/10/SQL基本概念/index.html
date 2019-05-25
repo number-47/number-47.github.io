@@ -168,13 +168,19 @@
 
 </head>
 
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
-
+	<div class="bg_content">
+	  <canvas id="canvas"></canvas>
+	</div>
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
@@ -623,8 +629,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/10/SQL数据库查询/" rel="next" title="SQL数据库查询">
-                <i class="fa fa-chevron-left"></i> SQL数据库查询
+              <a href="/2017/12/07/异常机制/" rel="next" title="异常机制">
+                <i class="fa fa-chevron-left"></i> 异常机制
               </a>
             
           </div>
@@ -633,8 +639,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/01/IO—File类/" rel="prev" title="IO流——File类">
-                IO流——File类 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/10/SQL数据库对象/" rel="prev" title="SQL管理数据库对象">
+                SQL管理数据库对象 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1390,3 +1396,4 @@
 
 </body>
 </html>
+<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>
