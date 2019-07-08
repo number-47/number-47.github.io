@@ -15,7 +15,7 @@
 
 
 <html class="theme-next muse use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -122,15 +122,14 @@
 <meta property="og:site_name" content="Number 47">
 <meta property="og:description" content="Tomcat  Tomcat服务器是一种Servlet/JSP容器，负责处理客户请求，把请求传送给Servlet并把结果返回给客户。 当用户访问某个Servlet时，Servlet容器将创建一个ServletRequest对象和ServletResponse对象。在ServletRequest对象中封装了客户请求信息，然后Servlet容器（Tomcat）把ServletRequest对象和Ser">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://number-47.github.io/images/img-Servlet容器响应客户请求过程.png">
-<meta property="og:image" content="https://number-47.github.io/images/img-Tomcat控制台部署web应用.png">
-<meta property="og:image" content="https://number-47.github.io/images/img-Tomcat各个组件之间的关系.png">
-<meta property="og:image" content="https://number-47.github.io/images/img-Tomcat%20Server处理一个HTTP请求的过程.png">
+<meta property="og:image" content="https://number-47.github.io/images/img-Servlet%E5%AE%B9%E5%99%A8%E5%93%8D%E5%BA%94%E5%AE%A2%E6%88%B7%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B.png">
+<meta property="og:image" content="https://number-47.github.io/images/img-Tomcat%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%83%A8%E7%BD%B2web%E5%BA%94%E7%94%A8.png">
+<meta property="og:image" content="https://number-47.github.io/images/img-Tomcat%E5%90%84%E4%B8%AA%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB.png">
 <meta property="og:updated_time" content="2019-05-25T05:38:39.581Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tomcat">
 <meta name="twitter:description" content="Tomcat  Tomcat服务器是一种Servlet/JSP容器，负责处理客户请求，把请求传送给Servlet并把结果返回给客户。 当用户访问某个Servlet时，Servlet容器将创建一个ServletRequest对象和ServletResponse对象。在ServletRequest对象中封装了客户请求信息，然后Servlet容器（Tomcat）把ServletRequest对象和Ser">
-<meta name="twitter:image" content="https://number-47.github.io/images/img-Servlet容器响应客户请求过程.png">
+<meta name="twitter:image" content="https://number-47.github.io/images/img-Servlet%E5%AE%B9%E5%99%A8%E5%93%8D%E5%BA%94%E5%AE%A2%E6%88%B7%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B.png">
 
 
 
@@ -380,6 +379,13 @@
     </header>
 
     
+  
+  
+
+  
+
+  <a href="https://github.com/number-47" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
 
 
     <main id="main" class="main">
@@ -543,19 +549,22 @@
       
         <h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><p>  Tomcat服务器是一种Servlet/JSP容器，负责处理客户请求，把请求传送给Servlet并把结果返回给客户。</p>
 <p>当用户访问某个Servlet时，Servlet容器将创建一个ServletRequest对象和ServletResponse对象。在ServletRequest对象中封装了客户请求信息，然后Servlet容器（Tomcat）把ServletRequest对象和ServletResponse对象传给客户所请求的Servlet。Servlet把响应结果写到ServletResponse中，然后由Servlet容器（Tomcat）把响应结果传给客户。<a id="more"></a></p>
-<p><img src="/images/img-Servlet容器响应客户请求过程.png" alt="Alt text"></p>
+<p><img src="/images/img-Servlet%E5%AE%B9%E5%99%A8%E5%93%8D%E5%BA%94%E5%AE%A2%E6%88%B7%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B.png" alt="Alt text"></p>
 <h2 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h2><p>安装目录为D:\Tomcat</p>
 <p>打开D:\Tomcat\conf\server.xml，修改8080端口</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;</span><br><span class="line">              connectionTimeout=&quot;20000&quot;</span><br><span class="line">              redirectPort=&quot;8443&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Connector <span class="attribute">port</span>=<span class="string">"8080"</span> <span class="attribute">protocol</span>=<span class="string">"HTTP/1.1"</span></span><br><span class="line">              <span class="attribute">connectionTimeout</span>=<span class="string">"20000"</span></span><br><span class="line">              <span class="attribute">redirectPort</span>=<span class="string">"8443"</span> /&gt;</span><br></pre></td></tr></table></figure>
+
 <h2 id="运行多个服务"><a href="#运行多个服务" class="headerlink" title="运行多个服务"></a>运行多个服务</h2><p>如果需要让Tomcat运行多个服务，只需要复制server.xml文件中的<service>元素，并修改相应的参数，便可以实现一个Tomcat运行多个服务。</service></p>
-<h2 id="Tomcat的结构"><a href="#Tomcat的结构" class="headerlink" title="Tomcat的结构"></a>Tomcat的结构</h2><p>每个Tomcat组件在server.xml文件中对应一种配置元素。以下为Tomcat组件之间的关系。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;Server&gt;                             //顶层类元素，可以包括多个Service   </span><br><span class="line">    &lt;Service&gt;                        //顶层类元素，可包含一个Engine，多个Connecter</span><br><span class="line">        &lt;Connector&gt;                  //连接器类元素，代表通信接口</span><br><span class="line">                &lt;Engine&gt;             //容器类元素，为特定的Service组件处理客户请求，要包含多个Host</span><br><span class="line">                        &lt;Host&gt;       //容器类元素，为特定的虚拟主机组件处理客户请求，可包含多个Context</span><br><span class="line">                          &lt;Context&gt;  //容器类元素，为特定的Web应用处理所有的客户请求</span><br><span class="line">                          &lt;/Context&gt;</span><br><span class="line">                        &lt;/Host&gt;</span><br><span class="line">                &lt;/Engine&gt;</span><br><span class="line">        &lt;/Connector&gt;</span><br><span class="line">    &lt;/Service&gt;</span><br><span class="line">&lt;/Server&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Tomcat的结构"><a href="#Tomcat的结构" class="headerlink" title="Tomcat的结构"></a>Tomcat的结构</h2><p>每个Tomcat组件在server.xml文件中对应一种配置元素。以下为Tomcat组件之间的关系。</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">&lt;Server&gt;</span>                             <span class="comment">//顶层类元素，可以包括多个Service   </span></span><br><span class="line">    <span class="params">&lt;Service&gt;</span>                        <span class="comment">//顶层类元素，可包含一个Engine，多个Connecter</span></span><br><span class="line">        <span class="params">&lt;Connector&gt;</span>                  <span class="comment">//连接器类元素，代表通信接口</span></span><br><span class="line">                <span class="params">&lt;Engine&gt;</span>             <span class="comment">//容器类元素，为特定的Service组件处理客户请求，要包含多个Host</span></span><br><span class="line">                        <span class="params">&lt;Host&gt;</span>       <span class="comment">//容器类元素，为特定的虚拟主机组件处理客户请求，可包含多个Context</span></span><br><span class="line">                          <span class="params">&lt;Context&gt;</span>  <span class="comment">//容器类元素，为特定的Web应用处理所有的客户请求</span></span><br><span class="line">                          <span class="params">&lt;/Context&gt;</span></span><br><span class="line">                        <span class="params">&lt;/Host&gt;</span></span><br><span class="line">                <span class="params">&lt;/Engine&gt;</span></span><br><span class="line">        <span class="params">&lt;/Connector&gt;</span></span><br><span class="line">    <span class="params">&lt;/Service&gt;</span></span><br><span class="line"><span class="params">&lt;/Server&gt;</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><code>&lt;Server&gt;</code>元素</li>
 </ul>
 <p><code>&lt;Server&gt;</code>元素代表整个Servlet容器，是Tomcat实例的顶层元素。<code>&lt;Server&gt;</code>元素中包含一个或多个<code>&lt;Server&gt;</code>元素。</p>
 <ul>
 <li><p><code>&lt;Service&gt;</code>元素</p>
-<p><code>&lt;Service&gt;</code>元素包含一个<code>&lt;Engine&gt;</code>元素，以及一个或多个<code>&lt;Connector&gt;</code>元素，这些<code>&lt;Connector&gt;</code>元素共享同一个\<engine>元素</engine></p>
+<p><code>&lt;Service&gt;</code>元素包含一个<code>&lt;Engine&gt;</code>元素，以及一个或多个<code>&lt;Connector&gt;</code>元素，这些<code>&lt;Connector&gt;</code>元素共享同一个&lt;Engine&gt;元素</p>
 </li>
 <li><p><code>&lt;Connector&gt;</code>元素</p>
 <p><code>&lt;Connector&gt;</code>元素代表和客户程序实际交互的组件，它负责接收客户请求，以及向客户返回响应结果。</p>
@@ -573,15 +582,16 @@
 <p>Host Manager控制台</p>
 <h3 id="增加控制台用户"><a href="#增加控制台用户" class="headerlink" title="增加控制台用户"></a>增加控制台用户</h3><p>打开D:\Tomcat\conf\tomcat-users.xml文件</p>
 <p>在<code>&lt;tomcat-users&gt;</code>元素中增加用户</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;tomcat-users&gt;</span><br><span class="line">	&lt;role rolename=&quot;tomcat&quot;/&gt;</span><br><span class="line">	&lt;!--增加一个用户--&gt;</span><br><span class="line">	&lt;user username=&apos;admin&apos; password = &apos;123456&apos; roles = &apos;manager-gui&apos;/&gt;</span><br><span class="line">&lt;/tomcat-users&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tomcat-users</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">role</span> <span class="attr">rolename</span>=<span class="string">"tomcat"</span>/&gt;</span></span><br><span class="line">	<span class="comment">&lt;!--增加一个用户--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">user</span> <span class="attr">username</span>=<span class="string">'admin'</span> <span class="attr">password</span> = <span class="string">'123456'</span> <span class="attr">roles</span> = <span class="string">'manager-gui'</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tomcat-users</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="部署Web应用"><a href="#部署Web应用" class="headerlink" title="部署Web应用"></a>部署Web应用</h2><h3 id="方式一：利用Tomact的自动部署"><a href="#方式一：利用Tomact的自动部署" class="headerlink" title="方式一：利用Tomact的自动部署"></a>方式一：利用Tomact的自动部署</h3><p>只要将一个Web应用复制到Tomcat的webapps下，系统就会把应用部署到Tomcat中。</p>
 <h3 id="方式二：利用控制台部署"><a href="#方式二：利用控制台部署" class="headerlink" title="方式二：利用控制台部署"></a>方式二：利用控制台部署</h3><p>进入控制台，按照下图输入即可</p>
-<p>！<img src="/images/img-Tomcat控制台部署web应用.png" alt="img-Tomcat控制台部署web应用"></p>
+<p>！<img src="/images/img-Tomcat%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%83%A8%E7%BD%B2web%E5%BA%94%E7%94%A8.png" alt="img-Tomcat控制台部署web应用"></p>
 <p>将会在Tomcat的webapps目录多了一个名为tmall_ssh的文件夹，文件内容和D:\JAVA\workspace\路径tmall_ssh文件夹内容一样</p>
 </li>
 </ul>
-<h2 id="Tomcat各个组件之间的嵌套关系"><a href="#Tomcat各个组件之间的嵌套关系" class="headerlink" title="Tomcat各个组件之间的嵌套关系"></a>Tomcat各个组件之间的嵌套关系</h2><p><img src="/images/img-Tomcat各个组件之间的关系.png" alt="img_Tomcat各个组件之间的关系"></p>
-<h2 id="Tomcat-Server处理一个HTTP请求的过程"><a href="#Tomcat-Server处理一个HTTP请求的过程" class="headerlink" title="Tomcat Server处理一个HTTP请求的过程"></a>Tomcat Server处理一个HTTP请求的过程</h2><p><img src="/images/img-Tomcat Server处理一个HTTP请求的过程.png" alt="img_Tomcat Server处理一个HTTP请求的过程"></p>
+<h2 id="Tomcat各个组件之间的嵌套关系"><a href="#Tomcat各个组件之间的嵌套关系" class="headerlink" title="Tomcat各个组件之间的嵌套关系"></a>Tomcat各个组件之间的嵌套关系</h2><p><img src="/images/img-Tomcat%E5%90%84%E4%B8%AA%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB.png" alt="img_Tomcat各个组件之间的关系"></p>
+<h2 id="Tomcat-Server处理一个HTTP请求的过程"><a href="#Tomcat-Server处理一个HTTP请求的过程" class="headerlink" title="Tomcat Server处理一个HTTP请求的过程"></a>Tomcat Server处理一个HTTP请求的过程</h2><p>![img_Tomcat Server处理一个HTTP请求的过程](/images/img-Tomcat Server处理一个HTTP请求的过程.png)</p>
 <ol>
 <li>用户点击网页内容，请求被发送到本机端口8080，被在那里监听的Coyote HTTP/1.1 Connector获得。 </li>
 <li>Connector把该请求交给它所在的Service的Engine来处理，并等待Engine的回应。 </li>
@@ -999,6 +1009,12 @@
 
 
 
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
