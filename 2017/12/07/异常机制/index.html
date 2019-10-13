@@ -114,19 +114,19 @@
   <meta name="google-site-verification" content="OEGvUNDprcDAPzFy12Ke7q-M372LbXqOgPLPuEYjSP0">
 
 
-  <meta name="description" content="概述异常：程序在运行时出现不正常情况。 Java将异常分为Checked异常、Runtime异常 Runtime异常(运行时异常)定义：所有RuntimeException类及其子类的实例都称为Runtime异常 如果在函数内抛出异常，函数上不用声明，函数一样通过。 如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。 之所以不用函数声明，是因为不需要让调用者处理。当该异常发生，希望程">
-<meta name="keywords" content="JAVA基础">
+  <meta name="description" content="概述异常：程序在运行时出现不正常情况。 Java将异常分为checked异常、unchecked异常 unchecked异常(非受查异常)定义：所有派生于Error类或RuntimeException类的异常都称为unchecked异常 如果在函数内抛出异常，函数上不用声明，函数一样通过。 如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。 之所以不用函数声明，是因为不需要让调用者处">
+<meta name="keywords" content="Java基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="异常机制">
 <meta property="og:url" content="https://number-47.github.io/2017/12/07/异常机制/index.html">
 <meta property="og:site_name" content="Number 47">
-<meta property="og:description" content="概述异常：程序在运行时出现不正常情况。 Java将异常分为Checked异常、Runtime异常 Runtime异常(运行时异常)定义：所有RuntimeException类及其子类的实例都称为Runtime异常 如果在函数内抛出异常，函数上不用声明，函数一样通过。 如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。 之所以不用函数声明，是因为不需要让调用者处理。当该异常发生，希望程">
+<meta property="og:description" content="概述异常：程序在运行时出现不正常情况。 Java将异常分为checked异常、unchecked异常 unchecked异常(非受查异常)定义：所有派生于Error类或RuntimeException类的异常都称为unchecked异常 如果在函数内抛出异常，函数上不用声明，函数一样通过。 如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。 之所以不用函数声明，是因为不需要让调用者处">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://number-47.github.io/images/img-Throwable.png">
-<meta property="og:updated_time" content="2019-05-25T05:38:39.583Z">
+<meta property="og:updated_time" content="2019-07-09T15:31:55.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常机制">
-<meta name="twitter:description" content="概述异常：程序在运行时出现不正常情况。 Java将异常分为Checked异常、Runtime异常 Runtime异常(运行时异常)定义：所有RuntimeException类及其子类的实例都称为Runtime异常 如果在函数内抛出异常，函数上不用声明，函数一样通过。 如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。 之所以不用函数声明，是因为不需要让调用者处理。当该异常发生，希望程">
+<meta name="twitter:description" content="概述异常：程序在运行时出现不正常情况。 Java将异常分为checked异常、unchecked异常 unchecked异常(非受查异常)定义：所有派生于Error类或RuntimeException类的异常都称为unchecked异常 如果在函数内抛出异常，函数上不用声明，函数一样通过。 如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。 之所以不用函数声明，是因为不需要让调用者处">
 <meta name="twitter:image" content="https://number-47.github.io/images/img-Throwable.png">
 
 
@@ -452,7 +452,7 @@
                 
               
 
-              <time title="创建时间：2017-12-07 12:56:35" itemprop="dateCreated datePublished" datetime="2017-12-07T12:56:35+08:00">2017-12-07</time>
+              <time title="创建时间：2017-12-07 12:56:00" itemprop="dateCreated datePublished" datetime="2017-12-07T12:56:00+08:00">2017-12-07</time>
             
 
             
@@ -469,7 +469,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-25 13:38:39" itemprop="dateModified" datetime="2019-05-25T13:38:39+08:00">2019-05-25</time>
+                <time title="修改时间：2019-07-09 23:31:55" itemprop="dateModified" datetime="2019-07-09T23:31:55+08:00">2019-07-09</time>
               
             
           </span>
@@ -546,20 +546,21 @@
 
       
         <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p><strong>异常：</strong>程序在<strong>运行时</strong>出现不正常情况。</p>
-<p>Java将异常分为Checked异常、Runtime异常</p>
-<h3 id="Runtime异常-运行时异常"><a href="#Runtime异常-运行时异常" class="headerlink" title="Runtime异常(运行时异常)"></a>Runtime异常(运行时异常)</h3><p><strong>定义：</strong>所有RuntimeException类及其子类的实例都称为Runtime异常</p>
+<p>Java将异常分为checked异常、unchecked异常</p>
+<h3 id="unchecked异常-非受查异常"><a href="#unchecked异常-非受查异常" class="headerlink" title="unchecked异常(非受查异常)"></a>unchecked异常(非受查异常)</h3><p><strong>定义：</strong>所有派生于Error类或RuntimeException类的异常都称为unchecked异常</p>
 <p>如果在函数内抛出异常，函数上不用声明，函数一样通过。</p>
 <p>如果在函数上声明了该异常，调用者可以不用进行处理，编译一样通过。</p>
 <p>之所以不用函数声明，是因为不需要让调用者处理。当该异常发生，希望程序停止。因为在运行时，出现了无法继续运算的情况，希望停止程序后，由程序员修改。</p>
-<h3 id="Checked异常（可查异常）"><a href="#Checked异常（可查异常）" class="headerlink" title="Checked异常（可查异常）"></a>Checked异常（可查异常）</h3><p><strong>定义：</strong>不是RuntimeException类及其子类的实例都称为Checked异常。</p>
+<h3 id="Checked异常（受查异常）"><a href="#Checked异常（受查异常）" class="headerlink" title="Checked异常（受查异常）"></a>Checked异常（受查异常）</h3><p><strong>定义：</strong>不是RuntimeException类及其子类的实例都称为Checked异常。</p>
 <p>可查异常即必须进行处理的异常，要么try catch住,要么往外抛，谁调用，谁处理，比如 FileNotFoundException<br>如果不处理，编译器，就不让你通过。</p>
 <p>也就是说Java认为Checked异常是可以修复的异常，所以Java程序必须显式处理Checked异常，如果程序没有处理Checked异常，该程序在编译时就会发生错误，无法通过编译。</p>
 <p><strong>运行时异常与非运行时异常的区别：</strong><br>运行时异常是不可查异常，不需要进行显式的捕捉<br>非运行时异常是可查异常，必须进行显示的捕捉，或者抛出<a id="more"></a></p>
 <h2 id="异常处理机制"><a href="#异常处理机制" class="headerlink" title="异常处理机制"></a>异常处理机制</h2><p>当程序运行出现意外情形时，系统会自动生成一个Exception对象来通知程序，从而实现将”业务功能实现代码“和“错误处理代码”分离，提供更好的可读性。</p>
+<p>总结：一个方法必须声明所有可能抛出的(check)受查异常，而（uncheck）非受查异常要么不可控制（Error）要么就应该避免发生（RuntimeException）。</p>
 <p>下面为异常的处理</p>
 <h3 id="方式一：try…catch捕获异常"><a href="#方式一：try…catch捕获异常" class="headerlink" title="方式一：try…catch捕获异常"></a>方式一：try…catch捕获异常</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">//有可能产生异常的业务实现代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(Exception e)<span class="comment">//异常对象</span></span><br><span class="line">&#123;</span><br><span class="line">  System.out.println(e.toString());<span class="comment">//异常名称：异常信息</span></span><br><span class="line">  e.printStackTrace();<span class="comment">//异常名称：异常信息,异常出现的位置</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">finally</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">//一定会执行的语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="方式二：使用throws声明抛出异常"><a href="#方式二：使用throws声明抛出异常" class="headerlink" title="方式二：使用throws声明抛出异常"></a>方式二：使用throws声明抛出异常</h3><p><strong>使用场景：</strong>当前方法不知道如何处理这种类型的异常，该异常应该由上一级调用者处理；如果main方法也不知道如何处理这种类型的异常，就使用throws声明抛出异常。该异常交给JVM处理，JVM对异常的处理方法是，打印异常的跟踪栈信息，并终止程序运行。</p>
+<h3 id="方式二：使用throws声明抛出异常"><a href="#方式二：使用throws声明抛出异常" class="headerlink" title="方式二：使用throws声明抛出异常"></a>方式二：使用throws声明抛出异常</h3><p><strong>使用场景：</strong>当前方法不知道如何处理这种类型或者是可能抛出的异常，该异常应该由上一级调用者处理；如果main方法也不知道如何处理这种类型的异常，就使用throws声明抛出异常。该异常交给JVM处理，JVM对异常的处理方法是，打印异常的跟踪栈信息，并终止程序运行。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> exception;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileNotFoundException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestException</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		method1();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">          <span class="comment">//因为method2()方法声明抛出FileNotFoundException异常，所以调用该方法的代码要么放在try块中显示捕获该异常，要么放在另一个带throws声明抛出的方法中。</span></span><br><span class="line">			method2();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//该方法希望它的调用者来处理异常,也就是说，调用该方法时要么放在try块中显示捕获该异常，要么放在另一个带throws声明抛出的方法中。</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method2</span><span class="params">()</span> <span class="keyword">throws</span> FileNotFoundException </span>&#123;</span><br><span class="line"></span><br><span class="line">		File f = <span class="keyword">new</span> File(<span class="string">"d:/LOL.exe"</span>);</span><br><span class="line">		System.out.println(<span class="string">"试图打开 d:/LOL.exe"</span>);</span><br><span class="line">		<span class="keyword">new</span> FileInputStream(f);</span><br><span class="line">		System.out.println(<span class="string">"成功打开"</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>注意：</strong>throws声明抛出异常时有限制：子类方法声明抛出的异常类型应该是父类方法声明抛出类型的子类或相同，子类方法声明抛出异常不允许比父类方法声明抛出的异常多。如下</p>
@@ -608,8 +609,6 @@
 <h3 id="Throwable"><a href="#Throwable" class="headerlink" title="Throwable"></a>Throwable</h3><p> <img src="/images/img-Throwable.png" alt="Throwable"></p>
 <p>Throwable是类，Exception和Error都继承了该类，所以在捕捉的时候，也可以使用Throwable进行捕捉。<br>如图： 异常分Error和Exception<br>Exception里又分运行时异常和可查异常。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestException</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">        File f = <span class="keyword">new</span> File(<span class="string">"d:/LOL.exe"</span>);</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">new</span> FileInputStream(f);</span><br><span class="line">            <span class="comment">//使用Throwable进行异常捕捉</span></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Throwable t) &#123;</span><br><span class="line">            <span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">            t.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
       
     </div>
 
@@ -681,7 +680,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JAVA基础/" rel="tag"><i class="fa fa-tag"></i> JAVA基础</a>
+            <a href="/tags/Java基础/" rel="tag"><i class="fa fa-tag"></i> Java基础</a>
           
         </div>
       
@@ -694,8 +693,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/07/理解面向对象/" rel="next" title="理解面向对象">
-                <i class="fa fa-chevron-left"></i> 理解面向对象
+              <a href="/2017/11/27/Tomcat/" rel="next" title="Tomcat">
+                <i class="fa fa-chevron-left"></i> Tomcat
               </a>
             
           </div>
@@ -704,8 +703,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/10/SQL数据类型/" rel="prev" title="SQL数据类型">
-                SQL数据类型 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/07/理解面向对象/" rel="prev" title="理解面向对象">
+                理解面向对象 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -781,7 +780,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -804,9 +803,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -835,11 +832,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -910,7 +903,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Runtime异常-运行时异常"><span class="nav-number">2.</span> <span class="nav-text">Runtime异常(运行时异常)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Checked异常（可查异常）"><span class="nav-number">3.</span> <span class="nav-text">Checked异常（可查异常）</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理机制"><span class="nav-number"></span> <span class="nav-text">异常处理机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一：try…catch捕获异常"><span class="nav-number">1.</span> <span class="nav-text">方式一：try…catch捕获异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式二：使用throws声明抛出异常"><span class="nav-number">2.</span> <span class="nav-text">方式二：使用throws声明抛出异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序自行抛出异常（throw）"><span class="nav-number">3.</span> <span class="nav-text">程序自行抛出异常（throw）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#throws与throw区别"><span class="nav-number"></span> <span class="nav-text">throws与throw区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问异常信息"><span class="nav-number"></span> <span class="nav-text">访问异常信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义异常"><span class="nav-number"></span> <span class="nav-text">自定义异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#finally"><span class="nav-number">1.</span> <span class="nav-text">finally</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Throwable"><span class="nav-number">2.</span> <span class="nav-text">Throwable</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unchecked异常-非受查异常"><span class="nav-number">2.</span> <span class="nav-text">unchecked异常(非受查异常)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Checked异常（受查异常）"><span class="nav-number">3.</span> <span class="nav-text">Checked异常（受查异常）</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理机制"><span class="nav-number"></span> <span class="nav-text">异常处理机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一：try…catch捕获异常"><span class="nav-number">1.</span> <span class="nav-text">方式一：try…catch捕获异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式二：使用throws声明抛出异常"><span class="nav-number">2.</span> <span class="nav-text">方式二：使用throws声明抛出异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序自行抛出异常（throw）"><span class="nav-number">3.</span> <span class="nav-text">程序自行抛出异常（throw）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#throws与throw区别"><span class="nav-number"></span> <span class="nav-text">throws与throw区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问异常信息"><span class="nav-number"></span> <span class="nav-text">访问异常信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义异常"><span class="nav-number"></span> <span class="nav-text">自定义异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#finally"><span class="nav-number">1.</span> <span class="nav-text">finally</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Throwable"><span class="nav-number">2.</span> <span class="nav-text">Throwable</span></a></li></ol></li></div>
             
 
           </div>
