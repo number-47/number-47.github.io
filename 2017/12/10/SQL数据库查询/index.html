@@ -546,20 +546,20 @@
 
       
         <h2 id="Select语句"><a href="#Select语句" class="headerlink" title="Select语句"></a>Select语句</h2><p>数据库查询语句(DQL)</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> [* | <span class="keyword">distinct</span> column1 , column2 ]</span><br><span class="line"><span class="keyword">from</span>   <span class="keyword">table</span> [,table2]</span><br><span class="line"><span class="keyword">where</span>  [condition1 | expression1] [<span class="keyword">and</span> | orcondition2 | expression2 ]</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> column1 | <span class="built_in">integer</span> [<span class="keyword">ASC</span>升序 | <span class="keyword">DESC</span>降序]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select [* | distinct column1 , column2 ]</span><br><span class="line">from   table [,table2]</span><br><span class="line">where  [condition1 | expression1] [and | orcondition2 | expression2 ]</span><br><span class="line">order by column1 | integer [ASC升序 | DESC降序]</span><br></pre></td></tr></table></figure>
 
 <p>distinct：在结果中去除重复的记录。<br>order by：输出结果以某种形式排序。默认升序asc<br><strong>order by可以使用整数代表字段</strong><a id="more"></a><br>eg:</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> *</span><br><span class="line"><span class="keyword">from</span> products_tbl</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="number">1</span>;</span><br><span class="line">//上面查询语句输出的会按照products_tbl的第一个字段进行升序排序。</span><br><span class="line"><span class="keyword">select</span> *</span><br><span class="line"><span class="keyword">from</span> products_tbl</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="number">1</span>，<span class="number">2</span>;</span><br><span class="line">//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行升序排序。</span><br><span class="line"><span class="keyword">select</span> *</span><br><span class="line"><span class="keyword">from</span> products_tbl</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="number">1</span>，<span class="number">2</span> <span class="keyword">desc</span>;</span><br><span class="line">//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行降序排序。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from products_tbl</span><br><span class="line">order by 1;</span><br><span class="line">//上面查询语句输出的会按照products_tbl的第一个字段进行升序排序。</span><br><span class="line">select *</span><br><span class="line">from products_tbl</span><br><span class="line">order by 1，2;</span><br><span class="line">//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行升序排序。</span><br><span class="line">select *</span><br><span class="line">from products_tbl</span><br><span class="line">order by 1，2 desc;</span><br><span class="line">//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行降序排序。</span><br></pre></td></tr></table></figure>
 
-<h2 id="统计表里的记录数量COUNT"><a href="#统计表里的记录数量COUNT" class="headerlink" title="统计表里的记录数量COUNT()"></a>统计表里的记录数量COUNT()</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">select</span> <span class="title">COUNT</span>(<span class="params">*</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">from</span> table_name</span>;</span><br><span class="line"><span class="comment">//查询table_name的表中有多少行数据</span></span><br><span class="line">如果统计的字段规定not <span class="literal">null</span>，那么统计结果和表里的数量相同</span><br><span class="line">如果统计字段规定可以<span class="literal">null</span>，那么就只统计有数据的数据。</span><br></pre></td></tr></table></figure>
+<h2 id="统计表里的记录数量COUNT"><a href="#统计表里的记录数量COUNT" class="headerlink" title="统计表里的记录数量COUNT()"></a>统计表里的记录数量COUNT()</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select COUNT(*)</span><br><span class="line">from table_name;</span><br><span class="line">//查询table_name的表中有多少行数据</span><br><span class="line">如果统计的字段规定not null，那么统计结果和表里的数量相同</span><br><span class="line">如果统计字段规定可以null，那么就只统计有数据的数据。</span><br></pre></td></tr></table></figure>
 
 <p>eg：</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">select</span> <span class="title">COUNT</span>(<span class="params">PROD_ID</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">from</span> PRODUCTS_TBL</span>;</span><br><span class="line"><span class="comment">//统计PRODUCTS_TBL里字段PROD_ID的值的数量</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select COUNT(PROD_ID)</span><br><span class="line">from PRODUCTS_TBL;</span><br><span class="line">//统计PRODUCTS_TBL里字段PROD_ID的值的数量</span><br></pre></td></tr></table></figure>
 
-<h2 id="使用字段别名"><a href="#使用字段别名" class="headerlink" title="使用字段别名"></a>使用字段别名</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">select</span> column_name <span class="title">alias_name</span>(<span class="params">别名</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">from</span> table_name</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用字段别名"><a href="#使用字段别名" class="headerlink" title="使用字段别名"></a>使用字段别名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select column_name alias_name(别名)</span><br><span class="line">from table_name</span><br></pre></td></tr></table></figure>
 
 <p>eg:</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> prod_desc, prod_desc product</span><br><span class="line"><span class="keyword">from</span> products_tbl;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select prod_desc, prod_desc product</span><br><span class="line">from products_tbl;</span><br></pre></td></tr></table></figure>
 
 <p><img src="/images/img-sql%E5%AD%97%E6%AE%B5%E5%88%AB%E5%90%8D%E8%BE%93%E5%87%BA.png" alt="sql字段别名输出"></p>
 
@@ -647,8 +647,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/10/SQL数据库对象/" rel="next" title="SQL管理数据库对象">
-                <i class="fa fa-chevron-left"></i> SQL管理数据库对象
+              <a href="/2017/12/07/理解面向对象/" rel="next" title="理解面向对象">
+                <i class="fa fa-chevron-left"></i> 理解面向对象
               </a>
             
           </div>
@@ -657,8 +657,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/01/IO—File类/" rel="prev" title="IO流——File类">
-                IO流——File类 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/10/SQL事务/" rel="prev" title="SQL事务">
+                SQL事务 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -734,7 +734,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

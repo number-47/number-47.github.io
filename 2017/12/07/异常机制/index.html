@@ -574,7 +574,7 @@
 
 <h2 id="throws与throw区别"><a href="#throws与throw区别" class="headerlink" title="throws与throw区别"></a>throws与throw区别</h2><p>throws使用在函数上；throw使用在函数内。</p>
 <p>throws后面跟的异常类，可以跟多个，用逗号隔开；throw后面跟的是异常对象。</p>
-<h2 id="访问异常信息"><a href="#访问异常信息" class="headerlink" title="访问异常信息"></a>访问异常信息</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">getMessage</span><span class="params">()</span></span>:返回该异常的详细描述字符串</span><br><span class="line"><span class="function"><span class="title">printStackTrace</span><span class="params">()</span></span>:将该异常的跟踪栈信息输出到标准错误输出</span><br><span class="line"><span class="function"><span class="title">printStackTrace</span><span class="params">(PrintStream s)</span></span>:将该异常的跟踪栈信息输出到指定输出流。</span><br><span class="line"><span class="function"><span class="title">getStackTrace</span><span class="params">()</span></span>:返回该异常的跟踪栈信息。</span><br></pre></td></tr></table></figure>
+<h2 id="访问异常信息"><a href="#访问异常信息" class="headerlink" title="访问异常信息"></a>访问异常信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">getMessage():返回该异常的详细描述字符串</span><br><span class="line">printStackTrace():将该异常的跟踪栈信息输出到标准错误输出</span><br><span class="line">printStackTrace(PrintStream s):将该异常的跟踪栈信息输出到指定输出流。</span><br><span class="line">getStackTrace():返回该异常的跟踪栈信息。</span><br></pre></td></tr></table></figure>
 
 <h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><p><strong>应用场景:</strong>项目中会出现特有问题，而这些问题并未被java所所描述并封装对象。所以对于这些特有的问题可以按照java的对问题的封装思想，将特有的问题，进行自定义的异常封装。自定义异常必须继承Exception类。</p>
 <ol>
@@ -780,7 +780,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
