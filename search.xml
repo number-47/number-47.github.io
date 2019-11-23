@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[spring security 学习(二)-自定义登录页登录与退出]]></title>
+    <url>%2F2019%2F10%2F24%2FSpring%20Security(%E4%BA%8C)-%E8%87%AA%E5%AE%9A%E4%B9%89%E7%99%BB%E5%BD%95%E9%A1%B5%E7%99%BB%E5%BD%95%E4%B8%8E%E9%80%80%E5%87%BA%2F</url>
+    <content type="text"><![CDATA[Spring Security(二)-自定义登录页登录与退出]]></content>
+      <categories>
+        <category>Spring Security</category>
+      </categories>
+      <tags>
+        <tag>Spring Security</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[spring security]]></title>
     <url>%2F2019%2F10%2F24%2FSpring%20Security%2F</url>
     <content type="text"><![CDATA[Spring Security核心功能 认证（你是谁） 授权（你能干什么） 攻击防护（防止伪造身份） 基本原理 用户名+密码手机号+短信认证]]></content>
@@ -15,17 +26,6 @@
     <title><![CDATA[spring security 学习(一)-spring boot 整合]]></title>
     <url>%2F2019%2F10%2F24%2Fspring%20security%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89-spring%20boot%20%E6%95%B4%E5%90%88%2F</url>
     <content type="text"><![CDATA[Spring Security(一)-Spring Boot 整合创建spring boot项目，引入spring-boot-start-security1234&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;&lt;/dependency&gt; 创建/spring-security的访问接口1234567@RestControllerpublic class DemoController &#123; @GetMapping("spring-security") public String hello() &#123; return "hello spring security"; &#125;&#125; 表单认证创建配置类WebSecurityConfig继承WebSecurityConfigurerAdapter,WebSecurityConfigurerAdapter是由Spring Security提供的Web应用安全配置的适配器。 1234567891011121314@Configuration@EnableWebSecuritypublic class WebSecurityConfig extends WebSecurityConfigurerAdapter &#123; @Override protected void configure(HttpSecurity http) throws Exception &#123; http.formLogin() // 表单方式 .and() .authorizeRequests() .anyRequest() // 所有请求 .authenticated(); // 都需要认证 &#125;&#125; 设置启动端口application.properties 1server.port=8081 启动程序，启动时控制台Using generated security password: 9aac6105-0752-4bf1-9f54-c247e94086ab，每次都不一样，这个为用户user的密码。访问http://localhost:8080/spring-security，页面跳转到http://localhost:8080/login登录后，访问到http://localhost:8080/spring-security]]></content>
-      <categories>
-        <category>Spring Security</category>
-      </categories>
-      <tags>
-        <tag>Spring Security</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[spring security 学习(二)-自定义登录页登录与退出]]></title>
-    <url>%2F2019%2F10%2F24%2FSpring%20Security(%E4%BA%8C)-%E8%87%AA%E5%AE%9A%E4%B9%89%E7%99%BB%E5%BD%95%E9%A1%B5%E7%99%BB%E5%BD%95%E4%B8%8E%E9%80%80%E5%87%BA%2F</url>
-    <content type="text"><![CDATA[Spring Security(二)-自定义登录页登录与退出]]></content>
       <categories>
         <category>Spring Security</category>
       </categories>
@@ -97,6 +97,28 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[SQL事务]]></title>
+    <url>%2F2017%2F12%2F10%2FSQL%E4%BA%8B%E5%8A%A1%2F</url>
+    <content type="text"><![CDATA[事务事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。 控制事务###COMMIT命令 用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。 123begin transactionsql语句commit; ###ROLLBACK命令 用于撤销还没有被保存到数据库的命令，它只能用于撤销上一个COMMIT或ROLLBACK命令之后的实物。 123begin transactionsql语句rollback; eg: 1234567begin transaction update products_tblset cost = 8where prod_id = &apos;11235&apos;;rollback;//上面语句会撤销更新的sql，不会让&apos;11235&apos;的prod_id更新为8，而是原来的值 ###SAVEPOINT 保存点是事务过程中的一个逻辑点，我们可以把事务回退到这个点，而步兵回退到整个实物。 创建savepoint1save transaction savepoint_name 回退到savepoint1rollback transaction savepoint_name eg: 1234567891011121314151617181920BEGIN TRANSACTIONsave transaction sp1 //保存点1 更新&apos;11235&apos;的cost为80update products_tblset cost = 80where prod_id = &apos;11235&apos;;save transaction sp2 //保存点2 更新&apos;11235&apos;的cost为99update products_tblset cost = 99where prod_id = &apos;11235&apos;select * //查询 得到&apos;11235&apos;的cost为99from products_tbl; rollback transaction sp2; //回退到保存点2 得到&apos;11235&apos;的cost为80select * //查询 得到&apos;11235&apos;的cost为80from products_tbl;]]></content>
+      <categories>
+        <category>SQL</category>
+      </categories>
+      <tags>
+        <tag>SQL入门经典</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SQL数据类型]]></title>
+    <url>%2F2017%2F12%2F10%2FSQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[SQL数据类型 CHAR(n)：定长数据类型 VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量 BLOB：大对象类型，二进制大对象，保存很长的二进制字符串 TEXT：长字符串类型，可以看作一个大VARCHAR字段 数值类型 BIT(n) BIT VARCHAR(n) DECIMAL(p, s) INTEGER SMALLINT BIGINT FLOAT(p, s) DOUBLE PRECISION(p, s) REAL(s)p表示字段的最大长度s表示小数点后面的位数 小数点类型DECIMAL(p, s) p：有效位数 s：标度 12eg:DECIMAL(4,2) 最大值为99.99//有效位数是4，也就是数值总位数是4，标度是2小数点后面的位数 如果实际数值的小数位数超出定义的位数，数字就会被四舍五入。 ##浮点数 REAL：单精度浮点数，单精度浮点数的有效位1—21（包含） DOUBLE PRECISION：双精度浮点数的有效位22—53（包含） 日期和时间类型 DATE TIME DATETIME TIMESTAMP ##直义字符串 一系列字符，比如姓名或电话号码，这是有用户或程序明确指定的。 自定义类型由用户定义的类型，允许用户根据已有的数据类型来定制自己的数据类型。 1234567891011MYSQL//创建自定义类型CRATE TYPE PERSON AS OBJECT(NAME VARCHAR(30),SSN VARCHAR(9));//引用自定义类型CREATE TABLE EMP_PAY(EMPLOYEE PERSON,SALARY DECIMAL(10,2),HIRE_DATE DATE); 域域是能够被使用的有效数据类型的集合。域与数据相关联，从而只接受待定的数据，在域创建之后，我们可以向域添加约束，约束与数据类型共同发挥作用，从而限制字段能够接受的数据。 123456789101112//创建域CREATE DOMAIN MONEY_D AS NUMBER(8,2);//添加约束ALTER DOMAIN MONEY_DADD CONSTRANINT MONEY_CON1CHECK (VALUE &gt; 5);//引用域CREATE TABLE EMP_PAY(EMP_ID NUMBER(9),EMP_NAME VARCHAR2(30),PAY_RATE MONET_D);]]></content>
+      <categories>
+        <category>SQL</category>
+      </categories>
+      <tags>
+        <tag>SQL入门经典</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[SQL基本概念]]></title>
     <url>%2F2017%2F12%2F10%2FSQL%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%2F</url>
     <content type="text"><![CDATA[概念DBMS（数据库管理系统）数据库管理系统，数据被保存在数据库中，这种机制叫做数据库管理系统。 RDBMS:关系型数据库管理系统。 DBA（数据库管理员）数据库管理员 DBS(数据库系统)由数据库、数据库管理系统（及其应用的开发工具）、应用数据和DBA组成的存储、管理、处理和维护数据的系统。 SQL结构化查询语句是与关系型数据库进行通信的标准语言。 SQL会话用户利用SQL命令与关系型数据库进行交互时发生的事情。当用户与数据库建立连接时，会话就被建立了。会话可以通过直接与数据库建立链接来申请，也可以通过前端程序来申请。无论何种情况，会话通常是由通过网络访问数据库的用户在终端或工作站建立的。 CONNECT命令CONNECT用于建立与数据库的连接，它可以申请连接,也可以修改连接。当用户连接到数据库时，SQL会话就被初始化了。 命令如下 1CONNECT user@database DISCONNECT/NEXT命令DISCONNECT用于断开用户与数据库的连接。当用户连接到数据库时，SQL会话就被结束了。 当使用EXIT命令离开数据库时，SQL会话就结束了，而且用于访问数据库的软件通常会关闭。 SQL命令的类型DDL—数据库定义语言DDL用于创建和重构数据库对象。 基本的DDL命令： 12345678CREATE TABLEALTER TABLEDROP TABLECREATE INDEXALTER INDEXDROP INDEXCREATE VIEWDROP VIEW DML—数据库操作语言DML用于操作关系型数据库对象内部的数据。 基本命令： 123INSERTUPDATEDELETE DQL—数据查询语句基本命令SELECT DCL—数据控制语言DCL用于控制对数据库里数据的访问，通常用于创建与用户访问相关的对象，以及控制用户权限。 基本命令： 1234ALTER PASSWORDGRANTREVOKECREATE SYNONYM 数据管理命令用于对数据库里的操作进行审计和分析，还有助于分析系统性能。 基本命令： 12START AUDITSTOP AUDIT 事务控制命令用于管理数据库事务 1234COMMIT //保存数据库事务ROLLBACK //撤销数据库事务SAVEPIONT //在一组事务里创建标记点以用于回退（ROLLBACK）SET TRANSACTION //设置实物名称]]></content>
@@ -119,31 +141,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[SQL数据类型]]></title>
-    <url>%2F2017%2F12%2F10%2FSQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
-    <content type="text"><![CDATA[SQL数据类型 CHAR(n)：定长数据类型 VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量 BLOB：大对象类型，二进制大对象，保存很长的二进制字符串 TEXT：长字符串类型，可以看作一个大VARCHAR字段 数值类型 BIT(n) BIT VARCHAR(n) DECIMAL(p, s) INTEGER SMALLINT BIGINT FLOAT(p, s) DOUBLE PRECISION(p, s) REAL(s)p表示字段的最大长度s表示小数点后面的位数 小数点类型DECIMAL(p, s) p：有效位数 s：标度 12eg:DECIMAL(4,2) 最大值为99.99//有效位数是4，也就是数值总位数是4，标度是2小数点后面的位数 如果实际数值的小数位数超出定义的位数，数字就会被四舍五入。 ##浮点数 REAL：单精度浮点数，单精度浮点数的有效位1—21（包含） DOUBLE PRECISION：双精度浮点数的有效位22—53（包含） 日期和时间类型 DATE TIME DATETIME TIMESTAMP ##直义字符串 一系列字符，比如姓名或电话号码，这是有用户或程序明确指定的。 自定义类型由用户定义的类型，允许用户根据已有的数据类型来定制自己的数据类型。 1234567891011MYSQL//创建自定义类型CRATE TYPE PERSON AS OBJECT(NAME VARCHAR(30),SSN VARCHAR(9));//引用自定义类型CREATE TABLE EMP_PAY(EMPLOYEE PERSON,SALARY DECIMAL(10,2),HIRE_DATE DATE); 域域是能够被使用的有效数据类型的集合。域与数据相关联，从而只接受待定的数据，在域创建之后，我们可以向域添加约束，约束与数据类型共同发挥作用，从而限制字段能够接受的数据。 123456789101112//创建域CREATE DOMAIN MONEY_D AS NUMBER(8,2);//添加约束ALTER DOMAIN MONEY_DADD CONSTRANINT MONEY_CON1CHECK (VALUE &gt; 5);//引用域CREATE TABLE EMP_PAY(EMP_ID NUMBER(9),EMP_NAME VARCHAR2(30),PAY_RATE MONET_D);]]></content>
-      <categories>
-        <category>SQL</category>
-      </categories>
-      <tags>
-        <tag>SQL入门经典</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[SQL数据库查询]]></title>
     <url>%2F2017%2F12%2F10%2FSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%2F</url>
     <content type="text"><![CDATA[Select语句数据库查询语句(DQL) 1234select [* | distinct column1 , column2 ]from table [,table2]where [condition1 | expression1] [and | orcondition2 | expression2 ]order by column1 | integer [ASC升序 | DESC降序] distinct：在结果中去除重复的记录。order by：输出结果以某种形式排序。默认升序ascorder by可以使用整数代表字段eg: 123456789101112select *from products_tblorder by 1;//上面查询语句输出的会按照products_tbl的第一个字段进行升序排序。select *from products_tblorder by 1，2;//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行升序排序。select *from products_tblorder by 1，2 desc;//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行降序排序。 统计表里的记录数量COUNT()12345select COUNT(*)from table_name;//查询table_name的表中有多少行数据如果统计的字段规定not null，那么统计结果和表里的数量相同如果统计字段规定可以null，那么就只统计有数据的数据。 eg： 123select COUNT(PROD_ID)from PRODUCTS_TBL;//统计PRODUCTS_TBL里字段PROD_ID的值的数量 使用字段别名12select column_name alias_name(别名)from table_name eg: 12select prod_desc, prod_desc productfrom products_tbl;]]></content>
-      <categories>
-        <category>SQL</category>
-      </categories>
-      <tags>
-        <tag>SQL入门经典</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[SQL事务]]></title>
-    <url>%2F2017%2F12%2F10%2FSQL%E4%BA%8B%E5%8A%A1%2F</url>
-    <content type="text"><![CDATA[事务事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。 控制事务###COMMIT命令 用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。 123begin transactionsql语句commit; ###ROLLBACK命令 用于撤销还没有被保存到数据库的命令，它只能用于撤销上一个COMMIT或ROLLBACK命令之后的实物。 123begin transactionsql语句rollback; eg: 1234567begin transaction update products_tblset cost = 8where prod_id = &apos;11235&apos;;rollback;//上面语句会撤销更新的sql，不会让&apos;11235&apos;的prod_id更新为8，而是原来的值 ###SAVEPOINT 保存点是事务过程中的一个逻辑点，我们可以把事务回退到这个点，而步兵回退到整个实物。 创建savepoint1save transaction savepoint_name 回退到savepoint1rollback transaction savepoint_name eg: 1234567891011121314151617181920BEGIN TRANSACTIONsave transaction sp1 //保存点1 更新&apos;11235&apos;的cost为80update products_tblset cost = 80where prod_id = &apos;11235&apos;;save transaction sp2 //保存点2 更新&apos;11235&apos;的cost为99update products_tblset cost = 99where prod_id = &apos;11235&apos;select * //查询 得到&apos;11235&apos;的cost为99from products_tbl; rollback transaction sp2; //回退到保存点2 得到&apos;11235&apos;的cost为80select * //查询 得到&apos;11235&apos;的cost为80from products_tbl;]]></content>
       <categories>
         <category>SQL</category>
       </categories>
@@ -174,17 +174,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Java面试题]]></title>
-    <url>%2F2017%2F11%2F27%2FJava%E9%9D%A2%E8%AF%95%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[Java面试题原文链接1.面向对象的理解面向对象的本质就是将现实世界描绘成一系列完全自治、封闭的对象。我们在类中编写的方法就是对实现细节的一种封装；我们编写一个类就是对数据和数据操作的封装。可以说，封装就是隐藏一切可隐藏的东西，只向外界提供最简单的编程接口（可以想想普通洗衣机和全自动洗衣机的差别，明显全自动洗衣机封装更好因此操作起来更简单；我们现在使用的智能手机也是封装得足够好的，因为几个按键就搞定了所有的事情）。2. 自动装箱/拆箱机制如果整型字面量的值在-128到127之间，那么不会new新的Integer对象，而是直接引用常量池中的Integer对象，所以下面的面试题中f1== f2的结果是true，而f3== f4的结果是false。 1234567public class test &#123; public static void main(String[] args) &#123; Integer f1 = 100, f2 = 100, f3 = 150, f4 = 150; System.out.println(f1 == f2); //true System.out.println(f3 == f4); //false &#125;&#125; 3.栈(stack)、堆(heap)和静态区(static area)栈：定义一个基本数据类型的变量，一个对象的引用，函数调用的现场保存；堆：通过new关键字和构造器创建的对象；堆是垃圾收集器管理的主要区域，由于现在的垃圾收集器都采用分代收集算法，所以堆空间还可以细分为新生代和老生代，再具体一点可以分为Eden、Survivor（又可分为From Survivor和To Survivor）、Tenured；静态区：程序中的字面量（literal）如直接书写的100、”hello”和常量；都是放在常量池中，常量池是方法区的一部分 栈空间操作起来最快但是栈很小。通常大量的对象都是放在堆空间，理论上整个内存没有被其他进程使用的空间甚至硬盘上的虚拟内存都可以被当成堆空间来使用。 1String str = new String("Hello"); 栈：str堆：用new创建出来的字符串对象静态区：&quot;hello&quot;这个字面量4. Math.round(11.5) 等于多少？Math.round(-11.5)等于多少？答：Math.round(11.5)的返回值是12，Math.round(-11.5)的返回值是-11。四舍五入的原理是在参数上加0.5然后进行下取整。*5.抽象类（abstract class）和接口（interface）有什么异同？ *答：抽象类和接口都不能够实例化，但可以定义抽象类和接口类型的引用。一个类如果继承了某个抽象类或者实现了某个接口都需要对其中的抽象方法全部进行实现，否则该类仍然需要被声明为抽象类。接口比抽象类更加抽象，因为抽象类中可以定义构造器，可以有抽象方法和具体方法，而接口中不能定义构造器而且其中的方法全部都是抽象方法。抽象类中的成员可以是private、默认、protected、public的，而接口中的成员全都是public的。抽象类中可以定义成员变量，而接口中定义的成员变量实际上都是常量。有抽象方法的类必须被声明为抽象类，而抽象类未必要有抽象方法。*6.String s = new String(“xyz”);创建了几个字符串对象？ *答：两个对象，一个是静态区的”xyz”，一个是用new创建在堆上的对象。*7.接口是否可继承（extends）接口？抽象类是否可实现（implements）接口？抽象类是否可继承具体类（concrete class）？ *答：接口可以继承接口，而且支持多重继承。抽象类可以实现(implements)接口，抽象类可继承具体类也可以继承抽象类。*8.Java 中的final关键字有哪些用法？ *答： 修饰类：表示该类不能被继承； 修饰方法：表示方法不能被重写； 修饰变量：表示变量只能一次赋值以后值不能被修改（常量）。]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java面试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Tomcat]]></title>
     <url>%2F2017%2F11%2F27%2FTomcat%2F</url>
     <content type="text"><![CDATA[Tomcat Tomcat服务器是一种Servlet/JSP容器，负责处理客户请求，把请求传送给Servlet并把结果返回给客户。 当用户访问某个Servlet时，Servlet容器将创建一个ServletRequest对象和ServletResponse对象。在ServletRequest对象中封装了客户请求信息，然后Servlet容器（Tomcat）把ServletRequest对象和ServletResponse对象传给客户所请求的Servlet。Servlet把响应结果写到ServletResponse中，然后由Servlet容器（Tomcat）把响应结果传给客户。 修改端口安装目录为D:\Tomcat 打开D:\Tomcat\conf\server.xml，修改8080端口 123&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt; 运行多个服务如果需要让Tomcat运行多个服务，只需要复制server.xml文件中的元素，并修改相应的参数，便可以实现一个Tomcat运行多个服务。 Tomcat的结构每个Tomcat组件在server.xml文件中对应一种配置元素。以下为Tomcat组件之间的关系。 123456789101112&lt;Server&gt; //顶层类元素，可以包括多个Service &lt;Service&gt; //顶层类元素，可包含一个Engine，多个Connecter &lt;Connector&gt; //连接器类元素，代表通信接口 &lt;Engine&gt; //容器类元素，为特定的Service组件处理客户请求，要包含多个Host &lt;Host&gt; //容器类元素，为特定的虚拟主机组件处理客户请求，可包含多个Context &lt;Context&gt; //容器类元素，为特定的Web应用处理所有的客户请求 &lt;/Context&gt; &lt;/Host&gt; &lt;/Engine&gt; &lt;/Connector&gt; &lt;/Service&gt;&lt;/Server&gt; &lt;Server&gt;元素 &lt;Server&gt;元素代表整个Servlet容器，是Tomcat实例的顶层元素。&lt;Server&gt;元素中包含一个或多个&lt;Server&gt;元素。 &lt;Service&gt;元素 &lt;Service&gt;元素包含一个&lt;Engine&gt;元素，以及一个或多个&lt;Connector&gt;元素，这些&lt;Connector&gt;元素共享同一个&lt;Engine&gt;元素 &lt;Connector&gt;元素 &lt;Connector&gt;元素代表和客户程序实际交互的组件，它负责接收客户请求，以及向客户返回响应结果。 &lt;Engine&gt;元素 每个&lt;Service&gt;元素只能包含&lt;Engine&gt;元素。&lt;Engine&gt;元素处理在同一个&lt;Service&gt;中所有&lt;Connector&gt;元素接收到的客户请求。 &lt;Host&gt;元素 一个&lt;Engine&gt;元素可以包含多个&lt;Host&gt;元素。每个&lt;Host&gt;元素定义了一个虚拟主机，它可以包含一个或多个Web应用。 &lt;Context&gt;元素 &lt;Context&gt;元素是使用最频繁的元素，每个&lt;Context&gt;元素代表了运行在虚拟主机上的单个Web应用。一个&lt;Host&gt;元素中可以包含多个&lt;Context&gt;元素。 进入控制台Server Status控制台：监控服务器状态 Manager App控制台：部署、监控Web应用 Host Manager控制台 增加控制台用户打开D:\Tomcat\conf\tomcat-users.xml文件 在&lt;tomcat-users&gt;元素中增加用户 12345&lt;tomcat-users&gt; &lt;role rolename=&quot;tomcat&quot;/&gt; &lt;!--增加一个用户--&gt; &lt;user username=&apos;admin&apos; password = &apos;123456&apos; roles = &apos;manager-gui&apos;/&gt;&lt;/tomcat-users&gt; 部署Web应用方式一：利用Tomact的自动部署只要将一个Web应用复制到Tomcat的webapps下，系统就会把应用部署到Tomcat中。 方式二：利用控制台部署进入控制台，按照下图输入即可 ！ 将会在Tomcat的webapps目录多了一个名为tmall_ssh的文件夹，文件内容和D:\JAVA\workspace\路径tmall_ssh文件夹内容一样 Tomcat各个组件之间的嵌套关系 Tomcat Server处理一个HTTP请求的过程![img_Tomcat Server处理一个HTTP请求的过程](/images/img-Tomcat Server处理一个HTTP请求的过程.png) 用户点击网页内容，请求被发送到本机端口8080，被在那里监听的Coyote HTTP/1.1 Connector获得。 Connector把该请求交给它所在的Service的Engine来处理，并等待Engine的回应。 Engine获得请求localhost/index.jsp，匹配所有的虚拟主机Host。 Engine匹配到名为localhost的Host（即使匹配不到也把请求交给该Host处理，因为该Host被定义为该Engine的默认主机），名为localhost的Host获得请求/index.jsp，匹配它所拥有的所有的Context。Host匹配到路径为/test的Context（如果匹配不到就把该请求交给路径名为“ ”的Context去处理）。 path=“/”的Context获得请求/index.jsp，在它的mapping table中寻找出对应的Servlet。Context匹配到URL PATTERN为*.jsp的Servlet,对应于JspServlet类。 构造HttpServletRequest对象和HttpServletResponse对象，作为参数调用JspServlet的doGet（）或doPost（）.执行业务逻辑、数据存储等程序。 Context把执行完之后的HttpServletResponse对象返回给Host。 Host把HttpServletResponse对象返回给Engine。 Engine把HttpServletResponse对象返回Connector。 Connector把HttpServletResponse对象返回给客户Browser。]]></content>
@@ -193,6 +182,17 @@
       </categories>
       <tags>
         <tag>Tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Java面试题]]></title>
+    <url>%2F2017%2F11%2F27%2FJava%E9%9D%A2%E8%AF%95%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[Java面试题原文链接1.面向对象的理解面向对象的本质就是将现实世界描绘成一系列完全自治、封闭的对象。我们在类中编写的方法就是对实现细节的一种封装；我们编写一个类就是对数据和数据操作的封装。可以说，封装就是隐藏一切可隐藏的东西，只向外界提供最简单的编程接口（可以想想普通洗衣机和全自动洗衣机的差别，明显全自动洗衣机封装更好因此操作起来更简单；我们现在使用的智能手机也是封装得足够好的，因为几个按键就搞定了所有的事情）。2. 自动装箱/拆箱机制如果整型字面量的值在-128到127之间，那么不会new新的Integer对象，而是直接引用常量池中的Integer对象，所以下面的面试题中f1== f2的结果是true，而f3== f4的结果是false。 1234567public class test &#123; public static void main(String[] args) &#123; Integer f1 = 100, f2 = 100, f3 = 150, f4 = 150; System.out.println(f1 == f2); //true System.out.println(f3 == f4); //false &#125;&#125; 3.栈(stack)、堆(heap)和静态区(static area)栈：定义一个基本数据类型的变量，一个对象的引用，函数调用的现场保存；堆：通过new关键字和构造器创建的对象；堆是垃圾收集器管理的主要区域，由于现在的垃圾收集器都采用分代收集算法，所以堆空间还可以细分为新生代和老生代，再具体一点可以分为Eden、Survivor（又可分为From Survivor和To Survivor）、Tenured；静态区：程序中的字面量（literal）如直接书写的100、”hello”和常量；都是放在常量池中，常量池是方法区的一部分 栈空间操作起来最快但是栈很小。通常大量的对象都是放在堆空间，理论上整个内存没有被其他进程使用的空间甚至硬盘上的虚拟内存都可以被当成堆空间来使用。 1String str = new String("Hello"); 栈：str堆：用new创建出来的字符串对象静态区：&quot;hello&quot;这个字面量4. Math.round(11.5) 等于多少？Math.round(-11.5)等于多少？答：Math.round(11.5)的返回值是12，Math.round(-11.5)的返回值是-11。四舍五入的原理是在参数上加0.5然后进行下取整。*5.抽象类（abstract class）和接口（interface）有什么异同？ *答：抽象类和接口都不能够实例化，但可以定义抽象类和接口类型的引用。一个类如果继承了某个抽象类或者实现了某个接口都需要对其中的抽象方法全部进行实现，否则该类仍然需要被声明为抽象类。接口比抽象类更加抽象，因为抽象类中可以定义构造器，可以有抽象方法和具体方法，而接口中不能定义构造器而且其中的方法全部都是抽象方法。抽象类中的成员可以是private、默认、protected、public的，而接口中的成员全都是public的。抽象类中可以定义成员变量，而接口中定义的成员变量实际上都是常量。有抽象方法的类必须被声明为抽象类，而抽象类未必要有抽象方法。*6.String s = new String(“xyz”);创建了几个字符串对象？ *答：两个对象，一个是静态区的”xyz”，一个是用new创建在堆上的对象。*7.接口是否可继承（extends）接口？抽象类是否可实现（implements）接口？抽象类是否可继承具体类（concrete class）？ *答：接口可以继承接口，而且支持多重继承。抽象类可以实现(implements)接口，抽象类可继承具体类也可以继承抽象类。*8.Java 中的final关键字有哪些用法？ *答： 修饰类：表示该类不能被继承； 修饰方法：表示方法不能被重写； 修饰变量：表示变量只能一次赋值以后值不能被修改（常量）。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java面试</tag>
       </tags>
   </entry>
   <entry>
