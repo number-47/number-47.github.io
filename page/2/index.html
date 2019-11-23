@@ -406,7 +406,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://number-47.github.io/2017/12/10/SQL数据类型/">
+    <link itemprop="mainEntityOfPage" href="https://number-47.github.io/2017/12/10/SQL数据库查询/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Number 47">
@@ -426,7 +426,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2017/12/10/SQL数据类型/" class="post-title-link" itemprop="url">SQL数据类型</a>
+                <a href="/2017/12/10/SQL数据库查询/" class="post-title-link" itemprop="url">SQL数据库查询</a>
               
             
           </h1>
@@ -504,8 +504,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2017/12/10/SQL数据类型/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/10/SQL数据类型/" itemprop="commentCount"></span>
+                <a href="/2017/12/10/SQL数据库查询/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/10/SQL数据库查询/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -513,7 +513,7 @@
 
           
           
-            <span id="/2017/12/10/SQL数据类型/" class="leancloud_visitors" data-flag-title="SQL数据类型">
+            <span id="/2017/12/10/SQL数据库查询/" class="leancloud_visitors" data-flag-title="SQL数据库查询">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -545,18 +545,14 @@
 
       
         
-          <h2 id="SQL数据类型"><a href="#SQL数据类型" class="headerlink" title="SQL数据类型"></a>SQL数据类型</h2><ul>
-<li><p>CHAR(n)：定长数据类型</p>
-</li>
-<li><p>VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量</p>
-</li>
-<li><p>BLOB：大对象类型，二进制大对象，保存很长的二进制字符串</p>
-</li>
-<li><p>TEXT：长字符串类型，可以看作一个大VARCHAR字段
+          <h2 id="Select语句"><a href="#Select语句" class="headerlink" title="Select语句"></a>Select语句</h2><p>数据库查询语句(DQL)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select [* | distinct column1 , column2 ]</span><br><span class="line">from   table [,table2]</span><br><span class="line">where  [condition1 | expression1] [and | orcondition2 | expression2 ]</span><br><span class="line">order by column1 | integer [ASC升序 | DESC降序]</span><br></pre></td></tr></table></figure>
+
+<p>distinct：在结果中去除重复的记录。<br>order by：输出结果以某种形式排序。默认升序asc<br><strong>order by可以使用整数代表字段</strong>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2017/12/10/SQL数据类型/#more" rel="contents">
+              <a class="btn" href="/2017/12/10/SQL数据库查询/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -564,7 +560,7 @@
           <!--/noindex-->
         
       
-    </p></li></ul></div>
+    </p></div>
 
     
 
@@ -1049,7 +1045,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://number-47.github.io/2017/12/10/SQL数据库查询/">
+    <link itemprop="mainEntityOfPage" href="https://number-47.github.io/2017/12/10/SQL数据类型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Number 47">
@@ -1069,7 +1065,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2017/12/10/SQL数据库查询/" class="post-title-link" itemprop="url">SQL数据库查询</a>
+                <a href="/2017/12/10/SQL数据类型/" class="post-title-link" itemprop="url">SQL数据类型</a>
               
             
           </h1>
@@ -1147,8 +1143,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2017/12/10/SQL数据库查询/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/10/SQL数据库查询/" itemprop="commentCount"></span>
+                <a href="/2017/12/10/SQL数据类型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/10/SQL数据类型/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1156,7 +1152,7 @@
 
           
           
-            <span id="/2017/12/10/SQL数据库查询/" class="leancloud_visitors" data-flag-title="SQL数据库查询">
+            <span id="/2017/12/10/SQL数据类型/" class="leancloud_visitors" data-flag-title="SQL数据类型">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -1188,14 +1184,18 @@
 
       
         
-          <h2 id="Select语句"><a href="#Select语句" class="headerlink" title="Select语句"></a>Select语句</h2><p>数据库查询语句(DQL)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select [* | distinct column1 , column2 ]</span><br><span class="line">from   table [,table2]</span><br><span class="line">where  [condition1 | expression1] [and | orcondition2 | expression2 ]</span><br><span class="line">order by column1 | integer [ASC升序 | DESC降序]</span><br></pre></td></tr></table></figure>
-
-<p>distinct：在结果中去除重复的记录。<br>order by：输出结果以某种形式排序。默认升序asc<br><strong>order by可以使用整数代表字段</strong>
+          <h2 id="SQL数据类型"><a href="#SQL数据类型" class="headerlink" title="SQL数据类型"></a>SQL数据类型</h2><ul>
+<li><p>CHAR(n)：定长数据类型</p>
+</li>
+<li><p>VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量</p>
+</li>
+<li><p>BLOB：大对象类型，二进制大对象，保存很长的二进制字符串</p>
+</li>
+<li><p>TEXT：长字符串类型，可以看作一个大VARCHAR字段
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2017/12/10/SQL数据库查询/#more" rel="contents">
+              <a class="btn" href="/2017/12/10/SQL数据类型/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1203,7 +1203,7 @@
           <!--/noindex-->
         
       
-    </p></div>
+    </p></li></ul></div>
 
     
 

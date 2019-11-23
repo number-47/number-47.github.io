@@ -108,9 +108,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[SQL数据类型]]></title>
-    <url>%2F2017%2F12%2F10%2FSQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
-    <content type="text"><![CDATA[SQL数据类型 CHAR(n)：定长数据类型 VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量 BLOB：大对象类型，二进制大对象，保存很长的二进制字符串 TEXT：长字符串类型，可以看作一个大VARCHAR字段 数值类型 BIT(n) BIT VARCHAR(n) DECIMAL(p, s) INTEGER SMALLINT BIGINT FLOAT(p, s) DOUBLE PRECISION(p, s) REAL(s)p表示字段的最大长度s表示小数点后面的位数 小数点类型DECIMAL(p, s) p：有效位数 s：标度 12eg:DECIMAL(4,2) 最大值为99.99//有效位数是4，也就是数值总位数是4，标度是2小数点后面的位数 如果实际数值的小数位数超出定义的位数，数字就会被四舍五入。 ##浮点数 REAL：单精度浮点数，单精度浮点数的有效位1—21（包含） DOUBLE PRECISION：双精度浮点数的有效位22—53（包含） 日期和时间类型 DATE TIME DATETIME TIMESTAMP ##直义字符串 一系列字符，比如姓名或电话号码，这是有用户或程序明确指定的。 自定义类型由用户定义的类型，允许用户根据已有的数据类型来定制自己的数据类型。 1234567891011MYSQL//创建自定义类型CRATE TYPE PERSON AS OBJECT(NAME VARCHAR(30),SSN VARCHAR(9));//引用自定义类型CREATE TABLE EMP_PAY(EMPLOYEE PERSON,SALARY DECIMAL(10,2),HIRE_DATE DATE); 域域是能够被使用的有效数据类型的集合。域与数据相关联，从而只接受待定的数据，在域创建之后，我们可以向域添加约束，约束与数据类型共同发挥作用，从而限制字段能够接受的数据。 123456789101112//创建域CREATE DOMAIN MONEY_D AS NUMBER(8,2);//添加约束ALTER DOMAIN MONEY_DADD CONSTRANINT MONEY_CON1CHECK (VALUE &gt; 5);//引用域CREATE TABLE EMP_PAY(EMP_ID NUMBER(9),EMP_NAME VARCHAR2(30),PAY_RATE MONET_D);]]></content>
+    <title><![CDATA[SQL数据库查询]]></title>
+    <url>%2F2017%2F12%2F10%2FSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%2F</url>
+    <content type="text"><![CDATA[Select语句数据库查询语句(DQL) 1234select [* | distinct column1 , column2 ]from table [,table2]where [condition1 | expression1] [and | orcondition2 | expression2 ]order by column1 | integer [ASC升序 | DESC降序] distinct：在结果中去除重复的记录。order by：输出结果以某种形式排序。默认升序ascorder by可以使用整数代表字段eg: 123456789101112select *from products_tblorder by 1;//上面查询语句输出的会按照products_tbl的第一个字段进行升序排序。select *from products_tblorder by 1，2;//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行升序排序。select *from products_tblorder by 1，2 desc;//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行降序排序。 统计表里的记录数量COUNT()12345select COUNT(*)from table_name;//查询table_name的表中有多少行数据如果统计的字段规定not null，那么统计结果和表里的数量相同如果统计字段规定可以null，那么就只统计有数据的数据。 eg： 123select COUNT(PROD_ID)from PRODUCTS_TBL;//统计PRODUCTS_TBL里字段PROD_ID的值的数量 使用字段别名12select column_name alias_name(别名)from table_name eg: 12select prod_desc, prod_desc productfrom products_tbl;]]></content>
       <categories>
         <category>SQL</category>
       </categories>
@@ -141,9 +141,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[SQL数据库查询]]></title>
-    <url>%2F2017%2F12%2F10%2FSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%2F</url>
-    <content type="text"><![CDATA[Select语句数据库查询语句(DQL) 1234select [* | distinct column1 , column2 ]from table [,table2]where [condition1 | expression1] [and | orcondition2 | expression2 ]order by column1 | integer [ASC升序 | DESC降序] distinct：在结果中去除重复的记录。order by：输出结果以某种形式排序。默认升序ascorder by可以使用整数代表字段eg: 123456789101112select *from products_tblorder by 1;//上面查询语句输出的会按照products_tbl的第一个字段进行升序排序。select *from products_tblorder by 1，2;//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行升序排序。select *from products_tblorder by 1，2 desc;//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行降序排序。 统计表里的记录数量COUNT()12345select COUNT(*)from table_name;//查询table_name的表中有多少行数据如果统计的字段规定not null，那么统计结果和表里的数量相同如果统计字段规定可以null，那么就只统计有数据的数据。 eg： 123select COUNT(PROD_ID)from PRODUCTS_TBL;//统计PRODUCTS_TBL里字段PROD_ID的值的数量 使用字段别名12select column_name alias_name(别名)from table_name eg: 12select prod_desc, prod_desc productfrom products_tbl;]]></content>
+    <title><![CDATA[SQL数据类型]]></title>
+    <url>%2F2017%2F12%2F10%2FSQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[SQL数据类型 CHAR(n)：定长数据类型 VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量 BLOB：大对象类型，二进制大对象，保存很长的二进制字符串 TEXT：长字符串类型，可以看作一个大VARCHAR字段 数值类型 BIT(n) BIT VARCHAR(n) DECIMAL(p, s) INTEGER SMALLINT BIGINT FLOAT(p, s) DOUBLE PRECISION(p, s) REAL(s)p表示字段的最大长度s表示小数点后面的位数 小数点类型DECIMAL(p, s) p：有效位数 s：标度 12eg:DECIMAL(4,2) 最大值为99.99//有效位数是4，也就是数值总位数是4，标度是2小数点后面的位数 如果实际数值的小数位数超出定义的位数，数字就会被四舍五入。 ##浮点数 REAL：单精度浮点数，单精度浮点数的有效位1—21（包含） DOUBLE PRECISION：双精度浮点数的有效位22—53（包含） 日期和时间类型 DATE TIME DATETIME TIMESTAMP ##直义字符串 一系列字符，比如姓名或电话号码，这是有用户或程序明确指定的。 自定义类型由用户定义的类型，允许用户根据已有的数据类型来定制自己的数据类型。 1234567891011MYSQL//创建自定义类型CRATE TYPE PERSON AS OBJECT(NAME VARCHAR(30),SSN VARCHAR(9));//引用自定义类型CREATE TABLE EMP_PAY(EMPLOYEE PERSON,SALARY DECIMAL(10,2),HIRE_DATE DATE); 域域是能够被使用的有效数据类型的集合。域与数据相关联，从而只接受待定的数据，在域创建之后，我们可以向域添加约束，约束与数据类型共同发挥作用，从而限制字段能够接受的数据。 123456789101112//创建域CREATE DOMAIN MONEY_D AS NUMBER(8,2);//添加约束ALTER DOMAIN MONEY_DADD CONSTRANINT MONEY_CON1CHECK (VALUE &gt; 5);//引用域CREATE TABLE EMP_PAY(EMP_ID NUMBER(9),EMP_NAME VARCHAR2(30),PAY_RATE MONET_D);]]></content>
       <categories>
         <category>SQL</category>
       </categories>
