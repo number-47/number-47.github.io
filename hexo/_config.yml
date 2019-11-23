@@ -42,7 +42,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: true
+  auto_detect: false
   tab_replace:
   
 # Home page setting
@@ -90,14 +90,13 @@ search:
   field: post
   format: html
   limit: 10000
-# hexo-admin authentification
-admin:
-  username: number-47
-  password_hash: $2a$10$7IE6QEAcugBE/Jm40ax..OFS.hrpJZK8DOCDc9fsfK/QYG0Hul/US
-  secret: 47
 # 自动生成sitemap
 sitemap: 
   path: sitemap.xml
 baidusitemap: 
   path: baidusitemap.xml
-  
+# hexo-admin authentification
+admin:
+  username: number47
+  password_hash: $2a$10$2ntyjhT/VNj4eUeq2KVkAuOGe4pEbFwiwtfYare5WTlMMrUVMK.oq
+  secret: number47

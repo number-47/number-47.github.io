@@ -1,8 +1,10 @@
----
 title: Java运行机制/JVM/JRE/JDK
-date: 2017-11-25 12:56:35
-tags: Java基础
-categories: Java
+tags:
+  - Java基础
+categories:
+  - Java
+author: number-47
+date: 2017-11-25 12:56:00
 ---
 ## JAVA运行机制
 Java语言编写的程序需要经过编译步骤，这个编译步骤并不会生成特定平台的机器骂，而是生成一种与平台无关的字节码（也就是\*.class文件），这种字节码不是可执行性的，必须使用Java解释器来解释执行。

@@ -1,8 +1,7 @@
----
 title: Activity的四种启动模式
-date: 2017-09-17 12:56:35
 tags: Android四大组件之Activity
 categories: Android
+date: 2017-09-17 12:56:35
 ---
 
 ## 1.Android是如何管理Activity?

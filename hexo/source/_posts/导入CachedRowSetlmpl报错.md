@@ -1,10 +1,11 @@
----
 title: 导入import com.sun.rowset.CachedRowSetImpl，报错
-date: 2018-1-10 12:56:35
-type: "categories"
-tags:  JAVA Web问题
-categories:  Java
+type: categories
+tags:
+  - JAVA Web问题
+categories:
+  - Java
 copyright: true
+date: 2018-01-10 12:56:00
 ---
 
 ## 报错内容
