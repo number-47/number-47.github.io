@@ -264,21 +264,24 @@
   </entry>
   
   <entry>
-    <title>SQL基本概念</title>
-    <link href="www.number47.cn/2017/12/10/SQL%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
-    <id>www.number47.cn/2017/12/10/SQL基本概念/</id>
+    <title>SQL数据类型</title>
+    <link href="www.number47.cn/2017/12/10/SQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>www.number47.cn/2017/12/10/SQL数据类型/</id>
     <published>2017-12-10T04:56:35.000Z</published>
-    <updated>2019-05-25T05:38:39.537Z</updated>
+    <updated>2019-05-25T05:38:39.578Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h2 id="DBMS（数据库管理系统）"><a href="#DBMS（数据库管理系统）" class="headerlink" title="DBMS（数据库管理系统）"></a>DBMS（数据库管理系统）</h2><p><strong>数据库管理系统</strong>，数据被保存在数据库中，这种机制叫做数据库管理系统。</p><p><strong>RDBMS:</strong>关系型数据库管理系统。</p><h2 id="DBA（数据库管理员）"><a href="#DBA（数据库管理员）" class="headerlink" title="DBA（数据库管理员）"></a>DBA（数据库管理员）</h2><p><strong>数据库管理员</strong></p><h2 id="DBS-数据库系统"><a href="#DBS-数据库系统" class="headerlink" title="DBS(数据库系统)"></a>DBS(数据库系统)</h2><p>由数据库、数据库管理系统（及其应用的开发工具）、应用数据和DBA组成的存储、管理、处理和维护数据的系统。</p><h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><p><strong>结构化查询语句</strong>是与关系型数据库进行通信的标准语言。<a id="more"></a></p><h2 id="SQL会话"><a href="#SQL会话" class="headerlink" title="SQL会话"></a>SQL会话</h2><p>用户利用SQL命令与关系型数据库进行交互时发生的事情。当用户与数据库建立连接时，会话就被建立了。会话可以通过直接与数据库建立链接来申请，也可以通过前端程序来申请。无论何种情况，会话通常是由通过网络访问数据库的用户在终端或工作站建立的。</p><h2 id="CONNECT"><a href="#CONNECT" class="headerlink" title="CONNECT"></a>CONNECT</h2><p>命令<strong>CONNECT</strong>用于建立与数据库的连接，它可以申请连接,也可以修改连接。当用户连接到数据库时，SQL会话就被初始化了。</p><p>命令如下</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CONNECT user@database</span><br></pre></td></tr></table></figure><h2 id="DISCONNECT-NEXT"><a href="#DISCONNECT-NEXT" class="headerlink" title="DISCONNECT/NEXT"></a>DISCONNECT/NEXT</h2><p>命令<strong>DISCONNECT</strong>用于断开用户与数据库的连接。当用户连接到数据库时，SQL会话就被结束了。</p><p>当使用<strong>EXIT</strong>命令离开数据库时，SQL会话就结束了，而且用于访问数据库的软件通常会关闭。</p><h2 id="SQL命令的类型"><a href="#SQL命令的类型" class="headerlink" title="SQL命令的类型"></a>SQL命令的类型</h2><h3 id="DDL—数据库定义语言"><a href="#DDL—数据库定义语言" class="headerlink" title="DDL—数据库定义语言"></a>DDL—数据库定义语言</h3><p><strong>DDL</strong>用于创建和重构数据库对象。</p><p>基本的DDL命令：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">INDEX</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">VIEW</span></span><br></pre></td></tr></table></figure><h3 id="DML—数据库操作语言"><a href="#DML—数据库操作语言" class="headerlink" title="DML—数据库操作语言"></a>DML—数据库操作语言</h3><p><strong>DML</strong>用于操作关系型数据库对象内部的数据。</p><p>基本命令：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span></span><br><span class="line"><span class="keyword">UPDATE</span></span><br><span class="line"><span class="keyword">DELETE</span></span><br></pre></td></tr></table></figure><h3 id="DQL—数据查询语句"><a href="#DQL—数据查询语句" class="headerlink" title="DQL—数据查询语句"></a>DQL—数据查询语句</h3><p>基本命令<code>SELECT</code></p><h3 id="DCL—数据控制语言"><a href="#DCL—数据控制语言" class="headerlink" title="DCL—数据控制语言"></a>DCL—数据控制语言</h3><p><strong>DCL</strong>用于控制对数据库里数据的访问，通常用于创建与用户访问相关的对象，以及控制用户权限。</p><p>基本命令：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">PASSWORD</span></span><br><span class="line"><span class="keyword">GRANT</span></span><br><span class="line"><span class="keyword">REVOKE</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">SYNONYM</span></span><br></pre></td></tr></table></figure><h3 id="数据管理命令"><a href="#数据管理命令" class="headerlink" title="数据管理命令"></a>数据管理命令</h3><p>用于对数据库里的操作进行审计和分析，还有助于分析系统性能。</p><p>基本命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">START AUDIT</span><br><span class="line">STOP AUDIT</span><br></pre></td></tr></table></figure><h3 id="事务控制命令"><a href="#事务控制命令" class="headerlink" title="事务控制命令"></a>事务控制命令</h3><p>用于管理数据库事务</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">COMMIT</span> //保存数据库事务</span><br><span class="line"><span class="keyword">ROLLBACK</span> //撤销数据库事务</span><br><span class="line">SAVEPIONT //在一组事务里创建标记点以用于回退（<span class="keyword">ROLLBACK</span>）</span><br><span class="line"><span class="keyword">SET</span> <span class="keyword">TRANSACTION</span> //设置实物名称</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="SQL数据类型"><a href="#SQL数据类型" class="headerlink" title="SQL数据类型"></a>SQL数据类型</h2><ul><li><p>CHAR(n)：定长数据类型</p></li><li><p>VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量</p></li><li><p>BLOB：大对象类型，二进制大对象，保存很长的二进制字符串</p></li><li><p>TEXT：长字符串类型，可以看作一个大VARCHAR字段<a id="more"></a></p></li></ul><h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><ul><li><p>BIT(n)</p></li><li><p>BIT VARCHAR(n)</p></li><li><p>DECIMAL(p, s)</p></li><li><p>INTEGER</p></li><li><p>SMALLINT</p></li><li><p>BIGINT</p></li><li><p>FLOAT(p, s)</p></li><li><p>DOUBLE PRECISION(p, s)</p></li><li><p>REAL(s)<br>p表示字段的最大长度<br>s表示小数点后面的位数</p></li></ul><h2 id="小数点类型"><a href="#小数点类型" class="headerlink" title="小数点类型"></a>小数点类型</h2><p>DECIMAL(p, s)</p><p>p：有效位数</p><p>s：标度</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eg:DECIMAL(4,2)  最大值为99.99</span><br><span class="line">//有效位数是4，也就是数值总位数是4，标度是2小数点后面的位数</span><br></pre></td></tr></table></figure><p>如果实际数值的小数位数超出定义的位数，数字就会被四舍五入。</p><p>##浮点数</p><p><strong>REAL：</strong>单精度浮点数，单精度浮点数的有效位1—21（包含）</p><p><strong>DOUBLE PRECISION：</strong>双精度浮点数的有效位22—53（包含）</p><h2 id="日期和时间类型"><a href="#日期和时间类型" class="headerlink" title="日期和时间类型"></a>日期和时间类型</h2><ul><li><p>DATE</p></li><li><p>TIME</p></li><li><p>DATETIME</p></li><li><p>TIMESTAMP</p></li></ul><p>##直义字符串</p><p>  一系列字符，比如姓名或电话号码，这是有用户或程序明确指定的。</p><h2 id="自定义类型"><a href="#自定义类型" class="headerlink" title="自定义类型"></a>自定义类型</h2><p>由用户定义的类型，允许用户根据已有的数据类型来定制自己的数据类型。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">MYSQL</span><br><span class="line">//创建自定义类型</span><br><span class="line">CRATE TYPE PERSON AS OBJECT</span><br><span class="line">(NAME VARCHAR(30),</span><br><span class="line">SSN VARCHAR(9));</span><br><span class="line">//引用自定义类型</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> EMP_PAY</span><br><span class="line">(EMPLOYEE PERSON,</span><br><span class="line">SALARY <span class="built_in">DECIMAL</span>(<span class="number">10</span>,<span class="number">2</span>),</span><br><span class="line">HIRE_DATE <span class="built_in">DATE</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure><h2 id="域"><a href="#域" class="headerlink" title="域"></a>域</h2><p>域是能够被使用的有效数据类型的集合。域与数据相关联，从而只接受待定的数据，在域创建之后，我们可以向域添加约束，约束与数据类型共同发挥作用，从而限制字段能够接受的数据。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//创建域</span><br><span class="line">CREATE DOMAIN MONEY_D AS NUMBER(8,2);</span><br><span class="line">//添加约束</span><br><span class="line">ALTER DOMAIN MONEY_D</span><br><span class="line">ADD CONSTRANINT MONEY_CON1</span><br><span class="line">CHECK (VALUE &gt; 5);</span><br><span class="line">//引用域</span><br><span class="line">CREATE TABLE EMP_PAY</span><br><span class="line">(EMP_ID NUMBER(9),</span><br><span class="line">EMP_NAME VARCHAR2(30),</span><br><span class="line">PAY_RATE MONET_D</span><br><span class="line">);</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;h2 id=&quot;DBMS（数据库管理系统）&quot;&gt;&lt;a href=&quot;#DBMS（数据库管理系统）&quot; class=&quot;headerlink&quot; title=&quot;DBMS（数据库管理系统）&quot;&gt;&lt;/a&gt;DBMS（数据库管理系统）&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;数据库管理系统&lt;/strong&gt;，数据被保存在数据库中，这种机制叫做数据库管理系统。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;RDBMS:&lt;/strong&gt;关系型数据库管理系统。&lt;/p&gt;
-&lt;h2 id=&quot;DBA（数据库管理员）&quot;&gt;&lt;a href=&quot;#DBA（数据库管理员）&quot; class=&quot;headerlink&quot; title=&quot;DBA（数据库管理员）&quot;&gt;&lt;/a&gt;DBA（数据库管理员）&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;数据库管理员&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;DBS-数据库系统&quot;&gt;&lt;a href=&quot;#DBS-数据库系统&quot; class=&quot;headerlink&quot; title=&quot;DBS(数据库系统)&quot;&gt;&lt;/a&gt;DBS(数据库系统)&lt;/h2&gt;&lt;p&gt;由数据库、数据库管理系统（及其应用的开发工具）、应用数据和DBA组成的存储、管理、处理和维护数据的系统。&lt;/p&gt;
-&lt;h2 id=&quot;SQL&quot;&gt;&lt;a href=&quot;#SQL&quot; class=&quot;headerlink&quot; title=&quot;SQL&quot;&gt;&lt;/a&gt;SQL&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;结构化查询语句&lt;/strong&gt;是与关系型数据库进行通信的标准语言。
+      &lt;h2 id=&quot;SQL数据类型&quot;&gt;&lt;a href=&quot;#SQL数据类型&quot; class=&quot;headerlink&quot; title=&quot;SQL数据类型&quot;&gt;&lt;/a&gt;SQL数据类型&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;CHAR(n)：定长数据类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;BLOB：大对象类型，二进制大对象，保存很长的二进制字符串&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TEXT：长字符串类型，可以看作一个大VARCHAR字段
     
     </summary>
     
@@ -342,35 +345,6 @@
   </entry>
   
   <entry>
-    <title>SQL数据类型</title>
-    <link href="www.number47.cn/2017/12/10/SQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>www.number47.cn/2017/12/10/SQL数据类型/</id>
-    <published>2017-12-10T04:56:35.000Z</published>
-    <updated>2019-05-25T05:38:39.578Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="SQL数据类型"><a href="#SQL数据类型" class="headerlink" title="SQL数据类型"></a>SQL数据类型</h2><ul><li><p>CHAR(n)：定长数据类型</p></li><li><p>VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量</p></li><li><p>BLOB：大对象类型，二进制大对象，保存很长的二进制字符串</p></li><li><p>TEXT：长字符串类型，可以看作一个大VARCHAR字段<a id="more"></a></p></li></ul><h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><ul><li><p>BIT(n)</p></li><li><p>BIT VARCHAR(n)</p></li><li><p>DECIMAL(p, s)</p></li><li><p>INTEGER</p></li><li><p>SMALLINT</p></li><li><p>BIGINT</p></li><li><p>FLOAT(p, s)</p></li><li><p>DOUBLE PRECISION(p, s)</p></li><li><p>REAL(s)<br>p表示字段的最大长度<br>s表示小数点后面的位数</p></li></ul><h2 id="小数点类型"><a href="#小数点类型" class="headerlink" title="小数点类型"></a>小数点类型</h2><p>DECIMAL(p, s)</p><p>p：有效位数</p><p>s：标度</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eg:DECIMAL(4,2)  最大值为99.99</span><br><span class="line">//有效位数是4，也就是数值总位数是4，标度是2小数点后面的位数</span><br></pre></td></tr></table></figure><p>如果实际数值的小数位数超出定义的位数，数字就会被四舍五入。</p><p>##浮点数</p><p><strong>REAL：</strong>单精度浮点数，单精度浮点数的有效位1—21（包含）</p><p><strong>DOUBLE PRECISION：</strong>双精度浮点数的有效位22—53（包含）</p><h2 id="日期和时间类型"><a href="#日期和时间类型" class="headerlink" title="日期和时间类型"></a>日期和时间类型</h2><ul><li><p>DATE</p></li><li><p>TIME</p></li><li><p>DATETIME</p></li><li><p>TIMESTAMP</p></li></ul><p>##直义字符串</p><p>  一系列字符，比如姓名或电话号码，这是有用户或程序明确指定的。</p><h2 id="自定义类型"><a href="#自定义类型" class="headerlink" title="自定义类型"></a>自定义类型</h2><p>由用户定义的类型，允许用户根据已有的数据类型来定制自己的数据类型。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">MYSQL</span><br><span class="line">//创建自定义类型</span><br><span class="line">CRATE TYPE PERSON AS OBJECT</span><br><span class="line">(NAME VARCHAR(30),</span><br><span class="line">SSN VARCHAR(9));</span><br><span class="line">//引用自定义类型</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> EMP_PAY</span><br><span class="line">(EMPLOYEE PERSON,</span><br><span class="line">SALARY <span class="built_in">DECIMAL</span>(<span class="number">10</span>,<span class="number">2</span>),</span><br><span class="line">HIRE_DATE <span class="built_in">DATE</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure><h2 id="域"><a href="#域" class="headerlink" title="域"></a>域</h2><p>域是能够被使用的有效数据类型的集合。域与数据相关联，从而只接受待定的数据，在域创建之后，我们可以向域添加约束，约束与数据类型共同发挥作用，从而限制字段能够接受的数据。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//创建域</span><br><span class="line">CREATE DOMAIN MONEY_D AS NUMBER(8,2);</span><br><span class="line">//添加约束</span><br><span class="line">ALTER DOMAIN MONEY_D</span><br><span class="line">ADD CONSTRANINT MONEY_CON1</span><br><span class="line">CHECK (VALUE &gt; 5);</span><br><span class="line">//引用域</span><br><span class="line">CREATE TABLE EMP_PAY</span><br><span class="line">(EMP_ID NUMBER(9),</span><br><span class="line">EMP_NAME VARCHAR2(30),</span><br><span class="line">PAY_RATE MONET_D</span><br><span class="line">);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;SQL数据类型&quot;&gt;&lt;a href=&quot;#SQL数据类型&quot; class=&quot;headerlink&quot; title=&quot;SQL数据类型&quot;&gt;&lt;/a&gt;SQL数据类型&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;CHAR(n)：定长数据类型&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;BLOB：大对象类型，二进制大对象，保存很长的二进制字符串&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;TEXT：长字符串类型，可以看作一个大VARCHAR字段
-    
-    </summary>
-    
-      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
-    
-    
-      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SQL事务</title>
     <link href="www.number47.cn/2017/12/10/SQL%E4%BA%8B%E5%8A%A1/"/>
     <id>www.number47.cn/2017/12/10/SQL事务/</id>
@@ -396,6 +370,54 @@
   </entry>
   
   <entry>
+    <title>SQL基本概念</title>
+    <link href="www.number47.cn/2017/12/10/SQL%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+    <id>www.number47.cn/2017/12/10/SQL基本概念/</id>
+    <published>2017-12-10T04:56:35.000Z</published>
+    <updated>2019-05-25T05:38:39.537Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h2 id="DBMS（数据库管理系统）"><a href="#DBMS（数据库管理系统）" class="headerlink" title="DBMS（数据库管理系统）"></a>DBMS（数据库管理系统）</h2><p><strong>数据库管理系统</strong>，数据被保存在数据库中，这种机制叫做数据库管理系统。</p><p><strong>RDBMS:</strong>关系型数据库管理系统。</p><h2 id="DBA（数据库管理员）"><a href="#DBA（数据库管理员）" class="headerlink" title="DBA（数据库管理员）"></a>DBA（数据库管理员）</h2><p><strong>数据库管理员</strong></p><h2 id="DBS-数据库系统"><a href="#DBS-数据库系统" class="headerlink" title="DBS(数据库系统)"></a>DBS(数据库系统)</h2><p>由数据库、数据库管理系统（及其应用的开发工具）、应用数据和DBA组成的存储、管理、处理和维护数据的系统。</p><h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><p><strong>结构化查询语句</strong>是与关系型数据库进行通信的标准语言。<a id="more"></a></p><h2 id="SQL会话"><a href="#SQL会话" class="headerlink" title="SQL会话"></a>SQL会话</h2><p>用户利用SQL命令与关系型数据库进行交互时发生的事情。当用户与数据库建立连接时，会话就被建立了。会话可以通过直接与数据库建立链接来申请，也可以通过前端程序来申请。无论何种情况，会话通常是由通过网络访问数据库的用户在终端或工作站建立的。</p><h2 id="CONNECT"><a href="#CONNECT" class="headerlink" title="CONNECT"></a>CONNECT</h2><p>命令<strong>CONNECT</strong>用于建立与数据库的连接，它可以申请连接,也可以修改连接。当用户连接到数据库时，SQL会话就被初始化了。</p><p>命令如下</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CONNECT user@database</span><br></pre></td></tr></table></figure><h2 id="DISCONNECT-NEXT"><a href="#DISCONNECT-NEXT" class="headerlink" title="DISCONNECT/NEXT"></a>DISCONNECT/NEXT</h2><p>命令<strong>DISCONNECT</strong>用于断开用户与数据库的连接。当用户连接到数据库时，SQL会话就被结束了。</p><p>当使用<strong>EXIT</strong>命令离开数据库时，SQL会话就结束了，而且用于访问数据库的软件通常会关闭。</p><h2 id="SQL命令的类型"><a href="#SQL命令的类型" class="headerlink" title="SQL命令的类型"></a>SQL命令的类型</h2><h3 id="DDL—数据库定义语言"><a href="#DDL—数据库定义语言" class="headerlink" title="DDL—数据库定义语言"></a>DDL—数据库定义语言</h3><p><strong>DDL</strong>用于创建和重构数据库对象。</p><p>基本的DDL命令：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">INDEX</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">VIEW</span></span><br></pre></td></tr></table></figure><h3 id="DML—数据库操作语言"><a href="#DML—数据库操作语言" class="headerlink" title="DML—数据库操作语言"></a>DML—数据库操作语言</h3><p><strong>DML</strong>用于操作关系型数据库对象内部的数据。</p><p>基本命令：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span></span><br><span class="line"><span class="keyword">UPDATE</span></span><br><span class="line"><span class="keyword">DELETE</span></span><br></pre></td></tr></table></figure><h3 id="DQL—数据查询语句"><a href="#DQL—数据查询语句" class="headerlink" title="DQL—数据查询语句"></a>DQL—数据查询语句</h3><p>基本命令<code>SELECT</code></p><h3 id="DCL—数据控制语言"><a href="#DCL—数据控制语言" class="headerlink" title="DCL—数据控制语言"></a>DCL—数据控制语言</h3><p><strong>DCL</strong>用于控制对数据库里数据的访问，通常用于创建与用户访问相关的对象，以及控制用户权限。</p><p>基本命令：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">PASSWORD</span></span><br><span class="line"><span class="keyword">GRANT</span></span><br><span class="line"><span class="keyword">REVOKE</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">SYNONYM</span></span><br></pre></td></tr></table></figure><h3 id="数据管理命令"><a href="#数据管理命令" class="headerlink" title="数据管理命令"></a>数据管理命令</h3><p>用于对数据库里的操作进行审计和分析，还有助于分析系统性能。</p><p>基本命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">START AUDIT</span><br><span class="line">STOP AUDIT</span><br></pre></td></tr></table></figure><h3 id="事务控制命令"><a href="#事务控制命令" class="headerlink" title="事务控制命令"></a>事务控制命令</h3><p>用于管理数据库事务</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">COMMIT</span> //保存数据库事务</span><br><span class="line"><span class="keyword">ROLLBACK</span> //撤销数据库事务</span><br><span class="line">SAVEPIONT //在一组事务里创建标记点以用于回退（<span class="keyword">ROLLBACK</span>）</span><br><span class="line"><span class="keyword">SET</span> <span class="keyword">TRANSACTION</span> //设置实物名称</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;h2 id=&quot;DBMS（数据库管理系统）&quot;&gt;&lt;a href=&quot;#DBMS（数据库管理系统）&quot; class=&quot;headerlink&quot; title=&quot;DBMS（数据库管理系统）&quot;&gt;&lt;/a&gt;DBMS（数据库管理系统）&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;数据库管理系统&lt;/strong&gt;，数据被保存在数据库中，这种机制叫做数据库管理系统。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RDBMS:&lt;/strong&gt;关系型数据库管理系统。&lt;/p&gt;
+&lt;h2 id=&quot;DBA（数据库管理员）&quot;&gt;&lt;a href=&quot;#DBA（数据库管理员）&quot; class=&quot;headerlink&quot; title=&quot;DBA（数据库管理员）&quot;&gt;&lt;/a&gt;DBA（数据库管理员）&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;数据库管理员&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;DBS-数据库系统&quot;&gt;&lt;a href=&quot;#DBS-数据库系统&quot; class=&quot;headerlink&quot; title=&quot;DBS(数据库系统)&quot;&gt;&lt;/a&gt;DBS(数据库系统)&lt;/h2&gt;&lt;p&gt;由数据库、数据库管理系统（及其应用的开发工具）、应用数据和DBA组成的存储、管理、处理和维护数据的系统。&lt;/p&gt;
+&lt;h2 id=&quot;SQL&quot;&gt;&lt;a href=&quot;#SQL&quot; class=&quot;headerlink&quot; title=&quot;SQL&quot;&gt;&lt;/a&gt;SQL&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;结构化查询语句&lt;/strong&gt;是与关系型数据库进行通信的标准语言。
+    
+    </summary>
+    
+      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
+    
+    
+      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>理解面向对象</title>
+    <link href="www.number47.cn/2017/12/07/%E7%90%86%E8%A7%A3%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>www.number47.cn/2017/12/07/理解面向对象/</id>
+    <published>2017-12-07T04:56:00.000Z</published>
+    <updated>2019-07-08T18:39:17.083Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>JAVA面向对象的三大特性：<strong>封装、继承、多态</strong><br>面向对象和面向过程都是一种思考方式。<br><strong>面向过程</strong>：打开冰箱/放东西进冰箱/关闭冰箱，强调动作过程。<br><strong>面向对象：</strong>冰箱.打开/冰箱.放东西/冰箱.关闭，强调冰箱这一对象。<a id="more"></a><br>举例：向过程到面向对象是从执行者到指挥者<br>餐厅点菜：我找服务员，服务员就是对象，服务员具有点菜功能。<br>HR面试我：我就是对象，我就是对象，具备有HR需要的人的技能。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;JAVA面向对象的三大特性：&lt;strong&gt;封装、继承、多态&lt;/strong&gt;&lt;br&gt;面向对象和面向过程都是一种思考方式。&lt;br&gt;&lt;strong&gt;面向过程&lt;/strong&gt;：打开冰箱/放东西进冰箱/关闭冰箱，强调动作过程。&lt;br&gt;&lt;strong&gt;面向对象：&lt;/strong&gt;冰箱.打开/冰箱.放东西/冰箱.关闭，强调冰箱这一对象。
+    
+    </summary>
+    
+      <category term="Java" scheme="www.number47.cn/categories/Java/"/>
+    
+    
+      <category term="Java基础" scheme="www.number47.cn/tags/Java%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>异常机制</title>
     <link href="www.number47.cn/2017/12/07/%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/"/>
     <id>www.number47.cn/2017/12/07/异常机制/</id>
@@ -416,28 +438,6 @@
 &lt;p&gt;可查异常即必须进行处理的异常，要么try catch住,要么往外抛，谁调用，谁处理，比如 FileNotFoundException&lt;br&gt;如果不处理，编译器，就不让你通过。&lt;/p&gt;
 &lt;p&gt;也就是说Java认为Checked异常是可以修复的异常，所以Java程序必须显式处理Checked异常，如果程序没有处理Checked异常，该程序在编译时就会发生错误，无法通过编译。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;运行时异常与非运行时异常的区别：&lt;/strong&gt;&lt;br&gt;运行时异常是不可查异常，不需要进行显式的捕捉&lt;br&gt;非运行时异常是可查异常，必须进行显示的捕捉，或者抛出
-    
-    </summary>
-    
-      <category term="Java" scheme="www.number47.cn/categories/Java/"/>
-    
-    
-      <category term="Java基础" scheme="www.number47.cn/tags/Java%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>理解面向对象</title>
-    <link href="www.number47.cn/2017/12/07/%E7%90%86%E8%A7%A3%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>www.number47.cn/2017/12/07/理解面向对象/</id>
-    <published>2017-12-07T04:56:00.000Z</published>
-    <updated>2019-07-08T18:39:17.083Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>JAVA面向对象的三大特性：<strong>封装、继承、多态</strong><br>面向对象和面向过程都是一种思考方式。<br><strong>面向过程</strong>：打开冰箱/放东西进冰箱/关闭冰箱，强调动作过程。<br><strong>面向对象：</strong>冰箱.打开/冰箱.放东西/冰箱.关闭，强调冰箱这一对象。<a id="more"></a><br>举例：向过程到面向对象是从执行者到指挥者<br>餐厅点菜：我找服务员，服务员就是对象，服务员具有点菜功能。<br>HR面试我：我就是对象，我就是对象，具备有HR需要的人的技能。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;JAVA面向对象的三大特性：&lt;strong&gt;封装、继承、多态&lt;/strong&gt;&lt;br&gt;面向对象和面向过程都是一种思考方式。&lt;br&gt;&lt;strong&gt;面向过程&lt;/strong&gt;：打开冰箱/放东西进冰箱/关闭冰箱，强调动作过程。&lt;br&gt;&lt;strong&gt;面向对象：&lt;/strong&gt;冰箱.打开/冰箱.放东西/冰箱.关闭，强调冰箱这一对象。
     
     </summary>
     
