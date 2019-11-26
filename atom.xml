@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.number47.cn/"/>
-  <updated>2019-11-23T08:15:24.459Z</updated>
+  <updated>2019-10-13T18:07:30.731Z</updated>
   <id>www.number47.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>spring security 学习(二)-自定义登录页登录与退出</title>
+    <link href="www.number47.cn/2019/10/24/Spring%20Security(%E4%BA%8C)-%E8%87%AA%E5%AE%9A%E4%B9%89%E7%99%BB%E5%BD%95%E9%A1%B5%E7%99%BB%E5%BD%95%E4%B8%8E%E9%80%80%E5%87%BA/"/>
+    <id>www.number47.cn/2019/10/24/Spring Security(二)-自定义登录页登录与退出/</id>
+    <published>2019-10-24T04:56:35.000Z</published>
+    <updated>2019-10-13T18:07:30.731Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Spring-Security-二-自定义登录页登录与退出"><a href="#Spring-Security-二-自定义登录页登录与退出" class="headerlink" title="Spring Security(二)-自定义登录页登录与退出"></a>Spring Security(二)-自定义登录页登录与退出</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Spring-Security-二-自定义登录页登录与退出&quot;&gt;&lt;a href=&quot;#Spring-Security-二-自定义登录页登录与退出&quot; class=&quot;headerlink&quot; title=&quot;Spring Security(二)-自定义登录页登录与退出&quot;&gt;&lt;/
+      
+    
+    </summary>
+    
+      <category term="Spring Security" scheme="www.number47.cn/categories/Spring-Security/"/>
+    
+    
+      <category term="Spring Security" scheme="www.number47.cn/tags/Spring-Security/"/>
+    
+  </entry>
   
   <entry>
     <title>专项课18 旅游场景</title>
@@ -39,31 +64,6 @@
     
     
       <category term="专项课" scheme="www.number47.cn/tags/%E4%B8%93%E9%A1%B9%E8%AF%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>spring security 学习(一)-spring boot 整合</title>
-    <link href="www.number47.cn/2019/10/24/spring%20security%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89-spring%20boot%20%E6%95%B4%E5%90%88/"/>
-    <id>www.number47.cn/2019/10/24/spring security学习（一）-spring boot 整合/</id>
-    <published>2019-10-24T04:56:35.000Z</published>
-    <updated>2019-10-13T17:14:19.504Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Spring-Security-一-Spring-Boot-整合"><a href="#Spring-Security-一-Spring-Boot-整合" class="headerlink" title="Spring Security(一)-Spring Boot 整合"></a>Spring Security(一)-Spring Boot 整合</h1><h2 id="创建spring-boot项目，引入spring-boot-start-security"><a href="#创建spring-boot项目，引入spring-boot-start-security" class="headerlink" title="创建spring boot项目，引入spring-boot-start-security"></a>创建spring boot项目，引入spring-boot-start-security</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure><h2 id="创建-spring-security的访问接口"><a href="#创建-spring-security的访问接口" class="headerlink" title="创建/spring-security的访问接口"></a>创建/spring-security的访问接口</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoController</span> </span>&#123;</span><br><span class="line"><span class="meta">@GetMapping</span>(<span class="string">"spring-security"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="string">"hello spring security"</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="表单认证"><a href="#表单认证" class="headerlink" title="表单认证"></a>表单认证</h2><p>创建配置类WebSecurityConfig继承<code>WebSecurityConfigurerAdapter</code>,<code>WebSecurityConfigurerAdapter</code>是由Spring Security提供的Web应用安全配置的适配器。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableWebSecurity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebSecurityConfig</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">http.formLogin() <span class="comment">// 表单方式</span></span><br><span class="line">.and()</span><br><span class="line">.authorizeRequests() </span><br><span class="line">.anyRequest()  <span class="comment">// 所有请求</span></span><br><span class="line">.authenticated(); <span class="comment">// 都需要认证</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="设置启动端口"><a href="#设置启动端口" class="headerlink" title="设置启动端口"></a>设置启动端口</h2><p>application.properties</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.port=8081</span><br></pre></td></tr></table></figure><p>启动程序，启动时控制台Using generated security password: 9aac6105-0752-4bf1-9f54-c247e94086ab，每次都不一样，这个为用户user的密码。<br>访问<a href="http://localhost:8080/spring-security" target="_blank" rel="noopener">http://localhost:8080/spring-security</a>，页面跳转到<a href="http://localhost:8080/login" target="_blank" rel="noopener">http://localhost:8080/login</a><br><img src="http://ww1.sinaimg.cn/large/a8a26f7cgy1g7x16jb1ylj20i709tmxe.jpg" alt="image.png"><br>登录后，访问到<a href="http://localhost:8080/spring-security" target="_blank" rel="noopener">http://localhost:8080/spring-security</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Spring-Security-一-Spring-Boot-整合&quot;&gt;&lt;a href=&quot;#Spring-Security-一-Spring-Boot-整合&quot; class=&quot;headerlink&quot; title=&quot;Spring Security(一)-Spring Bo
-      
-    
-    </summary>
-    
-      <category term="Spring Security" scheme="www.number47.cn/categories/Spring-Security/"/>
-    
-    
-      <category term="Spring Security" scheme="www.number47.cn/tags/Spring-Security/"/>
     
   </entry>
   
@@ -93,19 +93,19 @@
   </entry>
   
   <entry>
-    <title>spring security 学习(二)-自定义登录页登录与退出</title>
-    <link href="www.number47.cn/2019/10/24/Spring%20Security(%E4%BA%8C)-%E8%87%AA%E5%AE%9A%E4%B9%89%E7%99%BB%E5%BD%95%E9%A1%B5%E7%99%BB%E5%BD%95%E4%B8%8E%E9%80%80%E5%87%BA/"/>
-    <id>www.number47.cn/2019/10/24/Spring Security(二)-自定义登录页登录与退出/</id>
+    <title>spring security 学习(一)-spring boot 整合</title>
+    <link href="www.number47.cn/2019/10/24/spring%20security%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89-spring%20boot%20%E6%95%B4%E5%90%88/"/>
+    <id>www.number47.cn/2019/10/24/spring security学习（一）-spring boot 整合/</id>
     <published>2019-10-24T04:56:35.000Z</published>
-    <updated>2019-10-13T18:07:30.731Z</updated>
+    <updated>2019-10-13T17:14:19.504Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Spring-Security-二-自定义登录页登录与退出"><a href="#Spring-Security-二-自定义登录页登录与退出" class="headerlink" title="Spring Security(二)-自定义登录页登录与退出"></a>Spring Security(二)-自定义登录页登录与退出</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="Spring-Security-一-Spring-Boot-整合"><a href="#Spring-Security-一-Spring-Boot-整合" class="headerlink" title="Spring Security(一)-Spring Boot 整合"></a>Spring Security(一)-Spring Boot 整合</h1><h2 id="创建spring-boot项目，引入spring-boot-start-security"><a href="#创建spring-boot项目，引入spring-boot-start-security" class="headerlink" title="创建spring boot项目，引入spring-boot-start-security"></a>创建spring boot项目，引入spring-boot-start-security</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure><h2 id="创建-spring-security的访问接口"><a href="#创建-spring-security的访问接口" class="headerlink" title="创建/spring-security的访问接口"></a>创建/spring-security的访问接口</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoController</span> </span>&#123;</span><br><span class="line"><span class="meta">@GetMapping</span>(<span class="string">"spring-security"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="string">"hello spring security"</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="表单认证"><a href="#表单认证" class="headerlink" title="表单认证"></a>表单认证</h2><p>创建配置类WebSecurityConfig继承<code>WebSecurityConfigurerAdapter</code>,<code>WebSecurityConfigurerAdapter</code>是由Spring Security提供的Web应用安全配置的适配器。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableWebSecurity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebSecurityConfig</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">http.formLogin() <span class="comment">// 表单方式</span></span><br><span class="line">.and()</span><br><span class="line">.authorizeRequests() </span><br><span class="line">.anyRequest()  <span class="comment">// 所有请求</span></span><br><span class="line">.authenticated(); <span class="comment">// 都需要认证</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="设置启动端口"><a href="#设置启动端口" class="headerlink" title="设置启动端口"></a>设置启动端口</h2><p>application.properties</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.port=8081</span><br></pre></td></tr></table></figure><p>启动程序，启动时控制台Using generated security password: 9aac6105-0752-4bf1-9f54-c247e94086ab，每次都不一样，这个为用户user的密码。<br>访问<a href="http://localhost:8080/spring-security" target="_blank" rel="noopener">http://localhost:8080/spring-security</a>，页面跳转到<a href="http://localhost:8080/login" target="_blank" rel="noopener">http://localhost:8080/login</a><br><img src="http://ww1.sinaimg.cn/large/a8a26f7cgy1g7x16jb1ylj20i709tmxe.jpg" alt="image.png"><br>登录后，访问到<a href="http://localhost:8080/spring-security" target="_blank" rel="noopener">http://localhost:8080/spring-security</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Spring-Security-二-自定义登录页登录与退出&quot;&gt;&lt;a href=&quot;#Spring-Security-二-自定义登录页登录与退出&quot; class=&quot;headerlink&quot; title=&quot;Spring Security(二)-自定义登录页登录与退出&quot;&gt;&lt;/
+        &lt;h1 id=&quot;Spring-Security-一-Spring-Boot-整合&quot;&gt;&lt;a href=&quot;#Spring-Security-一-Spring-Boot-整合&quot; class=&quot;headerlink&quot; title=&quot;Spring Security(一)-Spring Bo
       
     
     </summary>
@@ -264,87 +264,6 @@
   </entry>
   
   <entry>
-    <title>SQL数据类型</title>
-    <link href="www.number47.cn/2017/12/10/SQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>www.number47.cn/2017/12/10/SQL数据类型/</id>
-    <published>2017-12-10T04:56:35.000Z</published>
-    <updated>2019-05-25T05:38:39.578Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="SQL数据类型"><a href="#SQL数据类型" class="headerlink" title="SQL数据类型"></a>SQL数据类型</h2><ul><li><p>CHAR(n)：定长数据类型</p></li><li><p>VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量</p></li><li><p>BLOB：大对象类型，二进制大对象，保存很长的二进制字符串</p></li><li><p>TEXT：长字符串类型，可以看作一个大VARCHAR字段<a id="more"></a></p></li></ul><h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><ul><li><p>BIT(n)</p></li><li><p>BIT VARCHAR(n)</p></li><li><p>DECIMAL(p, s)</p></li><li><p>INTEGER</p></li><li><p>SMALLINT</p></li><li><p>BIGINT</p></li><li><p>FLOAT(p, s)</p></li><li><p>DOUBLE PRECISION(p, s)</p></li><li><p>REAL(s)<br>p表示字段的最大长度<br>s表示小数点后面的位数</p></li></ul><h2 id="小数点类型"><a href="#小数点类型" class="headerlink" title="小数点类型"></a>小数点类型</h2><p>DECIMAL(p, s)</p><p>p：有效位数</p><p>s：标度</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eg:DECIMAL(4,2)  最大值为99.99</span><br><span class="line">//有效位数是4，也就是数值总位数是4，标度是2小数点后面的位数</span><br></pre></td></tr></table></figure><p>如果实际数值的小数位数超出定义的位数，数字就会被四舍五入。</p><p>##浮点数</p><p><strong>REAL：</strong>单精度浮点数，单精度浮点数的有效位1—21（包含）</p><p><strong>DOUBLE PRECISION：</strong>双精度浮点数的有效位22—53（包含）</p><h2 id="日期和时间类型"><a href="#日期和时间类型" class="headerlink" title="日期和时间类型"></a>日期和时间类型</h2><ul><li><p>DATE</p></li><li><p>TIME</p></li><li><p>DATETIME</p></li><li><p>TIMESTAMP</p></li></ul><p>##直义字符串</p><p>  一系列字符，比如姓名或电话号码，这是有用户或程序明确指定的。</p><h2 id="自定义类型"><a href="#自定义类型" class="headerlink" title="自定义类型"></a>自定义类型</h2><p>由用户定义的类型，允许用户根据已有的数据类型来定制自己的数据类型。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">MYSQL</span><br><span class="line">//创建自定义类型</span><br><span class="line">CRATE TYPE PERSON AS OBJECT</span><br><span class="line">(NAME VARCHAR(30),</span><br><span class="line">SSN VARCHAR(9));</span><br><span class="line">//引用自定义类型</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> EMP_PAY</span><br><span class="line">(EMPLOYEE PERSON,</span><br><span class="line">SALARY <span class="built_in">DECIMAL</span>(<span class="number">10</span>,<span class="number">2</span>),</span><br><span class="line">HIRE_DATE <span class="built_in">DATE</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure><h2 id="域"><a href="#域" class="headerlink" title="域"></a>域</h2><p>域是能够被使用的有效数据类型的集合。域与数据相关联，从而只接受待定的数据，在域创建之后，我们可以向域添加约束，约束与数据类型共同发挥作用，从而限制字段能够接受的数据。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//创建域</span><br><span class="line">CREATE DOMAIN MONEY_D AS NUMBER(8,2);</span><br><span class="line">//添加约束</span><br><span class="line">ALTER DOMAIN MONEY_D</span><br><span class="line">ADD CONSTRANINT MONEY_CON1</span><br><span class="line">CHECK (VALUE &gt; 5);</span><br><span class="line">//引用域</span><br><span class="line">CREATE TABLE EMP_PAY</span><br><span class="line">(EMP_ID NUMBER(9),</span><br><span class="line">EMP_NAME VARCHAR2(30),</span><br><span class="line">PAY_RATE MONET_D</span><br><span class="line">);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;SQL数据类型&quot;&gt;&lt;a href=&quot;#SQL数据类型&quot; class=&quot;headerlink&quot; title=&quot;SQL数据类型&quot;&gt;&lt;/a&gt;SQL数据类型&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;CHAR(n)：定长数据类型&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;BLOB：大对象类型，二进制大对象，保存很长的二进制字符串&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;TEXT：长字符串类型，可以看作一个大VARCHAR字段
-    
-    </summary>
-    
-      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
-    
-    
-      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL数据库查询</title>
-    <link href="www.number47.cn/2017/12/10/SQL%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/"/>
-    <id>www.number47.cn/2017/12/10/SQL数据库查询/</id>
-    <published>2017-12-10T04:56:35.000Z</published>
-    <updated>2019-05-25T05:38:39.577Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Select语句"><a href="#Select语句" class="headerlink" title="Select语句"></a>Select语句</h2><p>数据库查询语句(DQL)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select [* | distinct column1 , column2 ]</span><br><span class="line">from   table [,table2]</span><br><span class="line">where  [condition1 | expression1] [and | orcondition2 | expression2 ]</span><br><span class="line">order by column1 | integer [ASC升序 | DESC降序]</span><br></pre></td></tr></table></figure><p>distinct：在结果中去除重复的记录。<br>order by：输出结果以某种形式排序。默认升序asc<br><strong>order by可以使用整数代表字段</strong><a id="more"></a><br>eg:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from products_tbl</span><br><span class="line">order by 1;</span><br><span class="line">//上面查询语句输出的会按照products_tbl的第一个字段进行升序排序。</span><br><span class="line">select *</span><br><span class="line">from products_tbl</span><br><span class="line">order by 1，2;</span><br><span class="line">//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行升序排序。</span><br><span class="line">select *</span><br><span class="line">from products_tbl</span><br><span class="line">order by 1，2 desc;</span><br><span class="line">//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行降序排序。</span><br></pre></td></tr></table></figure><h2 id="统计表里的记录数量COUNT"><a href="#统计表里的记录数量COUNT" class="headerlink" title="统计表里的记录数量COUNT()"></a>统计表里的记录数量COUNT()</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select COUNT(*)</span><br><span class="line">from table_name;</span><br><span class="line">//查询table_name的表中有多少行数据</span><br><span class="line">如果统计的字段规定not null，那么统计结果和表里的数量相同</span><br><span class="line">如果统计字段规定可以null，那么就只统计有数据的数据。</span><br></pre></td></tr></table></figure><p>eg：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select COUNT(PROD_ID)</span><br><span class="line">from PRODUCTS_TBL;</span><br><span class="line">//统计PRODUCTS_TBL里字段PROD_ID的值的数量</span><br></pre></td></tr></table></figure><h2 id="使用字段别名"><a href="#使用字段别名" class="headerlink" title="使用字段别名"></a>使用字段别名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select column_name alias_name(别名)</span><br><span class="line">from table_name</span><br></pre></td></tr></table></figure><p>eg:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select prod_desc, prod_desc product</span><br><span class="line">from products_tbl;</span><br></pre></td></tr></table></figure><p><img src="/images/img-sql%E5%AD%97%E6%AE%B5%E5%88%AB%E5%90%8D%E8%BE%93%E5%87%BA.png" alt="sql字段别名输出"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Select语句&quot;&gt;&lt;a href=&quot;#Select语句&quot; class=&quot;headerlink&quot; title=&quot;Select语句&quot;&gt;&lt;/a&gt;Select语句&lt;/h2&gt;&lt;p&gt;数据库查询语句(DQL)&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;select [* | distinct column1 , column2 ]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;from   table [,table2]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;where  [condition1 | expression1] [and | orcondition2 | expression2 ]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;order by column1 | integer [ASC升序 | DESC降序]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;distinct：在结果中去除重复的记录。&lt;br&gt;order by：输出结果以某种形式排序。默认升序asc&lt;br&gt;&lt;strong&gt;order by可以使用整数代表字段&lt;/strong&gt;
-    
-    </summary>
-    
-      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
-    
-    
-      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL管理数据库对象</title>
-    <link href="www.number47.cn/2017/12/10/SQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%B9%E8%B1%A1/"/>
-    <id>www.number47.cn/2017/12/10/SQL数据库对象/</id>
-    <published>2017-12-10T04:56:35.000Z</published>
-    <updated>2019-05-25T05:38:39.576Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="数据库对象"><a href="#数据库对象" class="headerlink" title="数据库对象"></a>数据库对象</h2><p>数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。</p><h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><p><strong>CREATE TABLE 命令</strong></p><p>使用方法：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &lt;表名&gt;(</span><br><span class="line">&lt;列名&gt;  &lt;数据类型&gt;  [列级完整新约束],  //列级完整新约束 eg：primary key</span><br><span class="line">&lt;列名&gt;  &lt;数据类型&gt;  [列级完整新约束],  </span><br><span class="line">...</span><br><span class="line">[,&lt;表级完整性约束&gt;]</span><br><span class="line">);</span><br></pre></td></tr></table></figure><p>Eg:<a id="more"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE EMPLOYEE_TBL(</span><br><span class="line">EMP_ID       CHAR(9)       NOT NULL,</span><br><span class="line">EMP_NAME     VARCHAR(40)   NOT NULL,</span><br><span class="line">EMP_ST_ADDR  VARCHAR(20)   NOT NULL,</span><br><span class="line">EMP_CITY     VARCHAR(15)   NOT NULL,</span><br><span class="line">EMP_ST       CHAR(2)       NOT NULL,</span><br><span class="line">EMP_ZIP      INTEGER       NOT NULL,</span><br><span class="line">EMP_PHONE    INTEGER       NULL,</span><br><span class="line">EMP_PAGER    INTEGER       NULL</span><br><span class="line">);</span><br></pre></td></tr></table></figure><h2 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h2><p><strong>ALTER TABLE 命令</strong></p><h3 id="修改表的列的属性"><a href="#修改表的列的属性" class="headerlink" title="修改表的列的属性"></a>修改表的列的属性</h3><p><strong>列的属性：</strong>数据类型、长度、有效位或标度、是否为空</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE &lt;表名&gt;</span><br><span class="line">ADD [COLUMN] &lt;新列名&gt;&lt;数据类型&gt;[完整新约束]</span><br><span class="line">ADD &lt;表级完整新约束&gt;</span><br><span class="line">DROP [COLUMN] &lt;列名&gt; [CASCADE|RESTRICT]</span><br><span class="line">DROP CONSTRAINT&lt;完整性约束名&gt; [RESTRICT|CASCADE]</span><br><span class="line">ALTER COLUMN &lt;列名&gt; &lt;数据类型&gt;</span><br></pre></td></tr></table></figure><p><strong>CASCADE：</strong>自动删除引用了该类的其他对象，如视图</p><p><strong>RESTRICT：</strong>如果该列被其他对象引用，RDBMS拒绝删除该列</p><p>Eg：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//把EMP_ID的数据类型长度从9改为10.</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL </span><br><span class="line">ALTER COLUMN EMP_ID VARCHAR(10);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//新增EMP_ENGLISH_NAME列</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL</span><br><span class="line">ADD EMP_ENGLISH_NAME VARCHAR(20);</span><br><span class="line"></span><br><span class="line">//删除EMP_ENGLISH_NAME列</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL</span><br><span class="line">DROP COLUMN EMP_ENGLISH_NAME;</span><br></pre></td></tr></table></figure><h4 id="添加自动增加的列"><a href="#添加自动增加的列" class="headerlink" title="添加自动增加的列"></a>添加自动增加的列</h4><p>使用IDENTITY类型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE TEST_INCREMENT(</span><br><span class="line">  ID   INT  IDENTITY(1,1) NOT NULL, //(seed = 1,increment = 1) 從1開始,每次遞增1  </span><br><span class="line">  TEST_NAME VARCHAR(20)</span><br><span class="line">);</span><br></pre></td></tr></table></figure><p>##删除表</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE &lt;表名&gt; [CASCADE|RESTRICT];</span><br></pre></td></tr></table></figure><h2 id="完整性约束"><a href="#完整性约束" class="headerlink" title="完整性约束"></a>完整性约束</h2><h3 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h3><h3 id="唯一性约束"><a href="#唯一性约束" class="headerlink" title="唯一性约束"></a>唯一性约束</h3><p>###外键约束</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;数据库对象&quot;&gt;&lt;a href=&quot;#数据库对象&quot; class=&quot;headerlink&quot; title=&quot;数据库对象&quot;&gt;&lt;/a&gt;数据库对象&lt;/h2&gt;&lt;p&gt;数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。&lt;/p&gt;
-&lt;h2 id=&quot;创建表&quot;&gt;&lt;a href=&quot;#创建表&quot; class=&quot;headerlink&quot; title=&quot;创建表&quot;&gt;&lt;/a&gt;创建表&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;CREATE TABLE 命令&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;使用方法：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;CREATE TABLE &amp;lt;表名&amp;gt;(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束],  //列级完整新约束 eg：primary key&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束],  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	[,&amp;lt;表级完整性约束&amp;gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;Eg:
-    
-    </summary>
-    
-      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
-    
-    
-      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SQL事务</title>
     <link href="www.number47.cn/2017/12/10/SQL%E4%BA%8B%E5%8A%A1/"/>
     <id>www.number47.cn/2017/12/10/SQL事务/</id>
@@ -385,6 +304,87 @@
 &lt;h2 id=&quot;DBA（数据库管理员）&quot;&gt;&lt;a href=&quot;#DBA（数据库管理员）&quot; class=&quot;headerlink&quot; title=&quot;DBA（数据库管理员）&quot;&gt;&lt;/a&gt;DBA（数据库管理员）&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;数据库管理员&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&quot;DBS-数据库系统&quot;&gt;&lt;a href=&quot;#DBS-数据库系统&quot; class=&quot;headerlink&quot; title=&quot;DBS(数据库系统)&quot;&gt;&lt;/a&gt;DBS(数据库系统)&lt;/h2&gt;&lt;p&gt;由数据库、数据库管理系统（及其应用的开发工具）、应用数据和DBA组成的存储、管理、处理和维护数据的系统。&lt;/p&gt;
 &lt;h2 id=&quot;SQL&quot;&gt;&lt;a href=&quot;#SQL&quot; class=&quot;headerlink&quot; title=&quot;SQL&quot;&gt;&lt;/a&gt;SQL&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;结构化查询语句&lt;/strong&gt;是与关系型数据库进行通信的标准语言。
+    
+    </summary>
+    
+      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
+    
+    
+      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL管理数据库对象</title>
+    <link href="www.number47.cn/2017/12/10/SQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%B9%E8%B1%A1/"/>
+    <id>www.number47.cn/2017/12/10/SQL数据库对象/</id>
+    <published>2017-12-10T04:56:35.000Z</published>
+    <updated>2019-05-25T05:38:39.576Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="数据库对象"><a href="#数据库对象" class="headerlink" title="数据库对象"></a>数据库对象</h2><p>数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。</p><h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><p><strong>CREATE TABLE 命令</strong></p><p>使用方法：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &lt;表名&gt;(</span><br><span class="line">&lt;列名&gt;  &lt;数据类型&gt;  [列级完整新约束],  //列级完整新约束 eg：primary key</span><br><span class="line">&lt;列名&gt;  &lt;数据类型&gt;  [列级完整新约束],  </span><br><span class="line">...</span><br><span class="line">[,&lt;表级完整性约束&gt;]</span><br><span class="line">);</span><br></pre></td></tr></table></figure><p>Eg:<a id="more"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE EMPLOYEE_TBL(</span><br><span class="line">EMP_ID       CHAR(9)       NOT NULL,</span><br><span class="line">EMP_NAME     VARCHAR(40)   NOT NULL,</span><br><span class="line">EMP_ST_ADDR  VARCHAR(20)   NOT NULL,</span><br><span class="line">EMP_CITY     VARCHAR(15)   NOT NULL,</span><br><span class="line">EMP_ST       CHAR(2)       NOT NULL,</span><br><span class="line">EMP_ZIP      INTEGER       NOT NULL,</span><br><span class="line">EMP_PHONE    INTEGER       NULL,</span><br><span class="line">EMP_PAGER    INTEGER       NULL</span><br><span class="line">);</span><br></pre></td></tr></table></figure><h2 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h2><p><strong>ALTER TABLE 命令</strong></p><h3 id="修改表的列的属性"><a href="#修改表的列的属性" class="headerlink" title="修改表的列的属性"></a>修改表的列的属性</h3><p><strong>列的属性：</strong>数据类型、长度、有效位或标度、是否为空</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE &lt;表名&gt;</span><br><span class="line">ADD [COLUMN] &lt;新列名&gt;&lt;数据类型&gt;[完整新约束]</span><br><span class="line">ADD &lt;表级完整新约束&gt;</span><br><span class="line">DROP [COLUMN] &lt;列名&gt; [CASCADE|RESTRICT]</span><br><span class="line">DROP CONSTRAINT&lt;完整性约束名&gt; [RESTRICT|CASCADE]</span><br><span class="line">ALTER COLUMN &lt;列名&gt; &lt;数据类型&gt;</span><br></pre></td></tr></table></figure><p><strong>CASCADE：</strong>自动删除引用了该类的其他对象，如视图</p><p><strong>RESTRICT：</strong>如果该列被其他对象引用，RDBMS拒绝删除该列</p><p>Eg：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//把EMP_ID的数据类型长度从9改为10.</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL </span><br><span class="line">ALTER COLUMN EMP_ID VARCHAR(10);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//新增EMP_ENGLISH_NAME列</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL</span><br><span class="line">ADD EMP_ENGLISH_NAME VARCHAR(20);</span><br><span class="line"></span><br><span class="line">//删除EMP_ENGLISH_NAME列</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL</span><br><span class="line">DROP COLUMN EMP_ENGLISH_NAME;</span><br></pre></td></tr></table></figure><h4 id="添加自动增加的列"><a href="#添加自动增加的列" class="headerlink" title="添加自动增加的列"></a>添加自动增加的列</h4><p>使用IDENTITY类型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE TEST_INCREMENT(</span><br><span class="line">  ID   INT  IDENTITY(1,1) NOT NULL, //(seed = 1,increment = 1) 從1開始,每次遞增1  </span><br><span class="line">  TEST_NAME VARCHAR(20)</span><br><span class="line">);</span><br></pre></td></tr></table></figure><p>##删除表</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE &lt;表名&gt; [CASCADE|RESTRICT];</span><br></pre></td></tr></table></figure><h2 id="完整性约束"><a href="#完整性约束" class="headerlink" title="完整性约束"></a>完整性约束</h2><h3 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h3><h3 id="唯一性约束"><a href="#唯一性约束" class="headerlink" title="唯一性约束"></a>唯一性约束</h3><p>###外键约束</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;数据库对象&quot;&gt;&lt;a href=&quot;#数据库对象&quot; class=&quot;headerlink&quot; title=&quot;数据库对象&quot;&gt;&lt;/a&gt;数据库对象&lt;/h2&gt;&lt;p&gt;数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。&lt;/p&gt;
+&lt;h2 id=&quot;创建表&quot;&gt;&lt;a href=&quot;#创建表&quot; class=&quot;headerlink&quot; title=&quot;创建表&quot;&gt;&lt;/a&gt;创建表&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;CREATE TABLE 命令&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;CREATE TABLE &amp;lt;表名&amp;gt;(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束],  //列级完整新约束 eg：primary key&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束],  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	[,&amp;lt;表级完整性约束&amp;gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;Eg:
+    
+    </summary>
+    
+      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
+    
+    
+      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL数据库查询</title>
+    <link href="www.number47.cn/2017/12/10/SQL%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/"/>
+    <id>www.number47.cn/2017/12/10/SQL数据库查询/</id>
+    <published>2017-12-10T04:56:35.000Z</published>
+    <updated>2019-05-25T05:38:39.577Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Select语句"><a href="#Select语句" class="headerlink" title="Select语句"></a>Select语句</h2><p>数据库查询语句(DQL)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select [* | distinct column1 , column2 ]</span><br><span class="line">from   table [,table2]</span><br><span class="line">where  [condition1 | expression1] [and | orcondition2 | expression2 ]</span><br><span class="line">order by column1 | integer [ASC升序 | DESC降序]</span><br></pre></td></tr></table></figure><p>distinct：在结果中去除重复的记录。<br>order by：输出结果以某种形式排序。默认升序asc<br><strong>order by可以使用整数代表字段</strong><a id="more"></a><br>eg:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">select *</span><br><span class="line">from products_tbl</span><br><span class="line">order by 1;</span><br><span class="line">//上面查询语句输出的会按照products_tbl的第一个字段进行升序排序。</span><br><span class="line">select *</span><br><span class="line">from products_tbl</span><br><span class="line">order by 1，2;</span><br><span class="line">//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行升序排序。</span><br><span class="line">select *</span><br><span class="line">from products_tbl</span><br><span class="line">order by 1，2 desc;</span><br><span class="line">//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行降序排序。</span><br></pre></td></tr></table></figure><h2 id="统计表里的记录数量COUNT"><a href="#统计表里的记录数量COUNT" class="headerlink" title="统计表里的记录数量COUNT()"></a>统计表里的记录数量COUNT()</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select COUNT(*)</span><br><span class="line">from table_name;</span><br><span class="line">//查询table_name的表中有多少行数据</span><br><span class="line">如果统计的字段规定not null，那么统计结果和表里的数量相同</span><br><span class="line">如果统计字段规定可以null，那么就只统计有数据的数据。</span><br></pre></td></tr></table></figure><p>eg：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select COUNT(PROD_ID)</span><br><span class="line">from PRODUCTS_TBL;</span><br><span class="line">//统计PRODUCTS_TBL里字段PROD_ID的值的数量</span><br></pre></td></tr></table></figure><h2 id="使用字段别名"><a href="#使用字段别名" class="headerlink" title="使用字段别名"></a>使用字段别名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select column_name alias_name(别名)</span><br><span class="line">from table_name</span><br></pre></td></tr></table></figure><p>eg:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select prod_desc, prod_desc product</span><br><span class="line">from products_tbl;</span><br></pre></td></tr></table></figure><p><img src="/images/img-sql%E5%AD%97%E6%AE%B5%E5%88%AB%E5%90%8D%E8%BE%93%E5%87%BA.png" alt="sql字段别名输出"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Select语句&quot;&gt;&lt;a href=&quot;#Select语句&quot; class=&quot;headerlink&quot; title=&quot;Select语句&quot;&gt;&lt;/a&gt;Select语句&lt;/h2&gt;&lt;p&gt;数据库查询语句(DQL)&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;select [* | distinct column1 , column2 ]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;from   table [,table2]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;where  [condition1 | expression1] [and | orcondition2 | expression2 ]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;order by column1 | integer [ASC升序 | DESC降序]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;distinct：在结果中去除重复的记录。&lt;br&gt;order by：输出结果以某种形式排序。默认升序asc&lt;br&gt;&lt;strong&gt;order by可以使用整数代表字段&lt;/strong&gt;
+    
+    </summary>
+    
+      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
+    
+    
+      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL数据类型</title>
+    <link href="www.number47.cn/2017/12/10/SQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>www.number47.cn/2017/12/10/SQL数据类型/</id>
+    <published>2017-12-10T04:56:35.000Z</published>
+    <updated>2019-05-25T05:38:39.578Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SQL数据类型"><a href="#SQL数据类型" class="headerlink" title="SQL数据类型"></a>SQL数据类型</h2><ul><li><p>CHAR(n)：定长数据类型</p></li><li><p>VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量</p></li><li><p>BLOB：大对象类型，二进制大对象，保存很长的二进制字符串</p></li><li><p>TEXT：长字符串类型，可以看作一个大VARCHAR字段<a id="more"></a></p></li></ul><h2 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h2><ul><li><p>BIT(n)</p></li><li><p>BIT VARCHAR(n)</p></li><li><p>DECIMAL(p, s)</p></li><li><p>INTEGER</p></li><li><p>SMALLINT</p></li><li><p>BIGINT</p></li><li><p>FLOAT(p, s)</p></li><li><p>DOUBLE PRECISION(p, s)</p></li><li><p>REAL(s)<br>p表示字段的最大长度<br>s表示小数点后面的位数</p></li></ul><h2 id="小数点类型"><a href="#小数点类型" class="headerlink" title="小数点类型"></a>小数点类型</h2><p>DECIMAL(p, s)</p><p>p：有效位数</p><p>s：标度</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eg:DECIMAL(4,2)  最大值为99.99</span><br><span class="line">//有效位数是4，也就是数值总位数是4，标度是2小数点后面的位数</span><br></pre></td></tr></table></figure><p>如果实际数值的小数位数超出定义的位数，数字就会被四舍五入。</p><p>##浮点数</p><p><strong>REAL：</strong>单精度浮点数，单精度浮点数的有效位1—21（包含）</p><p><strong>DOUBLE PRECISION：</strong>双精度浮点数的有效位22—53（包含）</p><h2 id="日期和时间类型"><a href="#日期和时间类型" class="headerlink" title="日期和时间类型"></a>日期和时间类型</h2><ul><li><p>DATE</p></li><li><p>TIME</p></li><li><p>DATETIME</p></li><li><p>TIMESTAMP</p></li></ul><p>##直义字符串</p><p>  一系列字符，比如姓名或电话号码，这是有用户或程序明确指定的。</p><h2 id="自定义类型"><a href="#自定义类型" class="headerlink" title="自定义类型"></a>自定义类型</h2><p>由用户定义的类型，允许用户根据已有的数据类型来定制自己的数据类型。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">MYSQL</span><br><span class="line">//创建自定义类型</span><br><span class="line">CRATE TYPE PERSON AS OBJECT</span><br><span class="line">(NAME VARCHAR(30),</span><br><span class="line">SSN VARCHAR(9));</span><br><span class="line">//引用自定义类型</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> EMP_PAY</span><br><span class="line">(EMPLOYEE PERSON,</span><br><span class="line">SALARY <span class="built_in">DECIMAL</span>(<span class="number">10</span>,<span class="number">2</span>),</span><br><span class="line">HIRE_DATE <span class="built_in">DATE</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure><h2 id="域"><a href="#域" class="headerlink" title="域"></a>域</h2><p>域是能够被使用的有效数据类型的集合。域与数据相关联，从而只接受待定的数据，在域创建之后，我们可以向域添加约束，约束与数据类型共同发挥作用，从而限制字段能够接受的数据。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//创建域</span><br><span class="line">CREATE DOMAIN MONEY_D AS NUMBER(8,2);</span><br><span class="line">//添加约束</span><br><span class="line">ALTER DOMAIN MONEY_D</span><br><span class="line">ADD CONSTRANINT MONEY_CON1</span><br><span class="line">CHECK (VALUE &gt; 5);</span><br><span class="line">//引用域</span><br><span class="line">CREATE TABLE EMP_PAY</span><br><span class="line">(EMP_ID NUMBER(9),</span><br><span class="line">EMP_NAME VARCHAR2(30),</span><br><span class="line">PAY_RATE MONET_D</span><br><span class="line">);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;SQL数据类型&quot;&gt;&lt;a href=&quot;#SQL数据类型&quot; class=&quot;headerlink&quot; title=&quot;SQL数据类型&quot;&gt;&lt;/a&gt;SQL数据类型&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;CHAR(n)：定长数据类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;BLOB：大对象类型，二进制大对象，保存很长的二进制字符串&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TEXT：长字符串类型，可以看作一个大VARCHAR字段
     
     </summary>
     
