@@ -1534,8 +1534,8 @@ pre .javascript .function {
   margin-top: 40px;
 }
 .posts-expand .post-tags {
-  margin-top: 40px;
-  text-align: center;
+  margin-top: 5px;
+  margin-left: 48px;
 }
 .posts-expand .post-tags a {
   display: inline-block;
@@ -1855,7 +1855,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff95ff;
+  background: #ff75a8;
 }
 .feed-link,
 .chat {
