@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[spring security 学习(一)-spring boot 整合]]></title>
-    <url>%2Fposts%2F2041720639%2F</url>
-    <content type="text"><![CDATA[Spring Security(一)-Spring Boot 整合创建spring boot项目，引入spring-boot-start-security1234&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;&lt;/dependency&gt; 创建/spring-security的访问接口1234567@RestControllerpublic class DemoController &#123; @GetMapping("spring-security") public String hello() &#123; return "hello spring security"; &#125;&#125; 表单认证创建配置类WebSecurityConfig继承WebSecurityConfigurerAdapter,WebSecurityConfigurerAdapter是由Spring Security提供的Web应用安全配置的适配器。 1234567891011121314@Configuration@EnableWebSecuritypublic class WebSecurityConfig extends WebSecurityConfigurerAdapter &#123; @Override protected void configure(HttpSecurity http) throws Exception &#123; http.formLogin() // 表单方式 .and() .authorizeRequests() .anyRequest() // 所有请求 .authenticated(); // 都需要认证 &#125;&#125; 设置启动端口application.properties 1server.port=8081 启动程序，启动时控制台Using generated security password: 9aac6105-0752-4bf1-9f54-c247e94086ab，每次都不一样，这个为用户user的密码。访问http://localhost:8080/spring-security，页面跳转到http://localhost:8080/login登录后，访问到http://localhost:8080/spring-security]]></content>
+    <title></title>
+    <url>%2Fposts%2F0%2F</url>
+    <content type="text"><![CDATA[-– title: Lesson22-Unit3 Part3(2) tags: 教学课 | English categories: English copyright: true comment: true abbrlink: 3125715511 date: 2019-11-29 12:56:35 -– VocabularySource of Energy 能源solar energy/solar power 太阳能solar adj.太阳的 clean 干净的 -&gt; cleanest 最干净的 plentiful 充足的 -&gt; most plentiful 最充足的 one of + the形容词最高级+名词复数 最….的之一 e.g. Tony Stark is one of the richest people in the world. Solar power depends on sunlight, so in cloudy weather and at night, no power is generated. wind energy 风能non-: 表示否定的前缀 non-polluting 无污染的 non-alcoholoic 不含酒精的 non-traditional 非传统的 non-smoking 无烟的 Wind turbines convert the kinetic energy of the wind into mechanical power. wind turbine 风力涡轮机 mechanical power 机械能 kinetic energy 动能 convert A into B 把A转化为B nuclear energy 核能efficient 高效的 carbon gas 含碳气体 waste product 废弃物 Chernobyl 切尔诺贝利 deadly adj.致命的，致死的 a deadly virus 致命的病毒 a deadly weapon 致命的武器 deadly radioactive waste products 致命的放射性废弃物 fossil fuel 化石燃料A major source of energy comes from the buring of fossil fuels, such as coal and oil. the buring of fossil fuels 化石燃料的燃烧 coal 煤 oil 石油 CO2= carbon dioxide 二氧化碳 When we burn fossil fuels, waste gases, such as CO2 are produced. 当我们燃烧化石燃料时，废弃的气体就产生了，比如二氧化碳。 remain v.保持不变，仍然是 remain + n. e.g. It remains a secret. remain + adj. e.g. You have the right to remain silent. 你有权保持沉默。 hydropower 水力发电the kinetic energy of falling water 高处落下的睡产生的动能 Output is reliable and can be regulated to meet the demand, except during periods of drought. 水力发电的能量稳定，可以调控以满足需求，除了干旱时期之外。 reliable adj.可靠的，可信赖的 output n. 输出，产出 input n. 输入，投入 regulate v.控制调节 e.g. My monther regulates how much TV I can watch. to meet the demand 为了满足需求（动词不定式表示目的） meet v. 满足 meet the needs/requirements except 除…之外 drought n.干旱 Types of Wordsnoun 名词 n.&amp; pronoun代词 pron.represent object a person, an animal, a thing, including an idea verb动词 v.express actions: sit down , stand up express relationships: to love someone , to own something adjective 形容词 adj.describe objects: a tall building adverb 副词 adv.describe actions: run fast,walk slowly, quickly, loudly, quietly, well Adverbs express the quality of an action, such as how well or poorly something is done. conjunction 连接词 conj.connect thing or actions : to read and write Dialogue将来时的结构之一：will do 将来时的结构之二：现在进行时表将来 We are moving to a new office. 我们要搬去新的办公室了. move, go, come, leave 等转移动词 e.g. I’m coming. ​ She’s leaving for Beijing. When is this going to happen? 将来时的结构之三：be going to + do 意愿（打算在将来做某事） e.g. We are going to move to a new office. 我们要搬去新的办公室了. be supposed to do sth 应当做某事 How far away..?有多远 How far away is the new office? How far away … from ..? 从哪到哪距离多远 How far away is the Sun from Earth? We’re not sure yet, but it will mean a longer commute of most of us. yet 用于否定句和疑问句，谈论尚未发生的事 commute n. 通勤 a longer commute v. 通勤 I commute by subway In other words 也就是说，换句话说 That depends on your point of view. point of view 观点，看法 From my point of view …./ In my opinion…. 在我看来.. depend on 取决于 plan to do sth 打算做某事 不定代词+形容词 somthing hot and spicy on one’s own 靠自己 now that 既然，由于 e.g. I‘m going to relax now that the school year is over. 既然一个学年结束了，我想放松下 in favor of sth 支持，赞同某事 be against sth 反对某事 at first 一开始，最开始 be serious about sth. 对某事认真严肃 take a risk/take risks 冒险 be tired of doing sth 厌倦做某事 come as a surprise to sb 让某人出乎意料，感到突然 come as no surprise 不出意外]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[spring security 学习(二)-自定义登录页登录与退出]]></title>
+    <url>%2Fposts%2F1069405809%2F</url>
+    <content type="text"><![CDATA[Spring Security(二)-自定义登录页登录与退出]]></content>
       <categories>
         <category>Spring Security</category>
       </categories>
@@ -23,9 +28,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[spring security 学习(二)-自定义登录页登录与退出]]></title>
-    <url>%2Fposts%2F1069405809%2F</url>
-    <content type="text"><![CDATA[Spring Security(二)-自定义登录页登录与退出]]></content>
+    <title><![CDATA[spring security 学习(一)-spring boot 整合]]></title>
+    <url>%2Fposts%2F2041720639%2F</url>
+    <content type="text"><![CDATA[Spring Security(一)-Spring Boot 整合创建spring boot项目，引入spring-boot-start-security1234&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;&lt;/dependency&gt; 创建/spring-security的访问接口1234567@RestControllerpublic class DemoController &#123; @GetMapping("spring-security") public String hello() &#123; return "hello spring security"; &#125;&#125; 表单认证创建配置类WebSecurityConfig继承WebSecurityConfigurerAdapter,WebSecurityConfigurerAdapter是由Spring Security提供的Web应用安全配置的适配器。 1234567891011121314@Configuration@EnableWebSecuritypublic class WebSecurityConfig extends WebSecurityConfigurerAdapter &#123; @Override protected void configure(HttpSecurity http) throws Exception &#123; http.formLogin() // 表单方式 .and() .authorizeRequests() .anyRequest() // 所有请求 .authenticated(); // 都需要认证 &#125;&#125; 设置启动端口application.properties 1server.port=8081 启动程序，启动时控制台Using generated security password: 9aac6105-0752-4bf1-9f54-c247e94086ab，每次都不一样，这个为用户user的密码。访问http://localhost:8080/spring-security，页面跳转到http://localhost:8080/login登录后，访问到http://localhost:8080/spring-security]]></content>
       <categories>
         <category>Spring Security</category>
       </categories>
@@ -108,31 +113,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[SQL数据类型]]></title>
-    <url>%2Fposts%2F344462107%2F</url>
-    <content type="text"><![CDATA[SQL数据类型 CHAR(n)：定长数据类型 VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量 BLOB：大对象类型，二进制大对象，保存很长的二进制字符串 TEXT：长字符串类型，可以看作一个大VARCHAR字段 数值类型 BIT(n) BIT VARCHAR(n) DECIMAL(p, s) INTEGER SMALLINT BIGINT FLOAT(p, s) DOUBLE PRECISION(p, s) REAL(s)p表示字段的最大长度s表示小数点后面的位数 小数点类型DECIMAL(p, s) p：有效位数 s：标度 12eg:DECIMAL(4,2) 最大值为99.99//有效位数是4，也就是数值总位数是4，标度是2小数点后面的位数 如果实际数值的小数位数超出定义的位数，数字就会被四舍五入。 ##浮点数 REAL：单精度浮点数，单精度浮点数的有效位1—21（包含） DOUBLE PRECISION：双精度浮点数的有效位22—53（包含） 日期和时间类型 DATE TIME DATETIME TIMESTAMP ##直义字符串 一系列字符，比如姓名或电话号码，这是有用户或程序明确指定的。 自定义类型由用户定义的类型，允许用户根据已有的数据类型来定制自己的数据类型。 1234567891011MYSQL//创建自定义类型CRATE TYPE PERSON AS OBJECT(NAME VARCHAR(30),SSN VARCHAR(9));//引用自定义类型CREATE TABLE EMP_PAY(EMPLOYEE PERSON,SALARY DECIMAL(10,2),HIRE_DATE DATE); 域域是能够被使用的有效数据类型的集合。域与数据相关联，从而只接受待定的数据，在域创建之后，我们可以向域添加约束，约束与数据类型共同发挥作用，从而限制字段能够接受的数据。 123456789101112//创建域CREATE DOMAIN MONEY_D AS NUMBER(8,2);//添加约束ALTER DOMAIN MONEY_DADD CONSTRANINT MONEY_CON1CHECK (VALUE &gt; 5);//引用域CREATE TABLE EMP_PAY(EMP_ID NUMBER(9),EMP_NAME VARCHAR2(30),PAY_RATE MONET_D);]]></content>
-      <categories>
-        <category>SQL</category>
-      </categories>
-      <tags>
-        <tag>SQL入门经典</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[SQL数据库查询]]></title>
-    <url>%2Fposts%2F2950692053%2F</url>
-    <content type="text"><![CDATA[Select语句数据库查询语句(DQL) 1234select [* | distinct column1 , column2 ]from table [,table2]where [condition1 | expression1] [and | orcondition2 | expression2 ]order by column1 | integer [ASC升序 | DESC降序] distinct：在结果中去除重复的记录。order by：输出结果以某种形式排序。默认升序ascorder by可以使用整数代表字段eg: 123456789101112select *from products_tblorder by 1;//上面查询语句输出的会按照products_tbl的第一个字段进行升序排序。select *from products_tblorder by 1，2;//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行升序排序。select *from products_tblorder by 1，2 desc;//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行降序排序。 统计表里的记录数量COUNT()12345select COUNT(*)from table_name;//查询table_name的表中有多少行数据如果统计的字段规定not null，那么统计结果和表里的数量相同如果统计字段规定可以null，那么就只统计有数据的数据。 eg： 123select COUNT(PROD_ID)from PRODUCTS_TBL;//统计PRODUCTS_TBL里字段PROD_ID的值的数量 使用字段别名12select column_name alias_name(别名)from table_name eg: 12select prod_desc, prod_desc productfrom products_tbl;]]></content>
-      <categories>
-        <category>SQL</category>
-      </categories>
-      <tags>
-        <tag>SQL入门经典</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[SQL管理数据库对象]]></title>
-    <url>%2Fposts%2F2709286209%2F</url>
-    <content type="text"><![CDATA[数据库对象数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。 创建表CREATE TABLE 命令 使用方法： 123456CREATE TABLE &lt;表名&gt;( &lt;列名&gt; &lt;数据类型&gt; [列级完整新约束], //列级完整新约束 eg：primary key &lt;列名&gt; &lt;数据类型&gt; [列级完整新约束], ... [,&lt;表级完整性约束&gt;]); Eg: 12345678910CREATE TABLE EMPLOYEE_TBL( EMP_ID CHAR(9) NOT NULL, EMP_NAME VARCHAR(40) NOT NULL, EMP_ST_ADDR VARCHAR(20) NOT NULL, EMP_CITY VARCHAR(15) NOT NULL, EMP_ST CHAR(2) NOT NULL, EMP_ZIP INTEGER NOT NULL, EMP_PHONE INTEGER NULL, EMP_PAGER INTEGER NULL); 修改表ALTER TABLE 命令 修改表的列的属性列的属性：数据类型、长度、有效位或标度、是否为空 123456ALTER TABLE &lt;表名&gt;ADD [COLUMN] &lt;新列名&gt;&lt;数据类型&gt;[完整新约束]ADD &lt;表级完整新约束&gt;DROP [COLUMN] &lt;列名&gt; [CASCADE|RESTRICT]DROP CONSTRAINT&lt;完整性约束名&gt; [RESTRICT|CASCADE]ALTER COLUMN &lt;列名&gt; &lt;数据类型&gt; CASCADE：自动删除引用了该类的其他对象，如视图 RESTRICT：如果该列被其他对象引用，RDBMS拒绝删除该列 Eg： 123456789101112//把EMP_ID的数据类型长度从9改为10.ALTER TABLE EMPLOYEE_TBL ALTER COLUMN EMP_ID VARCHAR(10);//新增EMP_ENGLISH_NAME列ALTER TABLE EMPLOYEE_TBLADD EMP_ENGLISH_NAME VARCHAR(20);//删除EMP_ENGLISH_NAME列ALTER TABLE EMPLOYEE_TBLDROP COLUMN EMP_ENGLISH_NAME; 添加自动增加的列使用IDENTITY类型 1234CREATE TABLE TEST_INCREMENT( ID INT IDENTITY(1,1) NOT NULL, //(seed = 1,increment = 1) 從1開始,每次遞增1 TEST_NAME VARCHAR(20)); ##删除表 1DROP TABLE &lt;表名&gt; [CASCADE|RESTRICT]; 完整性约束主键约束唯一性约束###外键约束]]></content>
+    <title><![CDATA[SQL事务]]></title>
+    <url>%2Fposts%2F2510228647%2F</url>
+    <content type="text"><![CDATA[事务事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。 控制事务###COMMIT命令 用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。 123begin transactionsql语句commit; ###ROLLBACK命令 用于撤销还没有被保存到数据库的命令，它只能用于撤销上一个COMMIT或ROLLBACK命令之后的实物。 123begin transactionsql语句rollback; eg: 1234567begin transaction update products_tblset cost = 8where prod_id = &apos;11235&apos;;rollback;//上面语句会撤销更新的sql，不会让&apos;11235&apos;的prod_id更新为8，而是原来的值 ###SAVEPOINT 保存点是事务过程中的一个逻辑点，我们可以把事务回退到这个点，而步兵回退到整个实物。 创建savepoint1save transaction savepoint_name 回退到savepoint1rollback transaction savepoint_name eg: 1234567891011121314151617181920BEGIN TRANSACTIONsave transaction sp1 //保存点1 更新&apos;11235&apos;的cost为80update products_tblset cost = 80where prod_id = &apos;11235&apos;;save transaction sp2 //保存点2 更新&apos;11235&apos;的cost为99update products_tblset cost = 99where prod_id = &apos;11235&apos;select * //查询 得到&apos;11235&apos;的cost为99from products_tbl; rollback transaction sp2; //回退到保存点2 得到&apos;11235&apos;的cost为80select * //查询 得到&apos;11235&apos;的cost为80from products_tbl;]]></content>
       <categories>
         <category>SQL</category>
       </categories>
@@ -152,9 +135,31 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[SQL事务]]></title>
-    <url>%2Fposts%2F2510228647%2F</url>
-    <content type="text"><![CDATA[事务事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。 控制事务###COMMIT命令 用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。 123begin transactionsql语句commit; ###ROLLBACK命令 用于撤销还没有被保存到数据库的命令，它只能用于撤销上一个COMMIT或ROLLBACK命令之后的实物。 123begin transactionsql语句rollback; eg: 1234567begin transaction update products_tblset cost = 8where prod_id = &apos;11235&apos;;rollback;//上面语句会撤销更新的sql，不会让&apos;11235&apos;的prod_id更新为8，而是原来的值 ###SAVEPOINT 保存点是事务过程中的一个逻辑点，我们可以把事务回退到这个点，而步兵回退到整个实物。 创建savepoint1save transaction savepoint_name 回退到savepoint1rollback transaction savepoint_name eg: 1234567891011121314151617181920BEGIN TRANSACTIONsave transaction sp1 //保存点1 更新&apos;11235&apos;的cost为80update products_tblset cost = 80where prod_id = &apos;11235&apos;;save transaction sp2 //保存点2 更新&apos;11235&apos;的cost为99update products_tblset cost = 99where prod_id = &apos;11235&apos;select * //查询 得到&apos;11235&apos;的cost为99from products_tbl; rollback transaction sp2; //回退到保存点2 得到&apos;11235&apos;的cost为80select * //查询 得到&apos;11235&apos;的cost为80from products_tbl;]]></content>
+    <title><![CDATA[SQL管理数据库对象]]></title>
+    <url>%2Fposts%2F2709286209%2F</url>
+    <content type="text"><![CDATA[数据库对象数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。 创建表CREATE TABLE 命令 使用方法： 123456CREATE TABLE &lt;表名&gt;( &lt;列名&gt; &lt;数据类型&gt; [列级完整新约束], //列级完整新约束 eg：primary key &lt;列名&gt; &lt;数据类型&gt; [列级完整新约束], ... [,&lt;表级完整性约束&gt;]); Eg: 12345678910CREATE TABLE EMPLOYEE_TBL( EMP_ID CHAR(9) NOT NULL, EMP_NAME VARCHAR(40) NOT NULL, EMP_ST_ADDR VARCHAR(20) NOT NULL, EMP_CITY VARCHAR(15) NOT NULL, EMP_ST CHAR(2) NOT NULL, EMP_ZIP INTEGER NOT NULL, EMP_PHONE INTEGER NULL, EMP_PAGER INTEGER NULL); 修改表ALTER TABLE 命令 修改表的列的属性列的属性：数据类型、长度、有效位或标度、是否为空 123456ALTER TABLE &lt;表名&gt;ADD [COLUMN] &lt;新列名&gt;&lt;数据类型&gt;[完整新约束]ADD &lt;表级完整新约束&gt;DROP [COLUMN] &lt;列名&gt; [CASCADE|RESTRICT]DROP CONSTRAINT&lt;完整性约束名&gt; [RESTRICT|CASCADE]ALTER COLUMN &lt;列名&gt; &lt;数据类型&gt; CASCADE：自动删除引用了该类的其他对象，如视图 RESTRICT：如果该列被其他对象引用，RDBMS拒绝删除该列 Eg： 123456789101112//把EMP_ID的数据类型长度从9改为10.ALTER TABLE EMPLOYEE_TBL ALTER COLUMN EMP_ID VARCHAR(10);//新增EMP_ENGLISH_NAME列ALTER TABLE EMPLOYEE_TBLADD EMP_ENGLISH_NAME VARCHAR(20);//删除EMP_ENGLISH_NAME列ALTER TABLE EMPLOYEE_TBLDROP COLUMN EMP_ENGLISH_NAME; 添加自动增加的列使用IDENTITY类型 1234CREATE TABLE TEST_INCREMENT( ID INT IDENTITY(1,1) NOT NULL, //(seed = 1,increment = 1) 從1開始,每次遞增1 TEST_NAME VARCHAR(20)); ##删除表 1DROP TABLE &lt;表名&gt; [CASCADE|RESTRICT]; 完整性约束主键约束唯一性约束###外键约束]]></content>
+      <categories>
+        <category>SQL</category>
+      </categories>
+      <tags>
+        <tag>SQL入门经典</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SQL数据库查询]]></title>
+    <url>%2Fposts%2F2950692053%2F</url>
+    <content type="text"><![CDATA[Select语句数据库查询语句(DQL) 1234select [* | distinct column1 , column2 ]from table [,table2]where [condition1 | expression1] [and | orcondition2 | expression2 ]order by column1 | integer [ASC升序 | DESC降序] distinct：在结果中去除重复的记录。order by：输出结果以某种形式排序。默认升序ascorder by可以使用整数代表字段eg: 123456789101112select *from products_tblorder by 1;//上面查询语句输出的会按照products_tbl的第一个字段进行升序排序。select *from products_tblorder by 1，2;//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行升序排序。select *from products_tblorder by 1，2 desc;//上面查询语句输出的会先对products_tbl的第一个字段进行升序排序，再对第二个字段进行降序排序。 统计表里的记录数量COUNT()12345select COUNT(*)from table_name;//查询table_name的表中有多少行数据如果统计的字段规定not null，那么统计结果和表里的数量相同如果统计字段规定可以null，那么就只统计有数据的数据。 eg： 123select COUNT(PROD_ID)from PRODUCTS_TBL;//统计PRODUCTS_TBL里字段PROD_ID的值的数量 使用字段别名12select column_name alias_name(别名)from table_name eg: 12select prod_desc, prod_desc productfrom products_tbl;]]></content>
+      <categories>
+        <category>SQL</category>
+      </categories>
+      <tags>
+        <tag>SQL入门经典</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SQL数据类型]]></title>
+    <url>%2Fposts%2F344462107%2F</url>
+    <content type="text"><![CDATA[SQL数据类型 CHAR(n)：定长数据类型 VARCHAR(n)：变长数据类型，n表示字段能够保存的最多字符数量 BLOB：大对象类型，二进制大对象，保存很长的二进制字符串 TEXT：长字符串类型，可以看作一个大VARCHAR字段 数值类型 BIT(n) BIT VARCHAR(n) DECIMAL(p, s) INTEGER SMALLINT BIGINT FLOAT(p, s) DOUBLE PRECISION(p, s) REAL(s)p表示字段的最大长度s表示小数点后面的位数 小数点类型DECIMAL(p, s) p：有效位数 s：标度 12eg:DECIMAL(4,2) 最大值为99.99//有效位数是4，也就是数值总位数是4，标度是2小数点后面的位数 如果实际数值的小数位数超出定义的位数，数字就会被四舍五入。 ##浮点数 REAL：单精度浮点数，单精度浮点数的有效位1—21（包含） DOUBLE PRECISION：双精度浮点数的有效位22—53（包含） 日期和时间类型 DATE TIME DATETIME TIMESTAMP ##直义字符串 一系列字符，比如姓名或电话号码，这是有用户或程序明确指定的。 自定义类型由用户定义的类型，允许用户根据已有的数据类型来定制自己的数据类型。 1234567891011MYSQL//创建自定义类型CRATE TYPE PERSON AS OBJECT(NAME VARCHAR(30),SSN VARCHAR(9));//引用自定义类型CREATE TABLE EMP_PAY(EMPLOYEE PERSON,SALARY DECIMAL(10,2),HIRE_DATE DATE); 域域是能够被使用的有效数据类型的集合。域与数据相关联，从而只接受待定的数据，在域创建之后，我们可以向域添加约束，约束与数据类型共同发挥作用，从而限制字段能够接受的数据。 123456789101112//创建域CREATE DOMAIN MONEY_D AS NUMBER(8,2);//添加约束ALTER DOMAIN MONEY_DADD CONSTRANINT MONEY_CON1CHECK (VALUE &gt; 5);//引用域CREATE TABLE EMP_PAY(EMP_ID NUMBER(9),EMP_NAME VARCHAR2(30),PAY_RATE MONET_D);]]></content>
       <categories>
         <category>SQL</category>
       </categories>
