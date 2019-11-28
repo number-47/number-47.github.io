@@ -42,6 +42,31 @@
   </entry>
   
   <entry>
+    <title>spring security</title>
+    <link href="www.number47.cn/posts/1444918557/"/>
+    <id>www.number47.cn/posts/1444918557/</id>
+    <published>2019-10-24T04:56:35.000Z</published>
+    <updated>2019-11-27T19:32:11.076Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h1><h2 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h2><ol><li>认证（你是谁）</li><li>授权（你能干什么）</li><li>攻击防护（防止伪造身份）</li></ol><h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p><img src="https://ws1.sinaimg.cn/large/a8a26f7cgy1g6dlcukl6rj20yq0a777q.jpg" alt></p><h2 id="用户名-密码"><a href="#用户名-密码" class="headerlink" title="用户名+密码"></a>用户名+密码</h2><h2 id="手机号-短信认证"><a href="#手机号-短信认证" class="headerlink" title="手机号+短信认证"></a>手机号+短信认证</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Spring-Security&quot;&gt;&lt;a href=&quot;#Spring-Security&quot; class=&quot;headerlink&quot; title=&quot;Spring Security&quot;&gt;&lt;/a&gt;Spring Security&lt;/h1&gt;&lt;h2 id=&quot;核心功能&quot;&gt;&lt;a href
+      
+    
+    </summary>
+    
+      <category term="Spring Security" scheme="www.number47.cn/categories/Spring-Security/"/>
+    
+    
+      <category term="Spring Security" scheme="www.number47.cn/tags/Spring-Security/"/>
+    
+  </entry>
+  
+  <entry>
     <title>专项课18 旅游场景</title>
     <link href="www.number47.cn/posts/3125715510/"/>
     <id>www.number47.cn/posts/3125715510/</id>
@@ -81,31 +106,6 @@
       
       
         &lt;h1 id=&quot;Spring-Security-一-Spring-Boot-整合&quot;&gt;&lt;a href=&quot;#Spring-Security-一-Spring-Boot-整合&quot; class=&quot;headerlink&quot; title=&quot;Spring Security(一)-Spring Bo
-      
-    
-    </summary>
-    
-      <category term="Spring Security" scheme="www.number47.cn/categories/Spring-Security/"/>
-    
-    
-      <category term="Spring Security" scheme="www.number47.cn/tags/Spring-Security/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>spring security</title>
-    <link href="www.number47.cn/posts/1444918557/"/>
-    <id>www.number47.cn/posts/1444918557/</id>
-    <published>2019-10-24T04:56:35.000Z</published>
-    <updated>2019-11-27T19:32:11.076Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h1><h2 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h2><ol><li>认证（你是谁）</li><li>授权（你能干什么）</li><li>攻击防护（防止伪造身份）</li></ol><h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p><img src="https://ws1.sinaimg.cn/large/a8a26f7cgy1g6dlcukl6rj20yq0a777q.jpg" alt></p><h2 id="用户名-密码"><a href="#用户名-密码" class="headerlink" title="用户名+密码"></a>用户名+密码</h2><h2 id="手机号-短信认证"><a href="#手机号-短信认证" class="headerlink" title="手机号+短信认证"></a>手机号+短信认证</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Spring-Security&quot;&gt;&lt;a href=&quot;#Spring-Security&quot; class=&quot;headerlink&quot; title=&quot;Spring Security&quot;&gt;&lt;/a&gt;Spring Security&lt;/h1&gt;&lt;h2 id=&quot;核心功能&quot;&gt;&lt;a href
       
     
     </summary>
@@ -264,6 +264,31 @@
   </entry>
   
   <entry>
+    <title>SQL事务</title>
+    <link href="www.number47.cn/posts/2510228647/"/>
+    <id>www.number47.cn/posts/2510228647/</id>
+    <published>2017-12-10T04:56:35.000Z</published>
+    <updated>2019-11-27T19:32:11.069Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p>事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。</p><h2 id="控制事务"><a href="#控制事务" class="headerlink" title="控制事务"></a>控制事务</h2><p>###COMMIT命令</p><p>用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">begin transaction</span><br><span class="line">sql语句</span><br><span class="line">commit;</span><br></pre></td></tr></table></figure><a id="more"></a><p>###ROLLBACK命令</p><p>用于撤销还没有被保存到数据库的命令，它只能用于撤销上一个COMMIT或ROLLBACK命令之后的实物。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">begin transaction</span><br><span class="line">sql语句</span><br><span class="line">rollback;</span><br></pre></td></tr></table></figure><p>eg:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">begin transaction  </span><br><span class="line">update products_tbl</span><br><span class="line">set cost = 8</span><br><span class="line">where prod_id = &apos;11235&apos;;</span><br><span class="line">rollback;</span><br><span class="line"></span><br><span class="line">//上面语句会撤销更新的sql，不会让&apos;11235&apos;的prod_id更新为8，而是原来的值</span><br></pre></td></tr></table></figure><p>###SAVEPOINT</p><p>保存点是事务过程中的一个逻辑点，我们可以把事务回退到这个点，而步兵回退到整个实物。</p><h4 id="创建savepoint"><a href="#创建savepoint" class="headerlink" title="创建savepoint"></a>创建savepoint</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">save transaction savepoint_name</span><br></pre></td></tr></table></figure><h4 id="回退到savepoint"><a href="#回退到savepoint" class="headerlink" title="回退到savepoint"></a>回退到savepoint</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rollback transaction savepoint_name</span><br></pre></td></tr></table></figure><p>eg:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">BEGIN TRANSACTION</span><br><span class="line"></span><br><span class="line">save transaction sp1   //保存点1  更新&apos;11235&apos;的cost为80</span><br><span class="line">update products_tbl</span><br><span class="line">set cost = 80</span><br><span class="line">where prod_id = &apos;11235&apos;;</span><br><span class="line"></span><br><span class="line">save transaction sp2   //保存点2  更新&apos;11235&apos;的cost为99</span><br><span class="line">update products_tbl</span><br><span class="line">set cost = 99</span><br><span class="line">where prod_id = &apos;11235&apos;</span><br><span class="line"></span><br><span class="line">select *//查询  得到&apos;11235&apos;的cost为99</span><br><span class="line">from products_tbl;</span><br><span class="line">  </span><br><span class="line">rollback transaction sp2;  //回退到保存点2 得到&apos;11235&apos;的cost为80</span><br><span class="line"></span><br><span class="line">select *//查询  得到&apos;11235&apos;的cost为80</span><br><span class="line"></span><br><span class="line">from products_tbl;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;事务&quot;&gt;&lt;a href=&quot;#事务&quot; class=&quot;headerlink&quot; title=&quot;事务&quot;&gt;&lt;/a&gt;事务&lt;/h2&gt;&lt;p&gt;事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。&lt;/p&gt;
+&lt;h2 id=&quot;控制事务&quot;&gt;&lt;a href=&quot;#控制事务&quot; class=&quot;headerlink&quot; title=&quot;控制事务&quot;&gt;&lt;/a&gt;控制事务&lt;/h2&gt;&lt;p&gt;###COMMIT命令&lt;/p&gt;
+&lt;p&gt;用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;begin transaction&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sql语句&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;commit;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
+    
+    
+      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SQL基本概念</title>
     <link href="www.number47.cn/posts/1750339182/"/>
     <id>www.number47.cn/posts/1750339182/</id>
@@ -279,6 +304,33 @@
 &lt;h2 id=&quot;DBA（数据库管理员）&quot;&gt;&lt;a href=&quot;#DBA（数据库管理员）&quot; class=&quot;headerlink&quot; title=&quot;DBA（数据库管理员）&quot;&gt;&lt;/a&gt;DBA（数据库管理员）&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;数据库管理员&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&quot;DBS-数据库系统&quot;&gt;&lt;a href=&quot;#DBS-数据库系统&quot; class=&quot;headerlink&quot; title=&quot;DBS(数据库系统)&quot;&gt;&lt;/a&gt;DBS(数据库系统)&lt;/h2&gt;&lt;p&gt;由数据库、数据库管理系统（及其应用的开发工具）、应用数据和DBA组成的存储、管理、处理和维护数据的系统。&lt;/p&gt;
 &lt;h2 id=&quot;SQL&quot;&gt;&lt;a href=&quot;#SQL&quot; class=&quot;headerlink&quot; title=&quot;SQL&quot;&gt;&lt;/a&gt;SQL&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;结构化查询语句&lt;/strong&gt;是与关系型数据库进行通信的标准语言。
+    
+    </summary>
+    
+      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
+    
+    
+      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL管理数据库对象</title>
+    <link href="www.number47.cn/posts/2709286209/"/>
+    <id>www.number47.cn/posts/2709286209/</id>
+    <published>2017-12-10T04:56:35.000Z</published>
+    <updated>2019-11-27T19:32:11.071Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="数据库对象"><a href="#数据库对象" class="headerlink" title="数据库对象"></a>数据库对象</h2><p>数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。</p><h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><p><strong>CREATE TABLE 命令</strong></p><p>使用方法：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &lt;表名&gt;(</span><br><span class="line">&lt;列名&gt;  &lt;数据类型&gt;  [列级完整新约束],  //列级完整新约束 eg：primary key</span><br><span class="line">&lt;列名&gt;  &lt;数据类型&gt;  [列级完整新约束],  </span><br><span class="line">...</span><br><span class="line">[,&lt;表级完整性约束&gt;]</span><br><span class="line">);</span><br></pre></td></tr></table></figure><p>Eg:<a id="more"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE EMPLOYEE_TBL(</span><br><span class="line">EMP_ID       CHAR(9)       NOT NULL,</span><br><span class="line">EMP_NAME     VARCHAR(40)   NOT NULL,</span><br><span class="line">EMP_ST_ADDR  VARCHAR(20)   NOT NULL,</span><br><span class="line">EMP_CITY     VARCHAR(15)   NOT NULL,</span><br><span class="line">EMP_ST       CHAR(2)       NOT NULL,</span><br><span class="line">EMP_ZIP      INTEGER       NOT NULL,</span><br><span class="line">EMP_PHONE    INTEGER       NULL,</span><br><span class="line">EMP_PAGER    INTEGER       NULL</span><br><span class="line">);</span><br></pre></td></tr></table></figure><h2 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h2><p><strong>ALTER TABLE 命令</strong></p><h3 id="修改表的列的属性"><a href="#修改表的列的属性" class="headerlink" title="修改表的列的属性"></a>修改表的列的属性</h3><p><strong>列的属性：</strong>数据类型、长度、有效位或标度、是否为空</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE &lt;表名&gt;</span><br><span class="line">ADD [COLUMN] &lt;新列名&gt;&lt;数据类型&gt;[完整新约束]</span><br><span class="line">ADD &lt;表级完整新约束&gt;</span><br><span class="line">DROP [COLUMN] &lt;列名&gt; [CASCADE|RESTRICT]</span><br><span class="line">DROP CONSTRAINT&lt;完整性约束名&gt; [RESTRICT|CASCADE]</span><br><span class="line">ALTER COLUMN &lt;列名&gt; &lt;数据类型&gt;</span><br></pre></td></tr></table></figure><p><strong>CASCADE：</strong>自动删除引用了该类的其他对象，如视图</p><p><strong>RESTRICT：</strong>如果该列被其他对象引用，RDBMS拒绝删除该列</p><p>Eg：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//把EMP_ID的数据类型长度从9改为10.</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL </span><br><span class="line">ALTER COLUMN EMP_ID VARCHAR(10);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//新增EMP_ENGLISH_NAME列</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL</span><br><span class="line">ADD EMP_ENGLISH_NAME VARCHAR(20);</span><br><span class="line"></span><br><span class="line">//删除EMP_ENGLISH_NAME列</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL</span><br><span class="line">DROP COLUMN EMP_ENGLISH_NAME;</span><br></pre></td></tr></table></figure><h4 id="添加自动增加的列"><a href="#添加自动增加的列" class="headerlink" title="添加自动增加的列"></a>添加自动增加的列</h4><p>使用IDENTITY类型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE TEST_INCREMENT(</span><br><span class="line">  ID   INT  IDENTITY(1,1) NOT NULL, //(seed = 1,increment = 1) 從1開始,每次遞增1  </span><br><span class="line">  TEST_NAME VARCHAR(20)</span><br><span class="line">);</span><br></pre></td></tr></table></figure><p>##删除表</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE &lt;表名&gt; [CASCADE|RESTRICT];</span><br></pre></td></tr></table></figure><h2 id="完整性约束"><a href="#完整性约束" class="headerlink" title="完整性约束"></a>完整性约束</h2><h3 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h3><h3 id="唯一性约束"><a href="#唯一性约束" class="headerlink" title="唯一性约束"></a>唯一性约束</h3><p>###外键约束</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;数据库对象&quot;&gt;&lt;a href=&quot;#数据库对象&quot; class=&quot;headerlink&quot; title=&quot;数据库对象&quot;&gt;&lt;/a&gt;数据库对象&lt;/h2&gt;&lt;p&gt;数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。&lt;/p&gt;
+&lt;h2 id=&quot;创建表&quot;&gt;&lt;a href=&quot;#创建表&quot; class=&quot;headerlink&quot; title=&quot;创建表&quot;&gt;&lt;/a&gt;创建表&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;CREATE TABLE 命令&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;CREATE TABLE &amp;lt;表名&amp;gt;(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束],  //列级完整新约束 eg：primary key&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束],  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	[,&amp;lt;表级完整性约束&amp;gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;Eg:
     
     </summary>
     
@@ -344,54 +396,24 @@
   </entry>
   
   <entry>
-    <title>SQL事务</title>
-    <link href="www.number47.cn/posts/2510228647/"/>
-    <id>www.number47.cn/posts/2510228647/</id>
-    <published>2017-12-10T04:56:35.000Z</published>
-    <updated>2019-11-27T19:32:11.069Z</updated>
+    <title>理解面向对象</title>
+    <link href="www.number47.cn/posts/2028349334/"/>
+    <id>www.number47.cn/posts/2028349334/</id>
+    <published>2017-12-07T04:56:00.000Z</published>
+    <updated>2019-11-27T19:32:11.082Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p>事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。</p><h2 id="控制事务"><a href="#控制事务" class="headerlink" title="控制事务"></a>控制事务</h2><p>###COMMIT命令</p><p>用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">begin transaction</span><br><span class="line">sql语句</span><br><span class="line">commit;</span><br></pre></td></tr></table></figure><a id="more"></a><p>###ROLLBACK命令</p><p>用于撤销还没有被保存到数据库的命令，它只能用于撤销上一个COMMIT或ROLLBACK命令之后的实物。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">begin transaction</span><br><span class="line">sql语句</span><br><span class="line">rollback;</span><br></pre></td></tr></table></figure><p>eg:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">begin transaction  </span><br><span class="line">update products_tbl</span><br><span class="line">set cost = 8</span><br><span class="line">where prod_id = &apos;11235&apos;;</span><br><span class="line">rollback;</span><br><span class="line"></span><br><span class="line">//上面语句会撤销更新的sql，不会让&apos;11235&apos;的prod_id更新为8，而是原来的值</span><br></pre></td></tr></table></figure><p>###SAVEPOINT</p><p>保存点是事务过程中的一个逻辑点，我们可以把事务回退到这个点，而步兵回退到整个实物。</p><h4 id="创建savepoint"><a href="#创建savepoint" class="headerlink" title="创建savepoint"></a>创建savepoint</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">save transaction savepoint_name</span><br></pre></td></tr></table></figure><h4 id="回退到savepoint"><a href="#回退到savepoint" class="headerlink" title="回退到savepoint"></a>回退到savepoint</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rollback transaction savepoint_name</span><br></pre></td></tr></table></figure><p>eg:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">BEGIN TRANSACTION</span><br><span class="line"></span><br><span class="line">save transaction sp1   //保存点1  更新&apos;11235&apos;的cost为80</span><br><span class="line">update products_tbl</span><br><span class="line">set cost = 80</span><br><span class="line">where prod_id = &apos;11235&apos;;</span><br><span class="line"></span><br><span class="line">save transaction sp2   //保存点2  更新&apos;11235&apos;的cost为99</span><br><span class="line">update products_tbl</span><br><span class="line">set cost = 99</span><br><span class="line">where prod_id = &apos;11235&apos;</span><br><span class="line"></span><br><span class="line">select *//查询  得到&apos;11235&apos;的cost为99</span><br><span class="line">from products_tbl;</span><br><span class="line">  </span><br><span class="line">rollback transaction sp2;  //回退到保存点2 得到&apos;11235&apos;的cost为80</span><br><span class="line"></span><br><span class="line">select *//查询  得到&apos;11235&apos;的cost为80</span><br><span class="line"></span><br><span class="line">from products_tbl;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;事务&quot;&gt;&lt;a href=&quot;#事务&quot; class=&quot;headerlink&quot; title=&quot;事务&quot;&gt;&lt;/a&gt;事务&lt;/h2&gt;&lt;p&gt;事务(Transaction)是用户定义的一个数据库操作序列，这些操作要么全做，要么全不做，是一个不可分割的工作单位。&lt;/p&gt;
-&lt;h2 id=&quot;控制事务&quot;&gt;&lt;a href=&quot;#控制事务&quot; class=&quot;headerlink&quot; title=&quot;控制事务&quot;&gt;&lt;/a&gt;控制事务&lt;/h2&gt;&lt;p&gt;###COMMIT命令&lt;/p&gt;
-&lt;p&gt;用于把事务所做的修改保存到数据库，把上一个COMMIT或ROLLBACK命令之后的全部事务都保存到数据库。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;begin transaction&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sql语句&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;commit;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
-    
-    
-      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL管理数据库对象</title>
-    <link href="www.number47.cn/posts/2709286209/"/>
-    <id>www.number47.cn/posts/2709286209/</id>
-    <published>2017-12-10T04:56:35.000Z</published>
-    <updated>2019-11-27T19:32:11.071Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="数据库对象"><a href="#数据库对象" class="headerlink" title="数据库对象"></a>数据库对象</h2><p>数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。</p><h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><p><strong>CREATE TABLE 命令</strong></p><p>使用方法：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &lt;表名&gt;(</span><br><span class="line">&lt;列名&gt;  &lt;数据类型&gt;  [列级完整新约束],  //列级完整新约束 eg：primary key</span><br><span class="line">&lt;列名&gt;  &lt;数据类型&gt;  [列级完整新约束],  </span><br><span class="line">...</span><br><span class="line">[,&lt;表级完整性约束&gt;]</span><br><span class="line">);</span><br></pre></td></tr></table></figure><p>Eg:<a id="more"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE EMPLOYEE_TBL(</span><br><span class="line">EMP_ID       CHAR(9)       NOT NULL,</span><br><span class="line">EMP_NAME     VARCHAR(40)   NOT NULL,</span><br><span class="line">EMP_ST_ADDR  VARCHAR(20)   NOT NULL,</span><br><span class="line">EMP_CITY     VARCHAR(15)   NOT NULL,</span><br><span class="line">EMP_ST       CHAR(2)       NOT NULL,</span><br><span class="line">EMP_ZIP      INTEGER       NOT NULL,</span><br><span class="line">EMP_PHONE    INTEGER       NULL,</span><br><span class="line">EMP_PAGER    INTEGER       NULL</span><br><span class="line">);</span><br></pre></td></tr></table></figure><h2 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h2><p><strong>ALTER TABLE 命令</strong></p><h3 id="修改表的列的属性"><a href="#修改表的列的属性" class="headerlink" title="修改表的列的属性"></a>修改表的列的属性</h3><p><strong>列的属性：</strong>数据类型、长度、有效位或标度、是否为空</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE &lt;表名&gt;</span><br><span class="line">ADD [COLUMN] &lt;新列名&gt;&lt;数据类型&gt;[完整新约束]</span><br><span class="line">ADD &lt;表级完整新约束&gt;</span><br><span class="line">DROP [COLUMN] &lt;列名&gt; [CASCADE|RESTRICT]</span><br><span class="line">DROP CONSTRAINT&lt;完整性约束名&gt; [RESTRICT|CASCADE]</span><br><span class="line">ALTER COLUMN &lt;列名&gt; &lt;数据类型&gt;</span><br></pre></td></tr></table></figure><p><strong>CASCADE：</strong>自动删除引用了该类的其他对象，如视图</p><p><strong>RESTRICT：</strong>如果该列被其他对象引用，RDBMS拒绝删除该列</p><p>Eg：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//把EMP_ID的数据类型长度从9改为10.</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL </span><br><span class="line">ALTER COLUMN EMP_ID VARCHAR(10);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//新增EMP_ENGLISH_NAME列</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL</span><br><span class="line">ADD EMP_ENGLISH_NAME VARCHAR(20);</span><br><span class="line"></span><br><span class="line">//删除EMP_ENGLISH_NAME列</span><br><span class="line">ALTER TABLE EMPLOYEE_TBL</span><br><span class="line">DROP COLUMN EMP_ENGLISH_NAME;</span><br></pre></td></tr></table></figure><h4 id="添加自动增加的列"><a href="#添加自动增加的列" class="headerlink" title="添加自动增加的列"></a>添加自动增加的列</h4><p>使用IDENTITY类型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE TEST_INCREMENT(</span><br><span class="line">  ID   INT  IDENTITY(1,1) NOT NULL, //(seed = 1,increment = 1) 從1開始,每次遞增1  </span><br><span class="line">  TEST_NAME VARCHAR(20)</span><br><span class="line">);</span><br></pre></td></tr></table></figure><p>##删除表</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE &lt;表名&gt; [CASCADE|RESTRICT];</span><br></pre></td></tr></table></figure><h2 id="完整性约束"><a href="#完整性约束" class="headerlink" title="完整性约束"></a>完整性约束</h2><h3 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h3><h3 id="唯一性约束"><a href="#唯一性约束" class="headerlink" title="唯一性约束"></a>唯一性约束</h3><p>###外键约束</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>JAVA面向对象的三大特性：<strong>封装、继承、多态</strong><br>面向对象和面向过程都是一种思考方式。<br><strong>面向过程</strong>：打开冰箱/放东西进冰箱/关闭冰箱，强调动作过程。<br><strong>面向对象：</strong>冰箱.打开/冰箱.放东西/冰箱.关闭，强调冰箱这一对象。<a id="more"></a><br>举例：向过程到面向对象是从执行者到指挥者<br>餐厅点菜：我找服务员，服务员就是对象，服务员具有点菜功能。<br>HR面试我：我就是对象，我就是对象，具备有HR需要的人的技能。</p>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;数据库对象&quot;&gt;&lt;a href=&quot;#数据库对象&quot; class=&quot;headerlink&quot; title=&quot;数据库对象&quot;&gt;&lt;/a&gt;数据库对象&lt;/h2&gt;&lt;p&gt;数据库里定义的、用于存储或是引用数据的对象，比如表、视图、簇、序列、索引和异名。&lt;/p&gt;
-&lt;h2 id=&quot;创建表&quot;&gt;&lt;a href=&quot;#创建表&quot; class=&quot;headerlink&quot; title=&quot;创建表&quot;&gt;&lt;/a&gt;创建表&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;CREATE TABLE 命令&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;使用方法：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;CREATE TABLE &amp;lt;表名&amp;gt;(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束],  //列级完整新约束 eg：primary key&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;列名&amp;gt;  &amp;lt;数据类型&amp;gt;  [列级完整新约束],  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	[,&amp;lt;表级完整性约束&amp;gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;Eg:
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;JAVA面向对象的三大特性：&lt;strong&gt;封装、继承、多态&lt;/strong&gt;&lt;br&gt;面向对象和面向过程都是一种思考方式。&lt;br&gt;&lt;strong&gt;面向过程&lt;/strong&gt;：打开冰箱/放东西进冰箱/关闭冰箱，强调动作过程。&lt;br&gt;&lt;strong&gt;面向对象：&lt;/strong&gt;冰箱.打开/冰箱.放东西/冰箱.关闭，强调冰箱这一对象。
     
     </summary>
     
-      <category term="SQL" scheme="www.number47.cn/categories/SQL/"/>
+      <category term="Java" scheme="www.number47.cn/categories/Java/"/>
     
     
-      <category term="SQL入门经典" scheme="www.number47.cn/tags/SQL%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8/"/>
+      <category term="Java基础" scheme="www.number47.cn/tags/Java%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -427,24 +449,25 @@
   </entry>
   
   <entry>
-    <title>理解面向对象</title>
-    <link href="www.number47.cn/posts/2028349334/"/>
-    <id>www.number47.cn/posts/2028349334/</id>
-    <published>2017-12-07T04:56:00.000Z</published>
-    <updated>2019-11-27T19:32:11.082Z</updated>
+    <title>Tomcat</title>
+    <link href="www.number47.cn/posts/2515320506/"/>
+    <id>www.number47.cn/posts/2515320506/</id>
+    <published>2017-11-26T16:00:00.000Z</published>
+    <updated>2019-11-27T19:32:11.078Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>JAVA面向对象的三大特性：<strong>封装、继承、多态</strong><br>面向对象和面向过程都是一种思考方式。<br><strong>面向过程</strong>：打开冰箱/放东西进冰箱/关闭冰箱，强调动作过程。<br><strong>面向对象：</strong>冰箱.打开/冰箱.放东西/冰箱.关闭，强调冰箱这一对象。<a id="more"></a><br>举例：向过程到面向对象是从执行者到指挥者<br>餐厅点菜：我找服务员，服务员就是对象，服务员具有点菜功能。<br>HR面试我：我就是对象，我就是对象，具备有HR需要的人的技能。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><p>  Tomcat服务器是一种Servlet/JSP容器，负责处理客户请求，把请求传送给Servlet并把结果返回给客户。</p><p>当用户访问某个Servlet时，Servlet容器将创建一个ServletRequest对象和ServletResponse对象。在ServletRequest对象中封装了客户请求信息，然后Servlet容器（Tomcat）把ServletRequest对象和ServletResponse对象传给客户所请求的Servlet。Servlet把响应结果写到ServletResponse中，然后由Servlet容器（Tomcat）把响应结果传给客户。<a id="more"></a></p><p><img src="/images/img-Servlet%E5%AE%B9%E5%99%A8%E5%93%8D%E5%BA%94%E5%AE%A2%E6%88%B7%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B.png" alt="Alt text"></p><h2 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h2><p>安装目录为D:\Tomcat</p><p>打开D:\Tomcat\conf\server.xml，修改8080端口</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;</span><br><span class="line">              connectionTimeout=&quot;20000&quot;</span><br><span class="line">              redirectPort=&quot;8443&quot; /&gt;</span><br></pre></td></tr></table></figure><h2 id="运行多个服务"><a href="#运行多个服务" class="headerlink" title="运行多个服务"></a>运行多个服务</h2><p>如果需要让Tomcat运行多个服务，只需要复制server.xml文件中的<service>元素，并修改相应的参数，便可以实现一个Tomcat运行多个服务。</service></p><h2 id="Tomcat的结构"><a href="#Tomcat的结构" class="headerlink" title="Tomcat的结构"></a>Tomcat的结构</h2><p>每个Tomcat组件在server.xml文件中对应一种配置元素。以下为Tomcat组件之间的关系。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;Server&gt;                             //顶层类元素，可以包括多个Service   </span><br><span class="line">    &lt;Service&gt;                        //顶层类元素，可包含一个Engine，多个Connecter</span><br><span class="line">        &lt;Connector&gt;                  //连接器类元素，代表通信接口</span><br><span class="line">                &lt;Engine&gt;             //容器类元素，为特定的Service组件处理客户请求，要包含多个Host</span><br><span class="line">                        &lt;Host&gt;       //容器类元素，为特定的虚拟主机组件处理客户请求，可包含多个Context</span><br><span class="line">                          &lt;Context&gt;  //容器类元素，为特定的Web应用处理所有的客户请求</span><br><span class="line">                          &lt;/Context&gt;</span><br><span class="line">                        &lt;/Host&gt;</span><br><span class="line">                &lt;/Engine&gt;</span><br><span class="line">        &lt;/Connector&gt;</span><br><span class="line">    &lt;/Service&gt;</span><br><span class="line">&lt;/Server&gt;</span><br></pre></td></tr></table></figure><ul><li><code>&lt;Server&gt;</code>元素</li></ul><p><code>&lt;Server&gt;</code>元素代表整个Servlet容器，是Tomcat实例的顶层元素。<code>&lt;Server&gt;</code>元素中包含一个或多个<code>&lt;Server&gt;</code>元素。</p><ul><li><p><code>&lt;Service&gt;</code>元素</p><p><code>&lt;Service&gt;</code>元素包含一个<code>&lt;Engine&gt;</code>元素，以及一个或多个<code>&lt;Connector&gt;</code>元素，这些<code>&lt;Connector&gt;</code>元素共享同一个&lt;Engine&gt;元素</p></li><li><p><code>&lt;Connector&gt;</code>元素</p><p><code>&lt;Connector&gt;</code>元素代表和客户程序实际交互的组件，它负责接收客户请求，以及向客户返回响应结果。</p></li><li><p><code>&lt;Engine&gt;</code>元素</p><p>每个<code>&lt;Service&gt;</code>元素只能包含<code>&lt;Engine&gt;</code>元素。<code>&lt;Engine&gt;</code>元素处理在同一个<code>&lt;Service&gt;</code>中所有<code>&lt;Connector&gt;</code>元素接收到的客户请求。</p></li><li><p><code>&lt;Host&gt;</code>元素</p><p>一个<code>&lt;Engine&gt;</code>元素可以包含多个<code>&lt;Host&gt;</code>元素。每个<code>&lt;Host&gt;</code>元素定义了一个虚拟主机，它可以包含一个或多个Web应用。</p></li><li><p><code>&lt;Context&gt;</code>元素</p><p><code>&lt;Context&gt;</code>元素是使用最频繁的元素，每个<code>&lt;Context&gt;</code>元素代表了运行在虚拟主机上的单个Web应用。一个<code>&lt;Host&gt;</code>元素中可以包含多个<code>&lt;Context&gt;</code>元素。</p><h2 id="进入控制台"><a href="#进入控制台" class="headerlink" title="进入控制台"></a>进入控制台</h2><p>Server Status控制台：监控服务器状态</p><p>Manager App控制台：部署、监控Web应用</p><p>Host Manager控制台</p><h3 id="增加控制台用户"><a href="#增加控制台用户" class="headerlink" title="增加控制台用户"></a>增加控制台用户</h3><p>打开D:\Tomcat\conf\tomcat-users.xml文件</p><p>在<code>&lt;tomcat-users&gt;</code>元素中增加用户</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;tomcat-users&gt;</span><br><span class="line">&lt;role rolename=&quot;tomcat&quot;/&gt;</span><br><span class="line">&lt;!--增加一个用户--&gt;</span><br><span class="line">&lt;user username=&apos;admin&apos; password = &apos;123456&apos; roles = &apos;manager-gui&apos;/&gt;</span><br><span class="line">&lt;/tomcat-users&gt;</span><br></pre></td></tr></table></figure><h2 id="部署Web应用"><a href="#部署Web应用" class="headerlink" title="部署Web应用"></a>部署Web应用</h2><h3 id="方式一：利用Tomact的自动部署"><a href="#方式一：利用Tomact的自动部署" class="headerlink" title="方式一：利用Tomact的自动部署"></a>方式一：利用Tomact的自动部署</h3><p>只要将一个Web应用复制到Tomcat的webapps下，系统就会把应用部署到Tomcat中。</p><h3 id="方式二：利用控制台部署"><a href="#方式二：利用控制台部署" class="headerlink" title="方式二：利用控制台部署"></a>方式二：利用控制台部署</h3><p>进入控制台，按照下图输入即可</p><p>！<img src="/images/img-Tomcat%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%83%A8%E7%BD%B2web%E5%BA%94%E7%94%A8.png" alt="img-Tomcat控制台部署web应用"></p><p>将会在Tomcat的webapps目录多了一个名为tmall_ssh的文件夹，文件内容和D:\JAVA\workspace\路径tmall_ssh文件夹内容一样</p></li></ul><h2 id="Tomcat各个组件之间的嵌套关系"><a href="#Tomcat各个组件之间的嵌套关系" class="headerlink" title="Tomcat各个组件之间的嵌套关系"></a>Tomcat各个组件之间的嵌套关系</h2><p><img src="/images/img-Tomcat%E5%90%84%E4%B8%AA%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB.png" alt="img_Tomcat各个组件之间的关系"></p><h2 id="Tomcat-Server处理一个HTTP请求的过程"><a href="#Tomcat-Server处理一个HTTP请求的过程" class="headerlink" title="Tomcat Server处理一个HTTP请求的过程"></a>Tomcat Server处理一个HTTP请求的过程</h2><p>![img_Tomcat Server处理一个HTTP请求的过程](/images/img-Tomcat Server处理一个HTTP请求的过程.png)</p><ol><li>用户点击网页内容，请求被发送到本机端口8080，被在那里监听的Coyote HTTP/1.1 Connector获得。 </li><li>Connector把该请求交给它所在的Service的Engine来处理，并等待Engine的回应。 </li><li>Engine获得请求localhost/index.jsp，匹配所有的虚拟主机Host。 </li><li>Engine匹配到名为localhost的Host（即使匹配不到也把请求交给该Host处理，因为该Host被定义为该Engine的默认主机），名为localhost的Host获得请求/index.jsp，匹配它所拥有的所有的Context。Host匹配到路径为/test的Context（如果匹配不到就把该请求交给路径名为“ ”的Context去处理）。 </li><li>path=“/”的Context获得请求/index.jsp，在它的mapping table中寻找出对应的Servlet。Context匹配到URL PATTERN为*.jsp的Servlet,对应于JspServlet类。 </li><li>构造HttpServletRequest对象和HttpServletResponse对象，作为参数调用JspServlet的doGet（）或doPost（）.执行业务逻辑、数据存储等程序。 </li><li>Context把执行完之后的HttpServletResponse对象返回给Host。 </li><li>Host把HttpServletResponse对象返回给Engine。 </li><li>Engine把HttpServletResponse对象返回Connector。 </li><li>Connector把HttpServletResponse对象返回给客户Browser。</li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;JAVA面向对象的三大特性：&lt;strong&gt;封装、继承、多态&lt;/strong&gt;&lt;br&gt;面向对象和面向过程都是一种思考方式。&lt;br&gt;&lt;strong&gt;面向过程&lt;/strong&gt;：打开冰箱/放东西进冰箱/关闭冰箱，强调动作过程。&lt;br&gt;&lt;strong&gt;面向对象：&lt;/strong&gt;冰箱.打开/冰箱.放东西/冰箱.关闭，强调冰箱这一对象。
+      &lt;h2 id=&quot;Tomcat&quot;&gt;&lt;a href=&quot;#Tomcat&quot; class=&quot;headerlink&quot; title=&quot;Tomcat&quot;&gt;&lt;/a&gt;Tomcat&lt;/h2&gt;&lt;p&gt;  Tomcat服务器是一种Servlet/JSP容器，负责处理客户请求，把请求传送给Servlet并把结果返回给客户。&lt;/p&gt;
+&lt;p&gt;当用户访问某个Servlet时，Servlet容器将创建一个ServletRequest对象和ServletResponse对象。在ServletRequest对象中封装了客户请求信息，然后Servlet容器（Tomcat）把ServletRequest对象和ServletResponse对象传给客户所请求的Servlet。Servlet把响应结果写到ServletResponse中，然后由Servlet容器（Tomcat）把响应结果传给客户。
     
     </summary>
     
-      <category term="Java" scheme="www.number47.cn/categories/Java/"/>
+      <category term="Java_Web" scheme="www.number47.cn/categories/Java-Web/"/>
     
     
-      <category term="Java基础" scheme="www.number47.cn/tags/Java%E5%9F%BA%E7%A1%80/"/>
+      <category term="Tomcat" scheme="www.number47.cn/tags/Tomcat/"/>
     
   </entry>
   
@@ -467,29 +490,6 @@
     
     
       <category term="Java面试" scheme="www.number47.cn/tags/Java%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tomcat</title>
-    <link href="www.number47.cn/posts/2515320506/"/>
-    <id>www.number47.cn/posts/2515320506/</id>
-    <published>2017-11-26T16:00:00.000Z</published>
-    <updated>2019-11-27T19:32:11.078Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><p>  Tomcat服务器是一种Servlet/JSP容器，负责处理客户请求，把请求传送给Servlet并把结果返回给客户。</p><p>当用户访问某个Servlet时，Servlet容器将创建一个ServletRequest对象和ServletResponse对象。在ServletRequest对象中封装了客户请求信息，然后Servlet容器（Tomcat）把ServletRequest对象和ServletResponse对象传给客户所请求的Servlet。Servlet把响应结果写到ServletResponse中，然后由Servlet容器（Tomcat）把响应结果传给客户。<a id="more"></a></p><p><img src="/images/img-Servlet%E5%AE%B9%E5%99%A8%E5%93%8D%E5%BA%94%E5%AE%A2%E6%88%B7%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B.png" alt="Alt text"></p><h2 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h2><p>安装目录为D:\Tomcat</p><p>打开D:\Tomcat\conf\server.xml，修改8080端口</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;</span><br><span class="line">              connectionTimeout=&quot;20000&quot;</span><br><span class="line">              redirectPort=&quot;8443&quot; /&gt;</span><br></pre></td></tr></table></figure><h2 id="运行多个服务"><a href="#运行多个服务" class="headerlink" title="运行多个服务"></a>运行多个服务</h2><p>如果需要让Tomcat运行多个服务，只需要复制server.xml文件中的<service>元素，并修改相应的参数，便可以实现一个Tomcat运行多个服务。</service></p><h2 id="Tomcat的结构"><a href="#Tomcat的结构" class="headerlink" title="Tomcat的结构"></a>Tomcat的结构</h2><p>每个Tomcat组件在server.xml文件中对应一种配置元素。以下为Tomcat组件之间的关系。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;Server&gt;                             //顶层类元素，可以包括多个Service   </span><br><span class="line">    &lt;Service&gt;                        //顶层类元素，可包含一个Engine，多个Connecter</span><br><span class="line">        &lt;Connector&gt;                  //连接器类元素，代表通信接口</span><br><span class="line">                &lt;Engine&gt;             //容器类元素，为特定的Service组件处理客户请求，要包含多个Host</span><br><span class="line">                        &lt;Host&gt;       //容器类元素，为特定的虚拟主机组件处理客户请求，可包含多个Context</span><br><span class="line">                          &lt;Context&gt;  //容器类元素，为特定的Web应用处理所有的客户请求</span><br><span class="line">                          &lt;/Context&gt;</span><br><span class="line">                        &lt;/Host&gt;</span><br><span class="line">                &lt;/Engine&gt;</span><br><span class="line">        &lt;/Connector&gt;</span><br><span class="line">    &lt;/Service&gt;</span><br><span class="line">&lt;/Server&gt;</span><br></pre></td></tr></table></figure><ul><li><code>&lt;Server&gt;</code>元素</li></ul><p><code>&lt;Server&gt;</code>元素代表整个Servlet容器，是Tomcat实例的顶层元素。<code>&lt;Server&gt;</code>元素中包含一个或多个<code>&lt;Server&gt;</code>元素。</p><ul><li><p><code>&lt;Service&gt;</code>元素</p><p><code>&lt;Service&gt;</code>元素包含一个<code>&lt;Engine&gt;</code>元素，以及一个或多个<code>&lt;Connector&gt;</code>元素，这些<code>&lt;Connector&gt;</code>元素共享同一个&lt;Engine&gt;元素</p></li><li><p><code>&lt;Connector&gt;</code>元素</p><p><code>&lt;Connector&gt;</code>元素代表和客户程序实际交互的组件，它负责接收客户请求，以及向客户返回响应结果。</p></li><li><p><code>&lt;Engine&gt;</code>元素</p><p>每个<code>&lt;Service&gt;</code>元素只能包含<code>&lt;Engine&gt;</code>元素。<code>&lt;Engine&gt;</code>元素处理在同一个<code>&lt;Service&gt;</code>中所有<code>&lt;Connector&gt;</code>元素接收到的客户请求。</p></li><li><p><code>&lt;Host&gt;</code>元素</p><p>一个<code>&lt;Engine&gt;</code>元素可以包含多个<code>&lt;Host&gt;</code>元素。每个<code>&lt;Host&gt;</code>元素定义了一个虚拟主机，它可以包含一个或多个Web应用。</p></li><li><p><code>&lt;Context&gt;</code>元素</p><p><code>&lt;Context&gt;</code>元素是使用最频繁的元素，每个<code>&lt;Context&gt;</code>元素代表了运行在虚拟主机上的单个Web应用。一个<code>&lt;Host&gt;</code>元素中可以包含多个<code>&lt;Context&gt;</code>元素。</p><h2 id="进入控制台"><a href="#进入控制台" class="headerlink" title="进入控制台"></a>进入控制台</h2><p>Server Status控制台：监控服务器状态</p><p>Manager App控制台：部署、监控Web应用</p><p>Host Manager控制台</p><h3 id="增加控制台用户"><a href="#增加控制台用户" class="headerlink" title="增加控制台用户"></a>增加控制台用户</h3><p>打开D:\Tomcat\conf\tomcat-users.xml文件</p><p>在<code>&lt;tomcat-users&gt;</code>元素中增加用户</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;tomcat-users&gt;</span><br><span class="line">&lt;role rolename=&quot;tomcat&quot;/&gt;</span><br><span class="line">&lt;!--增加一个用户--&gt;</span><br><span class="line">&lt;user username=&apos;admin&apos; password = &apos;123456&apos; roles = &apos;manager-gui&apos;/&gt;</span><br><span class="line">&lt;/tomcat-users&gt;</span><br></pre></td></tr></table></figure><h2 id="部署Web应用"><a href="#部署Web应用" class="headerlink" title="部署Web应用"></a>部署Web应用</h2><h3 id="方式一：利用Tomact的自动部署"><a href="#方式一：利用Tomact的自动部署" class="headerlink" title="方式一：利用Tomact的自动部署"></a>方式一：利用Tomact的自动部署</h3><p>只要将一个Web应用复制到Tomcat的webapps下，系统就会把应用部署到Tomcat中。</p><h3 id="方式二：利用控制台部署"><a href="#方式二：利用控制台部署" class="headerlink" title="方式二：利用控制台部署"></a>方式二：利用控制台部署</h3><p>进入控制台，按照下图输入即可</p><p>！<img src="/images/img-Tomcat%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%83%A8%E7%BD%B2web%E5%BA%94%E7%94%A8.png" alt="img-Tomcat控制台部署web应用"></p><p>将会在Tomcat的webapps目录多了一个名为tmall_ssh的文件夹，文件内容和D:\JAVA\workspace\路径tmall_ssh文件夹内容一样</p></li></ul><h2 id="Tomcat各个组件之间的嵌套关系"><a href="#Tomcat各个组件之间的嵌套关系" class="headerlink" title="Tomcat各个组件之间的嵌套关系"></a>Tomcat各个组件之间的嵌套关系</h2><p><img src="/images/img-Tomcat%E5%90%84%E4%B8%AA%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB.png" alt="img_Tomcat各个组件之间的关系"></p><h2 id="Tomcat-Server处理一个HTTP请求的过程"><a href="#Tomcat-Server处理一个HTTP请求的过程" class="headerlink" title="Tomcat Server处理一个HTTP请求的过程"></a>Tomcat Server处理一个HTTP请求的过程</h2><p>![img_Tomcat Server处理一个HTTP请求的过程](/images/img-Tomcat Server处理一个HTTP请求的过程.png)</p><ol><li>用户点击网页内容，请求被发送到本机端口8080，被在那里监听的Coyote HTTP/1.1 Connector获得。 </li><li>Connector把该请求交给它所在的Service的Engine来处理，并等待Engine的回应。 </li><li>Engine获得请求localhost/index.jsp，匹配所有的虚拟主机Host。 </li><li>Engine匹配到名为localhost的Host（即使匹配不到也把请求交给该Host处理，因为该Host被定义为该Engine的默认主机），名为localhost的Host获得请求/index.jsp，匹配它所拥有的所有的Context。Host匹配到路径为/test的Context（如果匹配不到就把该请求交给路径名为“ ”的Context去处理）。 </li><li>path=“/”的Context获得请求/index.jsp，在它的mapping table中寻找出对应的Servlet。Context匹配到URL PATTERN为*.jsp的Servlet,对应于JspServlet类。 </li><li>构造HttpServletRequest对象和HttpServletResponse对象，作为参数调用JspServlet的doGet（）或doPost（）.执行业务逻辑、数据存储等程序。 </li><li>Context把执行完之后的HttpServletResponse对象返回给Host。 </li><li>Host把HttpServletResponse对象返回给Engine。 </li><li>Engine把HttpServletResponse对象返回Connector。 </li><li>Connector把HttpServletResponse对象返回给客户Browser。</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Tomcat&quot;&gt;&lt;a href=&quot;#Tomcat&quot; class=&quot;headerlink&quot; title=&quot;Tomcat&quot;&gt;&lt;/a&gt;Tomcat&lt;/h2&gt;&lt;p&gt;  Tomcat服务器是一种Servlet/JSP容器，负责处理客户请求，把请求传送给Servlet并把结果返回给客户。&lt;/p&gt;
-&lt;p&gt;当用户访问某个Servlet时，Servlet容器将创建一个ServletRequest对象和ServletResponse对象。在ServletRequest对象中封装了客户请求信息，然后Servlet容器（Tomcat）把ServletRequest对象和ServletResponse对象传给客户所请求的Servlet。Servlet把响应结果写到ServletResponse中，然后由Servlet容器（Tomcat）把响应结果传给客户。
-    
-    </summary>
-    
-      <category term="Java_Web" scheme="www.number47.cn/categories/Java-Web/"/>
-    
-    
-      <category term="Tomcat" scheme="www.number47.cn/tags/Tomcat/"/>
     
   </entry>
   
